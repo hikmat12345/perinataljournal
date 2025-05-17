@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-"use client";
-import React, { useState } from "react";
-=======
 import { link } from "fs";
 import Link from "next/link";
-import React from "react";
->>>>>>> 8829980b1c4aabeb658fe598bc4f4eb82a1d15ae
+import React, { useState } from "react";
 import {
   FaStar,
   FaEye,
@@ -85,16 +80,9 @@ export default function Header() {
                 ].map((item, idx, arr) => (
                   <Link
                     key={idx}
-<<<<<<< HEAD
-                    href="#"
-                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${
-                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                    }`}
-=======
                     href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
                     className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
                       }`}
->>>>>>> 8829980b1c4aabeb658fe598bc4f4eb82a1d15ae
                   >
                     <span className="mr-2 text-[#777777] text-base">
                       <FaChevronRight />
@@ -110,7 +98,7 @@ export default function Header() {
             {/* Archive Dropdown */}
             <div className="relative group">
               <button className="flex items-center px-4 py-2 hover:text-blue-600">
-                Archive 
+                Archive
                 <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
               </button>
               <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10">
@@ -138,16 +126,9 @@ export default function Header() {
                 ].map((item, idx, arr) => (
                   <Link
                     key={idx}
-<<<<<<< HEAD
-                    href="#"
-                    className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
-                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                    }`}
-=======
                     href={"/Archive/" + item.link.replaceAll(" ", "-").toLowerCase()}
                     className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
                       }`}
->>>>>>> 8829980b1c4aabeb658fe598bc4f4eb82a1d15ae
                   >
                     <span className="mr-2 text-base">{item.icon}</span>
                     {item.label}
