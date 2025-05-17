@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 "use client";
 import React, { useState } from "react";
+=======
+import { link } from "fs";
+import Link from "next/link";
+import React from "react";
+>>>>>>> 8829980b1c4aabeb658fe598bc4f4eb82a1d15ae
 import {
   FaStar,
   FaEye,
@@ -78,6 +83,7 @@ export default function Header() {
                   "Publication Ethics",
                   "Contact Us",
                 ].map((item, idx, arr) => (
+                  <Link
                     key={idx}
 <<<<<<< HEAD
                     href="#"
@@ -94,6 +100,7 @@ export default function Header() {
                       <FaChevronRight />
                     </span>
                     {item}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -111,14 +118,17 @@ export default function Header() {
                   {
                     icon: <FaStar className="text-[#777777]" />,
                     label: "Current Issue",
+                    link: "Issue/288",
                   },
                   {
                     icon: <FaEye className="text-[#777777]" />,
                     label: "Early View",
+                    link: "Early View",
                   },
                   {
                     icon: <FaBook className="text-[#777777]" />,
                     label: "All Issues",
+                    link: "Issue",
                   },
                   {
                     icon: <FaSearch className="text-[#777777]" />,
@@ -126,16 +136,22 @@ export default function Header() {
                     link: "Search",
                   },
                 ].map((item, idx, arr) => (
+                  <Link
                     key={idx}
 <<<<<<< HEAD
                     href="#"
                     className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
                       idx !== arr.length - 1 ? "border-b border-gray-200" : ""
                     }`}
+=======
+                    href={"/Archive/" + item.link.replaceAll(" ", "-").toLowerCase()}
+                    className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                      }`}
+>>>>>>> 8829980b1c4aabeb658fe598bc4f4eb82a1d15ae
                   >
                     <span className="mr-2 text-base">{item.icon}</span>
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
