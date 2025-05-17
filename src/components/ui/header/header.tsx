@@ -12,7 +12,7 @@ import { MdArrowDropDown } from "react-icons/md";
 export default function Header() {
   return (
     <header className="bg-white shadow h-[50px]">
-      <div className="max-w-screen-xl mx-auto flex items-center h-full text-sm font-normal text-[#777777] leading-6">
+      <div className="  mx-auto flex items-center h-full text-sm font-normal text-[#777777] leading-6">
         {/* Logo + Navigation */}
         <div className="flex items-center space-x-8 h-full">
           {/* Logo and title with gradient background */}
@@ -25,7 +25,7 @@ export default function Header() {
             <img
               src="/images/logo-en-US.png"
               alt="Logo"
-              className="h-10 w-75 object-contain"
+              className="h-10 w-[428px] object-contain "
             />
           </div>
 
@@ -56,9 +56,8 @@ export default function Header() {
                   <a
                     key={idx}
                     href="#"
-                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${
-                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                    }`}
+                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                      }`}
                   >
                     <span className="mr-2 text-[#777777] text-base">
                       <FaChevronRight />
@@ -74,7 +73,7 @@ export default function Header() {
             {/* Archive Dropdown */}
             <div className="relative group">
               <button className="flex items-center px-4 py-2 hover:text-blue-600">
-                Archive 
+                Archive
                 <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
               </button>
               <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10">
@@ -99,9 +98,8 @@ export default function Header() {
                   <a
                     key={idx}
                     href="#"
-                    className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
-                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                    }`}
+                    className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                      }`}
                   >
                     <span className="mr-2 text-base">{item.icon}</span>
                     {item.label}
