@@ -5,9 +5,10 @@ import 'font-awesome/css/font-awesome.min.css'; // For Font Awesome 4.x
 import Carousel from '@/components/Carousel/Carousel.';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaThLarge, FaSearch } from "react-icons/fa";
+import { FaThLarge, FaSearch, FaUserAlt } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
+import { GrLink } from "react-icons/gr";
 import IntroductionCard from '@/components/ui/IntroductionCard/card';
 
 export default function Home({
@@ -206,7 +207,7 @@ export default function Home({
         <div className="home-body-right-sidebar w-[30%]">
           <div className="home-body-right-sidebar-inner">
             <Carousel />
-            <ModuleBox
+            {/* <ModuleBox
               title="Latest Articles"
               icon={<i className="icon-share"></i>}
             >
@@ -215,7 +216,7 @@ export default function Home({
                 <li><a href="/Archive/EarlyView/">Early View</a></li>
                 <li><a href="/Archive/Issue/">All Issues</a></li>
               </ul>
-            </ModuleBox>
+            </ModuleBox> */}
             <div className='mb-4 border border-black'>
               <a href="https://www.scopus.com/results/results.uri?sort=plf-f&amp;src=s&amp;st1=13053124&amp;sid=71065fb360f89f361d486ba2aa4a8e7d&amp;sot=b&amp;sdt=b&amp;sl=14&amp;s=ISSN%2813053124%29&amp;origin=searchbasic&amp;editSaveSearch=&amp;yearFrom=Before+1960&amp;yearTo=Present&amp;sessionSearchId=71065fb360f89f361d486ba2aa4a8e7d&amp;limit=10" target="_blank">
                 {/* <img src="/Content/img/scopus-banner.jpg"> */}
@@ -223,8 +224,8 @@ export default function Home({
               </a>
             </div>
             <ModuleBox
-              title="Latest Articles"
-              icon={<i className="icon-share"></i>}
+              title="Be a Member"
+              icon={<FaUserAlt />}
             >
               <p className='p-2'>
                 You can be a member of the journal and log in quickly.Therefore you can enjoy and benefit with scientific papers, news, opininons, editorials, guidelines and all scientific media.
@@ -235,8 +236,8 @@ export default function Home({
             </ModuleBox>
 
             <ModuleBox
-              title="Related Links"
-              icon={<i className="icon-share"></i>}
+              title="Links"
+              icon={<GrLink />}
             >
               <ul>
                 <li><a href="https://www.perinatalmedicine.org" target="_blank"><i className="icon-share"></i> Perinatal Medicine Foundation</a></li>

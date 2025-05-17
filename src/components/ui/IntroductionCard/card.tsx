@@ -17,7 +17,7 @@ const IntroductionCard = () => {
         </div>
 
         {/* Content */}
-        <div className="flex-1">
+        <div className="flex-1 my-auto">
           <h1 className="text-[32px] font-bold text-[rgb(0,87,156)]">
             Perinatal Journal
           </h1>
