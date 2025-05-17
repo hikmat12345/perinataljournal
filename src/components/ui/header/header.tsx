@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
   FaStar,
   FaEye,
@@ -8,10 +9,27 @@ import {
 } from "react-icons/fa";
 import { MdArrowDropDown } from "react-icons/md";
 
-
 export default function Header() {
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isArchiveOpen, setIsArchiveOpen] = useState(false);
+
+  const toggleInfoDropdown = () => {
+    setIsInfoOpen((prev) => !prev);
+    setIsArchiveOpen(false); // Close the other dropdown
+  };
+
+  const toggleArchiveDropdown = () => {
+    setIsArchiveOpen((prev) => !prev);
+    setIsInfoOpen(false); // Close the other dropdown
+  };
+
+  const closeDropdowns = () => {
+    setIsInfoOpen(false);
+    setIsArchiveOpen(false);
+  };
+
   return (
-    <header className="bg-white shadow h-[50px]">
+    <header className="bg-white shadow h-[50px] relative z-50">
       <div className="max-w-screen-xl mx-auto flex items-center h-full text-sm font-normal text-[#777777] leading-6">
         {/* Logo + Navigation */}
         <div className="flex items-center space-x-8 h-full">
@@ -30,89 +48,111 @@ export default function Header() {
           </div>
 
           {/* Navigation */}
-          <nav className="flex items-center h-full">
-            <a href="#" className="pr-3 py-2 hover:text-blue-600">
+          <nav className="flex items-center h-full relative">
+            <a href="#" className="pr-3 py-2">
               Home
             </a>
 
-            <div className="border-l border-gray-300 h-full mx-2" />
+            <div className="border-l border-gray-200 h-full mx-2" />
 
             {/* Information Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center px-2 py-2 hover:text-blue-600 text-[#777777] text-sm font-normal leading-6">
+            <div className="relative">
+              <button
+                onClick={toggleInfoDropdown}
+                className="flex items-center px-2 py-2 text-[#777777] text-sm font-normal leading-6"
+              >
                 Information
-                <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
+                <MdArrowDropDown
+                  size={18}
+                  className="ml-1 text-blue-600 text-xs"
+                />
               </button>
-              <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10">
-                {[
-                  "About Perinatal Journal",
-                  "Editorial Board",
-                  "Author Guidelines",
-                  "Article Processing Charge",
-                  "Editorial Policies",
-                  "Publication Ethics",
-                  "Contact Us",
-                ].map((item, idx, arr) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${
-                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                    }`}
-                  >
-                    <span className="mr-2 text-[#777777] text-base">
-                      <FaChevronRight />
-                    </span>
-                    {item}
-                  </a>
-                ))}
-              </div>
+              {isInfoOpen && (
+                <div className="absolute bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10">
+                  {[
+                    "About Perinatal Journal",
+                    "Editorial Board",
+                    "Author Guidelines",
+                    "Article Processing Charge",
+                    "Editorial Policies",
+                    "Publication Ethics",
+                    "Contact Us",
+                  ].map((item, idx, arr) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${
+                        idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                      }`}
+                    >
+                      <span className="mr-2 text-[#777777] text-base">
+                        <FaChevronRight />
+                      </span>
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
 
-            <div className="border-l border-gray-300 h-full mx-2" />
+            <div className="border-l border-gray-200 h-full" />
 
             {/* Archive Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center px-4 py-2 hover:text-blue-600">
-                Archive 
-                <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
+            <div className="relative">
+              <button
+                onClick={toggleArchiveDropdown}
+                className="flex items-center px-4 py-2 text-[#777777]"
+              >
+                Archive
+                <MdArrowDropDown
+                  size={18}
+                  className="ml-1 text-blue-600 text-xs"
+                />
               </button>
-              <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10">
-                {[
-                  {
-                    icon: <FaStar className="text-[#777777]" />,
-                    label: "Current Issue",
-                  },
-                  {
-                    icon: <FaEye className="text-[#777777]" />,
-                    label: "Early View",
-                  },
-                  {
-                    icon: <FaBook className="text-[#777777]" />,
-                    label: "All Issues",
-                  },
-                  {
-                    icon: <FaSearch className="text-[#777777]" />,
-                    label: "Article Search",
-                  },
-                ].map((item, idx, arr) => (
-                  <a
-                    key={idx}
-                    href="#"
-                    className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
-                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                    }`}
-                  >
-                    <span className="mr-2 text-base">{item.icon}</span>
-                    {item.label}
-                  </a>
-                ))}
-              </div>
+              {isArchiveOpen && (
+                <div className="absolute bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10">
+                  {[
+                    {
+                      icon: <FaStar className="text-[#777777]" />,
+                      label: "Current Issue",
+                    },
+                    {
+                      icon: <FaEye className="text-[#777777]" />,
+                      label: "Early View",
+                    },
+                    {
+                      icon: <FaBook className="text-[#777777]" />,
+                      label: "All Issues",
+                    },
+                    {
+                      icon: <FaSearch className="text-[#777777]" />,
+                      label: "Article Search",
+                    },
+                  ].map((item, idx, arr) => (
+                    <a
+                      key={idx}
+                      href="#"
+                      className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
+                        idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                      }`}
+                    >
+                      <span className="mr-2 text-base">{item.icon}</span>
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="border-l border-gray-300 h-full mx-2" />
+
+            <div className="border-l border-gray-200 h-full" />
           </nav>
         </div>
       </div>
+
+      {/* Click outside to close dropdowns */}
+      {(isInfoOpen || isArchiveOpen) && (
+        <div className="fixed inset-0 z-0" onClick={closeDropdowns} />
+      )}
     </header>
   );
 }
