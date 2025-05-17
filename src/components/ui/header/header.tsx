@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React, { useState } from "react";
 import {
@@ -77,18 +78,22 @@ export default function Header() {
                   "Publication Ethics",
                   "Contact Us",
                 ].map((item, idx, arr) => (
-                  <a
                     key={idx}
+<<<<<<< HEAD
                     href="#"
                     className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${
                       idx !== arr.length - 1 ? "border-b border-gray-200" : ""
                     }`}
+=======
+                    href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
+                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                      }`}
+>>>>>>> 8829980b1c4aabeb658fe598bc4f4eb82a1d15ae
                   >
                     <span className="mr-2 text-[#777777] text-base">
                       <FaChevronRight />
                     </span>
                     {item}
-                  </a>
                 ))}
               </div>
             </div>
@@ -118,10 +123,11 @@ export default function Header() {
                   {
                     icon: <FaSearch className="text-[#777777]" />,
                     label: "Article Search",
+                    link: "Search",
                   },
                 ].map((item, idx, arr) => (
-                  <a
                     key={idx}
+<<<<<<< HEAD
                     href="#"
                     className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
                       idx !== arr.length - 1 ? "border-b border-gray-200" : ""
