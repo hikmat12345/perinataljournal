@@ -58,51 +58,53 @@ export default function Header() {
             <div className="border-l border-gray-200 h-full mx-2" />
 
             {/* Information Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleInfoDropdown}
-                className="flex items-center px-2 py-2 text-[#777777] text-sm font-normal leading-6"
-              >
-                Information
-                <MdArrowDropDown
-                  size={18}
-                  className="ml-1 text-blue-600 text-xs"
-                />
-              </button>
-              <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10">
-                {[
-                  "About Perinatal Journal",
-                  "Editorial Board",
-                  "Author Guidelines",
-                  "Article Processing Charge",
-                  "Editorial Policies",
-                  "Publication Ethics",
-                  "Contact Us",
-                ].map((item, idx, arr) => (
-                  <Link
-                    key={idx}
-                    href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
-                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                      }`}
-                  >
-                    <span className="mr-2 text-[#777777] text-base">
-                      <FaChevronRight />
-                    </span>
-                    {item}
-                  </Link>
-                ))}
+              <div className="relative">
+                <button
+                  onClick={toggleInfoDropdown}
+                  className="flex items-center px-2 py-2 text-[#777777] text-sm font-normal leading-6"
+                >
+                  Information
+                  <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
+                </button>
+
+                <div className={`absolute bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10 ${isInfoOpen ? 'block' : 'hidden'}`}>
+                  {[
+                    "About Perinatal Journal",
+                    "Editorial Board",
+                    "Author Guidelines",
+                    "Article Processing Charge",
+                    "Editorial Policies",
+                    "Publication Ethics",
+                    "Contact Us",
+                  ].map((item, idx, arr) => (
+                    <Link
+                      key={idx}
+                      href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
+                      className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                        }`}
+                    >
+                      <span className="mr-2 text-[#777777] text-base">
+                        <FaChevronRight />
+                      </span>
+                      {item}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
 
             <div className="border-l border-gray-200 h-full" />
 
             {/* Archive Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center px-4 py-2 hover:text-blue-600">
+            <div className="relative">
+              <button
+                onClick={toggleArchiveDropdown}
+                className="flex items-center px-4 py-2 hover:text-blue-600"
+              >
                 Archive
                 <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
               </button>
-              <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10">
+
+              <div className={`absolute bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10 ${isArchiveOpen ? 'block' : 'hidden'}`}>
                 {[
                   {
                     icon: <FaStar className="text-[#777777]" />,
@@ -137,7 +139,6 @@ export default function Header() {
                 ))}
               </div>
             </div>
-
             <div className="border-l border-gray-200 h-full" />
           </nav>
         </div>
