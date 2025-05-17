@@ -170,3 +170,7 @@ input[type="checkbox"] {
   list-style: none !important;
   margin: 0px !important;
 }
+
+.css-treeview ul.sub-branch {
+  margin-left: 35px !important;
+}

@@ -80,7 +80,7 @@ const ArchiveTree = () => {
 
                                     {/* Folder contents */}
                                     {expandedFolders[item.id] && (
-                                        <ul className="pl-6 mt-1 space-y-1">
+                                        <ul className="pl-6 mt-1 space-y-1 sub-branch">
                                             {item.items.map((issue) => (
                                                 <li key={issue.id} className="flex items-center group">
                                                     <FiFile className="text-gray-400 mr-2 group-hover:text-blue-500" size={14} />

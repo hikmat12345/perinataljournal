@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow h-[50px]">
-      <div className="max-w-screen-xl mx-auto flex items-center h-full text-sm font-normal text-[#777777] leading-6">
+      <div className=" mx-auto flex items-center h-full text-sm font-normal text-[#777777] leading-6">
         {/* Logo + Navigation */}
         <div className="flex items-center space-x-8 h-full">
           {/* Logo and title with gradient background */}
@@ -51,46 +51,47 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="flex items-center h-full relative">
-            <a href="#" className="pr-3 py-2">
+            <Link className="pr-3 py-2"
+              href={"/"}>
               Home
-            </a>
+            </Link>
 
             <div className="border-l border-gray-200 h-full mx-2" />
 
             {/* Information Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={toggleInfoDropdown}
-                  className="flex items-center px-2 py-2 text-[#777777] text-sm font-normal leading-6"
-                >
-                  Information
-                  <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
-                </button>
+            <div className="relative">
+              <button
+                onClick={toggleInfoDropdown}
+                className="flex items-center px-2 py-2 text-[#777777] text-sm font-normal leading-6"
+              >
+                Information
+                <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
+              </button>
 
-                <div className={`absolute bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10 ${isInfoOpen ? 'block' : 'hidden'}`}>
-                  {[
-                    "About Perinatal Journal",
-                    "Editorial Board",
-                    "Author Guidelines",
-                    "Article Processing Charge",
-                    "Editorial Policies",
-                    "Publication Ethics",
-                    "Contact Us",
-                  ].map((item, idx, arr) => (
-                    <Link
-                      key={idx}
-                      href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
-                      className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                        }`}
-                    >
-                      <span className="mr-2 text-[#777777] text-base">
-                        <FaChevronRight />
-                      </span>
-                      {item}
-                    </Link>
-                  ))}
-                </div>
+              <div className={`absolute bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10 ${isInfoOpen ? 'block' : 'hidden'}`}>
+                {[
+                  "About Perinatal Journal",
+                  "Editorial Board",
+                  "Author Guidelines",
+                  "Article Processing Charge",
+                  "Editorial Policies",
+                  "Publication Ethics",
+                  "Contact Us",
+                ].map((item, idx, arr) => (
+                  <Link
+                    key={idx}
+                    href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
+                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                      }`}
+                  >
+                    <span className="mr-2 text-[#777777] text-base">
+                      <FaChevronRight />
+                    </span>
+                    {item}
+                  </Link>
+                ))}
               </div>
+            </div>
 
             <div className="border-l border-gray-200 h-full" />
 
