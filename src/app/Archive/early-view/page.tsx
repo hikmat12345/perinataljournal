@@ -1,7 +1,10 @@
 import Layout from '@/components/ui/Layout/layout'
 import ModuleBox from '@/components/ui/modulebox/modulebox'
 import Link from 'next/link'
+import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
 import React from 'react'
+import { FaShareFromSquare } from "react-icons/fa6";
+import { GrLink } from "react-icons/gr";
 
 export default function page() {
     return (
@@ -11,7 +14,7 @@ export default function page() {
                     <div>
                         <ModuleBox
                             title="Archive"
-                            icon={<i className="fas fa-share"></i>}
+                            icon={<FaThLarge />}
                         >
                             <ul>
                                 <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
@@ -25,7 +28,7 @@ export default function page() {
                         </ModuleBox>
                         <ModuleBox
                             title="Be a Member"
-                            icon={<i className="icon-share"></i>}
+                            icon={<FaUserAlt />}
                         >
                             <p>You can be a member of the journal and log in quickly. Therefore you can enjoy and benefit with scientific papers, news, opinions, editorials, guidelines and all scientific media.</p>
                             <Link href="/User/SignIn" className='flex justify-end mt-2'>
@@ -35,7 +38,7 @@ export default function page() {
                         </ModuleBox>
                         <ModuleBox
                             title="Links"
-                            icon={<i className="icon-share"></i>}
+                            icon={<GrLink />}
                         >
                             <ul>
                                 <li><a href="https://www.perinatalmedicine.org" target="_blank"><i className="icon-share"></i> Perinatal Medicine Foundation</a></li>
@@ -45,7 +48,7 @@ export default function page() {
                         </ModuleBox>
                         <ModuleBox
                             title="Search"
-                            icon={<i className="icon-search"></i>}
+                            icon={<FaSearch />}
                         >
                             <form method="get" action="/Archive/Search/">
                                 <p>You can search published articles.</p>
@@ -64,7 +67,7 @@ export default function page() {
                         </ModuleBox>
                         <ModuleBox
                             title="Archive"
-                            icon={<i className="icon-th-large"></i>}
+                            icon={<FaThLarge />}
                         >
                             <ul>
                                 <li><a href="/Archive/Latest/">Current Issue</a></li>
@@ -74,14 +77,14 @@ export default function page() {
                         </ModuleBox>
                         <ModuleBox
                             title="Submission"
-                            icon={<i className="icon-share"></i>}
-                        >
+                            icon={<FaShareFromSquare />}
+                            >
                             <ul>
                                 <li><a href="/Submission/">New Submission</a></li>
                                 <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
                                 <li><a href="/Info/author-guidelines">Author Guidelines</a></li>
                             </ul>
-                        </ModuleBox>
+                            </ModuleBox>
                         <ModuleBox
                             title="Journal Information"
                             icon={<i className="icon-info-sign"></i>}

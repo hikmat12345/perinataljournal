@@ -99,7 +99,7 @@ export default function Header() {
             <div className="relative">
               <button
                 onClick={toggleArchiveDropdown}
-                className="flex items-center px-4 py-2 hover:text-blue-600"
+                className="flex items-center px-4 py-2"
               >
                 Archive
                 <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />

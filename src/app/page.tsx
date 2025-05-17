@@ -5,7 +5,7 @@ import 'font-awesome/css/font-awesome.min.css'; // For Font Awesome 4.x
 import Carousel from '@/components/Carousel/Carousel.';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaThLarge, FaSearch, FaUserAlt } from "react-icons/fa";
+import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
@@ -235,15 +235,44 @@ export default function Home({
               </Link>
             </ModuleBox>
 
-            <ModuleBox
-              title="Links"
-              icon={<GrLink />}
-            >
-              <ul>
-                <li><a href="https://www.perinatalmedicine.org" target="_blank"><i className="icon-share"></i> Perinatal Medicine Foundation</a></li>
-                <li><a href="https://meet.perinatalmedicine.org/" target="_blank"><i className="icon-share"></i> World School of Perinatal Medicine</a></li>
-                <li><a href="http://www.worldperinatal.org" target="_blank"><i className="icon-share"></i> World Association of Perinatal Medicine</a></li>
-              </ul>
+            <ModuleBox title="Links" icon={<GrLink />}>
+              <p className="mb-3 text-sm text-gray-700">Please click on the link for you</p>
+
+              <div className="rounded border border-gray-200 divide-y divide-gray-200">
+                <div>
+                  <a
+                    href="https://www.perinatalmedicine.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-blue-600 hover:underline text-wrap px-3 py-2"
+                  >
+                    <FaShareSquare className="text-base" />
+                    Perinatal Medicine Foundation
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="https://meet.perinatalmedicine.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-blue-600 hover:underline text-wrap px-3 py-2"
+                  >
+                    <FaShareSquare className="text-base" />
+                    World School of Perinatal Medicine
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="http://www.worldperinatal.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-blue-600 hover:underline text-wrap px-3 py-2"
+                  >
+                    <FaShareSquare className="text-base" />
+                    World Association of Perinatal Medicine
+                  </a>
+                </div>
+              </div>
             </ModuleBox>
           </div>
         </div>
