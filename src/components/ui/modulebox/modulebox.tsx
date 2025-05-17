@@ -9,12 +9,12 @@ type ModuleBoxProps = {
 
 const ModuleBox = ({ title, icon, children }: ModuleBoxProps) => {
     return (
-        <div className="border rounded-t-md shadow-sm overflow-hidden mb-6">
-            <div className="flex items-center gap-2 bg-gradient-to-b from-[#e1e7ea] to-white text-[#0b5486] text-sm font-bold px-4 py-2 border-b border-[#CFD2E9]">
+        <div className=" overflow-hidden mb-6 module-box">
+            <div className="flex items-center gap-2  text-[#0b5486] text-sm font-bold px-4 py-2 border-b border-[#CFD2E9] module-title">
                 {icon && <span className="text-base">{icon}</span>}
                 {title}
             </div>
-            <div className="p-4">
+            <div className="p-2 pl-4">
                 {children}
             </div>
         </div>

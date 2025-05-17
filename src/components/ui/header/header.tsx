@@ -29,7 +29,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow h-[50px] relative z-50">
+    <header className="bg-white shadow h-[50px]">
       <div className="max-w-screen-xl mx-auto flex items-center h-full text-sm font-normal text-[#777777] leading-6">
         {/* Logo + Navigation */}
         <div className="flex items-center space-x-8 h-full">
@@ -43,7 +43,7 @@ export default function Header() {
             <img
               src="/images/logo-en-US.png"
               alt="Logo"
-              className="h-10 w-75 object-contain"
+              className="h-10 w-[428px] object-contain "
             />
           </div>
 
@@ -67,81 +67,71 @@ export default function Header() {
                   className="ml-1 text-blue-600 text-xs"
                 />
               </button>
-              {isInfoOpen && (
-                <div className="absolute bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10">
-                  {[
-                    "About Perinatal Journal",
-                    "Editorial Board",
-                    "Author Guidelines",
-                    "Article Processing Charge",
-                    "Editorial Policies",
-                    "Publication Ethics",
-                    "Contact Us",
-                  ].map((item, idx, arr) => (
-                    <a
-                      key={idx}
-                      href="#"
-                      className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${
-                        idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                      }`}
-                    >
-                      <span className="mr-2 text-[#777777] text-base">
-                        <FaChevronRight />
-                      </span>
-                      {item}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-64 z-10">
+                {[
+                  "About Perinatal Journal",
+                  "Editorial Board",
+                  "Author Guidelines",
+                  "Article Processing Charge",
+                  "Editorial Policies",
+                  "Publication Ethics",
+                  "Contact Us",
+                ].map((item, idx, arr) => (
+                  <a
+                    key={idx}
+                    href="#"
+                    className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${
+                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                    }`}
+                  >
+                    <span className="mr-2 text-[#777777] text-base">
+                      <FaChevronRight />
+                    </span>
+                    {item}
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className="border-l border-gray-200 h-full" />
 
             {/* Archive Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleArchiveDropdown}
-                className="flex items-center px-4 py-2 text-[#777777]"
-              >
-                Archive
-                <MdArrowDropDown
-                  size={18}
-                  className="ml-1 text-blue-600 text-xs"
-                />
+            <div className="relative group">
+              <button className="flex items-center px-4 py-2 hover:text-blue-600">
+                Archive 
+                <MdArrowDropDown size={18} className="ml-1 text-blue-600 text-xs" />
               </button>
-              {isArchiveOpen && (
-                <div className="absolute bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10">
-                  {[
-                    {
-                      icon: <FaStar className="text-[#777777]" />,
-                      label: "Current Issue",
-                    },
-                    {
-                      icon: <FaEye className="text-[#777777]" />,
-                      label: "Early View",
-                    },
-                    {
-                      icon: <FaBook className="text-[#777777]" />,
-                      label: "All Issues",
-                    },
-                    {
-                      icon: <FaSearch className="text-[#777777]" />,
-                      label: "Article Search",
-                    },
-                  ].map((item, idx, arr) => (
-                    <a
-                      key={idx}
-                      href="#"
-                      className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
-                        idx !== arr.length - 1 ? "border-b border-gray-200" : ""
-                      }`}
-                    >
-                      <span className="mr-2 text-base">{item.icon}</span>
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              )}
+              <div className="absolute hidden group-hover:block bg-white shadow-md mt-1 rounded-md text-sm w-56 z-10">
+                {[
+                  {
+                    icon: <FaStar className="text-[#777777]" />,
+                    label: "Current Issue",
+                  },
+                  {
+                    icon: <FaEye className="text-[#777777]" />,
+                    label: "Early View",
+                  },
+                  {
+                    icon: <FaBook className="text-[#777777]" />,
+                    label: "All Issues",
+                  },
+                  {
+                    icon: <FaSearch className="text-[#777777]" />,
+                    label: "Article Search",
+                  },
+                ].map((item, idx, arr) => (
+                  <a
+                    key={idx}
+                    href="#"
+                    className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${
+                      idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                    }`}
+                  >
+                    <span className="mr-2 text-base">{item.icon}</span>
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className="border-l border-gray-200 h-full" />
