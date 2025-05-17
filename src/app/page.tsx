@@ -5,6 +5,10 @@ import 'font-awesome/css/font-awesome.min.css'; // For Font Awesome 4.x
 import Carousel from '@/components/Carousel/Carousel.';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaThLarge, FaSearch } from "react-icons/fa";
+import { FaShareFromSquare } from "react-icons/fa6";
+import { RiInformation2Fill } from "react-icons/ri";
+import IntroductionCard from '@/components/ui/IntroductionCard/card';
 
 export default function Home({
   children,
@@ -12,11 +16,15 @@ export default function Home({
   children: React.ReactNode;
 }>) {
   return (
+    <>
+    <div className='pb-8'>
+      <IntroductionCard/>
+    </div>
     <Layout sidebar={
       <div>
         <ModuleBox
           title="Archive"
-          icon={<i className="fas fa-share"></i>}
+          icon={<FaThLarge />}
         >
           <ul>
             <li><a href="/Archive/Latest/">Current Issue</a></li>
@@ -26,7 +34,7 @@ export default function Home({
         </ModuleBox>
         <ModuleBox
           title="Submission"
-          icon={<i className="icon-share"></i>}
+          icon={<FaShareFromSquare />}
         >
           <ul>
             <li><a href="/Submission/">New Submission</a></li>
@@ -36,7 +44,7 @@ export default function Home({
         </ModuleBox>
         <ModuleBox
           title="Search"
-          icon={<i className="icon-search"></i>}
+          icon={<FaSearch />}
         >
           <form method="get" action="/Archive/Search/">
             <p>You can search published articles.</p>
@@ -55,7 +63,7 @@ export default function Home({
         </ModuleBox>
         <ModuleBox
           title="Journal Information"
-          icon={<i className="icon-info-sign"></i>}
+          icon={<RiInformation2Fill />}
         >
           <p><strong>Online ISSN</strong><br />1305-3124</p>
           <p><strong>Established</strong><br />1993</p>
@@ -240,6 +248,7 @@ export default function Home({
         </div>
       </div>
     </Layout>
+    </>
   )
 }
 
