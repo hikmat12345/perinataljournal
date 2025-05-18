@@ -268,7 +268,7 @@ export default function page() {
                   rel="noopener noreferrer"
                   className="text-[#0B5486] text-[14px] font-normal hover:underline"
                 >
-                  click here
+                  &nbsp;click here
                 </a>
               </p>
             </div>
@@ -331,7 +331,7 @@ export default function page() {
                   rel="noopener noreferrer"
                   className="text-[#0B5486] text-[14px] font-normal hover:underline"
                 >
-                  Committee on Publication Ethics (COPE),
+                  &nbsp;Committee on Publication Ethics (COPE),
                 </a>
                 <a
                   href="https://www.councilscienceeditors.org/"
@@ -339,7 +339,7 @@ export default function page() {
                   rel="noopener noreferrer"
                   className="text-[#0B5486] text-[14px] font-normal hover:underline"
                 >
-                  Council of Science Editors (CSE),
+                  &nbsp;Council of Science Editors (CSE),
                 </a>
                 <a
                   href="https://www.wame.org/"
@@ -347,7 +347,7 @@ export default function page() {
                   rel="noopener noreferrer"
                   className="text-[#0B5486] text-[14px] font-normal hover:underline"
                 >
-                  World Association of Medical Editors (WAME)
+                  &nbsp;World Association of Medical Editors (WAME)
                 </a>{" "}
                 and
                 <a
@@ -356,7 +356,7 @@ export default function page() {
                   rel="noopener noreferrer"
                   className="text-[#0B5486] text-[14px] font-normal hover:underline"
                 >
-                  International Committee of Medical Journal Editors (ICMJE).
+                  &nbsp;International Committee of Medical Journal Editors (ICMJE).
                 </a>
                 For the details of journal Publication Ethics and Malpractice
                 Statement please
@@ -366,126 +366,183 @@ export default function page() {
                   rel="noopener noreferrer"
                   className="text-[#0B5486] text-[14px] font-normal hover:underline"
                 >
-                  click here.
+                  &nbsp;click here.
                 </a>
               </p>
             </div>
-            <br />
-            <div>
-              <strong>Description</strong>
-              <br />
-
-              <p>
-                Perinatal Journal is an online open access, peer-reviewed
-                scientific journal (e-ISSN: 1305-3124). The journal is the
-                official publication of{" "}
-                <a href="http://www.perinatal.org.tr" target="_blank">
-                  Perinatal Medicine Foundation
+            <br /><br />
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold">Manuscript Preparation</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                In addition to the rules listed below, manuscripts to be published in the Perinatal Journal should be in compliance with the Uniform Requirements for Manuscripts Submitted to Biomedical Journals published by International Committee of Medical Journal Editors (ICMJE) of which latest version is available at
+                <a
+                  href="https://perinataljournal.com/Info/editorial-policies#peer-review-process"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0B5486] text-[14px] font-normal hover:underline"
+                >
+                  &nbsp;www.icmje.org
                 </a>
-                . It is published three times a year in April, August and
-                December. The publication language of the journal is English.
+                <br/><br/>
+                Authors are requested to ensure that their manuscript follows the appropriate guidelines such as CONSORT for randomized controlled trials, STROBE for observational studies, STARD for diagnostic accuracy studies, and PRISMA for systematic reviews and meta-analyses, for the study design and reporting if applicable. Clinical trials should be registered prospectively on a suitable trial registry, before any participants have been recruited into the trial. The trial registration number (e.g. NCT012345678) should be included in the Methods.
               </p>
-              <br />
-              <strong>Audience</strong>
-              <br />
-              <p>
-                Perinatal Journal can be read by perinatal medicine experts,
-                fetal medicine experts, obstetricians, gynecologists,
-                radiologists, pediatricians, sonographers, midwives,
-                radiographers, and scientific members of other related areas,
-                that mainly includes original clinical and experimental research
-                articles, case reports, reviews, technical notes and letters to
-                the editor.
-              </p>
-              <br />
-              <strong>Abstracted & Indexed</strong>
-              <br />
-              <p>
-                Perinatal Journal is currently indexed in DOAJ (Directory of
-                Open Access Journals) and Google Scholar, EBSCOhost, EBSCO
-                (Academic Search Complete), TÜBİTAK ULAKBİM TR Index Health
-                Sciences Database and SCOPUS
-              </p>
-              <br />
-              <strong>Editorial Board</strong>
-              <br />
-              <p>
-                The details of Editorial Team and Advisory Board members are
-                available on{" "}
-                <a href="https://perinataljournal.com/Info/editorial-board">
-                  Editorial Board page
-                </a>
-                .
-              </p>
-              <br />
-              <strong>Publication History</strong>
-              <br />
-              <p>
-                Perinatal Journal (2005-present)
-                <br />
-                Perinatoloji Dergisi (1993-2004)
-              </p>
-              <br />
-              <strong>Journal Abbreviation</strong>
-              <br />
-              <p>Perinat J</p>
-              <br />
-              <strong>Supplements</strong>
-              <br />
-
-              <p>
-                Perinatal Journal can publish peer-reviewed supplementary issues
-                to the main volume. Content will be in line with journal scope
-                and may include original articles, reviews, proceedings, meeting
-                abstracts and practice guidelines.
-              </p>
-              <br />
-              <strong>Journal Sponsorship</strong>
-              <br />
-              <p>
-                Perinatal Journal is sponsored by Perinatal Medicine Foundation
-                which is an internationally recognized, non-profit, scientific
-                institution.
-              </p>
-              <br />
-              <strong>Impressum</strong>
-              <br />
-              <p>
-                Ownership & Publisher: Perinatal Medicine Foundation
-                <br />
-                Managing Editor: Murat Yayla
-                <br />
-                Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367
-                Taksim, Istanbul, Turkey&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-                <br />
-                Advisor for Scientific Publishing: Akın Usta
-                <br />
-                Publishing Coordinator: Rumeysa Uslu
-                <br />
-                Language Editor: Fikret Yeşilyurt
-                <br />
-                Technical Staff: Ali Koz
-                <br />
-                Publishing service for Perintal Journal are provided by{" "}
-                <a href="mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal">
-                  CETUS
-                </a>
-              </p>
-              <br />
-              <strong>Correspondence</strong>
-              <br />
-              <p>
-                Perinatal Journal, Perinatal Medicine Foundation
-                <br />
-                Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70,
-                Bakırköy, Istanbul, Turkey
-                <br />
-                Phone: +90 542 442 87 b36
-              </p>
-              <a href="mailto:info@perinataljournal.com?subject=Perinatal%20Journal">
-                <strong>Send e-mail</strong>
-              </a>
             </div>
+            <br /><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold">Authorship and Length of Texts</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                The author(s) must declare that they were involved in at least 3 of the 5 stages of the study stated in the “Acknowledgement of Authorship and Transfer of Copyright Agreement” as “designing the study”, “collecting the data”, “analyzing the data”, “writing the manuscript” and “confirming the accuracy of the data and the analyses”. Those who do not fulfill this prerequisite should not be stated as an author.
+                <br/><br/>
+                Each author should also submit his/her
+                <a
+                  href="https://orcid.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0B5486] text-[14px] font-normal hover:underline"
+                >
+                  &nbsp;ORCID&nbsp;
+                </a>
+                ID besides the classical personal data such as affiliation.
+                <br/><br/>
+                <span className="italic">Original research articles</span> base on clinical or experimental studies. The main text should not exceed 2500 words (max. 16 pages), and a maximum of six authors is advisable.
+                <br/><br/>
+                <span className="italic">Case reports</span> should illustrate interesting cases including their treatment options. The main text should not exceed 2000 words (max. 8 pages), and a maximum of five authors is advisable. 
+                <br/><br/>
+                <span className="italic">Opinion articles:</span> Only by invitation and should be no more than 2000 words long (max. 8 pages). 
+                <br/><br/>
+                <span className="italic">Review articles:</span> Only by invitation and should be no more than 4000-5000 words long (max. 20 pages). 
+                <br/><br/>
+                <span className="italic">Technical notes</span> aims to present a newly diagnostic or therapeutic method. They should not exceed 2000 words (max. 8 pages) and include a maximum of 10 references.
+                <br/><br/>
+                <span className="italic">Letters to the Editor</span> should be no more than 500 words long (max. 2 pages) and include a maximum of 10 references.
+                </p>
+            </div>
+            <br/><br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold">Sections in the Manuscripts</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                Manuscripts should be designed in the following order: title, abstract, main text, references, and appendix (tables, figures, drawings, pictures, videos, patient forms, surveys etc.).
+            </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold italic">Title</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                The title of the manuscript should be carefully chosen to better reflect the contents of the study. No anusual abbreviations should be used in the title of the manuscript.
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold italic">Abstract</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                Abstracts should not contain any abbreviation and references. They should be prepared under following designs.<br/>
+                —  Abstracts of Original Research Articles should be max. 250 words and structured in four paragraphs using the following subtitles: Objective, Methods, Results, and Conclusion. Following the abstract, each abstract should include max. five keywords separated with comma and written in lower cases.<br/>
+                —  Abstracts of Case Reports should be max. 125 words and structured in three paragraphs using the following subtitles: Objective, Case, Conclusion. Following the abstract, each abstract should include max. three keywords separated with comma and written in lower cases.<br/>
+                —  Abstracts of Review Articles should be max. 300 words and presented not structured in one paragraph. Following the abstract, each abstract should include max. five keywords separated with comma and written in lower cases.<br/>
+                —  Abstracts of Technical Notes should be max. 125 words and structured in three paragraphs using the following subtitles: Objective, Technique, Conclusion. Following the abstract, each abstract should include max. three keywords separated with comma and written in lower cases.<br/>
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold italic">Main text</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                The sections in main text are defined according to the manuscript type.<br/>
+                —  In <span className="font-bold">Original Research Articles,</span> main text should consist of sections titled as "Introduction, Methods, Results, Discussion and Conclusion". Each title may have subtitles. The categories of subtitles should be clearly defined.<br/>
+                The Introduction section should include a brief summary of the base of the work and clearly states the purpose of the study.
+                The Methods section should contain a detailed description of the material, the study design and clinical and laboratory tests, and statistical methods used. A statement regarding the ethical issues should also be given in this section.
+                The Results section should provide the main findings of the study. Data should be concisely presented, preferably in tables or graphs.
+                The Discussion section should mainly rely on the results derived from the study, with relevant citations from the most recent literature.<br/>
+                The Conclusion section should briefly and claearly present the conclusions derived from the results of the study. It should be in compliance with the aim of the work and and point out its application in clinical practice.<br/>
+                — In <span className="font-bold">Case Reports,</span> main text should be divided with the titles "Introduction, Case(s), Discussion". Reported case(s) should be introduced clearly including the case story, and the results of laboratory tests should be given in table format as far as possible.<br/>
+                —  The text of the <span className="font-bold">Review Articles</span> should follow the "Introduction" and be organized under subtitles which should clearly define the text's context categorization. The reviews are expected to include wide surveying of literature and reflect the author's personal experiences as far as possible.<br/>
+                —  The text of the <span className="font-bold">Technical Note</span> type of articles should be divided into "Introduction, Technic, Discussion". The presented technic should be defined briefly under the related title, and include illustrations or figures as soon as possible.<br/>
+                —  <span className="font-bold">Letters to the Editor</span> should not have titled sections. If there is a citation about a formerly published article within the text, reference(s) should be provided.<br/>
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold italic">References</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                References used in the text should be directly related to the topic, as recent as possible and in enough numbers. They should be numbered in square brackets in the order in which they are mentioned in the text including Tables and Figures. Citation order should be checked carefully.<br/><br/>
+                Only published articles or articles in press can be used in references. Unpublished data including conference papers or personal communications should not be used. Papers published in only electronic journals or in the preprint or online first issues of the electronic versions of conventional periodicals should be absolutely presented with DOI (digital object identifier) numbers.<br/><br/>
+                
+                Journal titles should be abbreviated according to the Index Medicus. All authors if six or fewer should be listed; otherwise, the first six and “et al.” should be written.<br/><br/>
+                
+                Direct use of references is strongly recommended and the authors may be asked to provide the first and last pages of certain references. Publication of the manuscript will be suspended until this request is fulfilled by the author(s).<br/><br/>
+                
+                The style and punctuation should follow the formats outlined below:<br/><br/>
+                
+                — Standard journal article: Hammerman C, Bin-Nun A, Kaplan M. Managing the patent ductus arteriosus in the premature neonate: a new look at what we thought we knew. Semin Perinatol 2012;36:130–8. <br/><br/>
+                
+                — Article published in an electronic-only journal: Lee J, Romero R, Xu Y, Kim JS, Topping V, Yoo W, et al. A signature of maternal anti-fetal rejection in spontaneous preterm birth: chronic chorioamnionitis, anti-human leukocyte antigen antibodies, and C4d. PLoS One 2011;6:e16806. doi:10.1371/ journal.pone.0011846<br/><br/>
+                
+                — Book: Jones KL. Practical perinatology. New York: Springer; 1990. p. 112–9.<br/><br/>
+                
+                — Chapter in a book: Moore TR, Hauguel-De Mouzon S, Catalano P. Diabetes in pregnancy. In: Creasy RK, Resnik R, Greene MF, Iams JD, Lockwood CJ, Moore TR, editors. Creasy and Resnik’s maternal-fetal medicine: principles and practice. 7th ed. Philadelphia, PA: Saunders-Elsevier; 2014. p. 988–1021.<br/><br/>
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold italic">Figures and tables</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                All illustrations (photographs, graphics, drawings, etc.) accompanying the manuscript should be referred to as “figure”. All figures should be numbered consecutively and mentioned in the text. Figure legends should be added at the end of the text as a separate section. Each figure should be prepared as a separate digital file in “jpeg” format, with a minimum 300 dpi or better resolution. All illustrations should be original. Illustrations published elsewhere should be submitted with the written permission of the original copyright holder. For recognizable photographs of human subjects, written permission signed by the patient or his/her legal representative should be submitted; otherwise, patient names or eyes must be blocked out to prevent identification. Microscopic photographs should include information on staining and magnification.  
+                <br/><br/>
+                Each table should be prepared on a separate page with table heading on top of the table. Table heading should be added to the main text file on a separate page when a table is submitted as a supplementary file.
+                </p>
+            </div>
+            <br/><br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold italic">Submission</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                For a swift peer review, Perinatal Journal operates a web-based submission, peer review and manuscript tracking system. Authors are required to 
+                <a
+                  href="https://www.perinataljournal.com/Member/Login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0B5486] text-[14px] font-normal hover:underline"
+                >
+                  &nbsp;submit&nbsp;
+                </a>their articles online.
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold italic">Submission checklist</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                The following list will be useful during the final check of a manuscript before submission:<br/>
+                1.         Manuscript length (max. 4000 words for original research articles)<br/>
+                2.         Number of authors (max. six authors for original research articles)<br/>
+                3.         Title page (no anusual abbreviations)<br/>
+                4.         Abstracts (max. 250 words for original research articles)<br/>
+                5.         Key words (max. five keywords for original research articles)<br/>
+                6.         Main text (subtitles)<br/>
+                7.         References (listed according to the rules of ICMJE)<br/>
+                8.         Appendices such as tables, figures, drawings, pictures, videos, patient forms, surveys etc. (numbering; legends and headings; copyright info/permission)<br/>
+                9.         Conflicts of Interest Disclosure Statement (if necessary)<br/>
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold">Open Data Policy</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                Data that is integral to the paper must be made available in such a way as to enable readers to replicate, verify and build upon the conclusions published in the paper. Any restriction on the availability of this data must be disclosed at the time of submission.
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold">Open Access Policy & Copyright</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                To promote the development of global open access to scientific information and research, the journal provides immediate open access to its content. The Journal provides copyrights of all published papers (except where otherwise noted) for free use of readers, scientists, and institutions (such as link to the content or permission for its download, distribution, printing, copying, and reproduction in any medium, without any changing and except the commercial purpose), under the terms of CC BY-NC-ND 4.0 License, provided the original work is cited. To get permission for commercial purpose please contact the publisher. <span className="font-bold">All published materials will become the sole property of, and will be copyrighted by Perinatal Journal.</span> Therefore, “Acknowledgement of Authorship and Transfer of Copyright Agreement” presented by manuscript submission system should be approved by the authors during the submission
+                </p>
+            </div>
+            <br/><br/>
+            <div className="text-[#333333]">
+              <h2 className="text-[14px] font-bold">Privacy Statement</h2>
+              <p className="text-[14px] font-normal leading-[20px]">
+                By the Law on the Protection of Personal Data, the names and e-mail addresses submitted to this journal will be used exclusively for the stated purposes of Perinatal Journal will not be made available for any other purpose or to any other party.
+                </p>
+            </div>
+            <br/><br/><br/>
           </div>
         </div>
       </Layout>
