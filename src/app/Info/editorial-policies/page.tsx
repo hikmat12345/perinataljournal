@@ -560,9 +560,9 @@ export default function page() {
         }
       >
         <div className="w-full h-20 flex">
-          <div className="home-body-text w-[100%] p-3 ">
+          <div className="home-body-text w-[100%] px-3 ">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-3xl font-bold mb-6">Editorial Policies</h1>
+              <h1 className="text-[24px] font-bold leading-[40px] text-[#0B5486] not-italic">Editorial Policies</h1>
               <ul className="list-disc list-inside mb-10 space-y-2">
                 {editorialPolicies.map((policy) => (
                   <li key={policy.id}>

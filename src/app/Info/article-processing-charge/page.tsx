@@ -176,7 +176,7 @@ export default function page() {
       >
         <div className="w-full h-20 flex">
           <div className="home-body-text w-[100%] px-3 ">
-            <h1 className="text-[24px] font-bold leading-[40px] text-[rgb(11,84,134)]">
+            <h1 className="text-[24px] font-bold leading-[40px] text-[#0B5486] not-italic">
               Article Processing Charge
             </h1>
             <br />

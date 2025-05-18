@@ -8,6 +8,135 @@ import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
 
 export default function page() {
+      const editorialPolicies = [
+    {
+      id: "Publication Ethics and Malpractice Statement",
+      title: "Publication Ethics and Malpractice Statement",
+      content:
+        (
+            <>
+                Perinatal Journal is committed to upholding the highest standards of
+          publication ethics and observes the following principles of
+          Publication Ethics and Malpractice Statement which is based on the
+          recommendations and guidelines for journal editors developed by the
+          <a
+            href="https://publicationethics.org/resources/code-conduct"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+          >
+            &nbsp;Committee on Publication Ethics (COPE),&nbsp;
+          </a>
+          <a
+            href="https://www.councilscienceeditors.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+          >
+            &nbsp;Council of Science Editors (CSE),&nbsp;
+          </a>
+          <a
+            href="https://www.wame.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+          >
+            &nbsp;World Association of Medical Editors (WAME)&nbsp;
+          </a>
+          and
+          <a
+            href="https://www.icmje.org/recommendations/browse/roles-and-responsibilities/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+          >
+            &nbsp;International Committee of Medical Journal Editors
+            (ICMJE)&nbsp;
+            </a><br/><br/>
+            All submissions must be original, unpublished (including as full text in conference proceedings), and not under the review of any other publication synchronously. Each manuscript is reviewed by one of the editors and at least three referees under double-blind peer review process. We reserve the right to use plagiarism detecting software to screen submitted papers at all times. We check for plagiary and fraudulent data; falsification (fabrication or manipulation of research data, tables, or images) and improper use of humans or animals in research. All manuscripts not in accordance with these standards will be removed from the publication. This also contains any possible malpractice discovered after the publication. In accordance with the code of conduct we will report any cases of suspected plagiarism or duplicate publishing.<br/><br/>
+            We follow the COPE Ethics Flowcharts for dealing with cases of possible scientific misconduct and breach of publication ethics. For more details please 
+            <a
+                href="https://publicationethics.org/resources/flowcharts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0B5486] text-[14px] font-normal hover:underline"
+            >
+                &nbsp;click here&nbsp;
+            </a>.
+            </>
+        )    
+    },
+    {
+      id: "Author Responsibilities",
+      title: "Author Responsibilities",
+      content: (
+        <>
+          Authors should ensure that submitted work is original. They must certify that the manuscript has not previously been published elsewhere or is not currently being considered for publication elsewhere, in any language. Applicable copyright laws and conventions should be followed. Copyright material (e.g. tables, figures or extensive quotations) should be reproduced only with appropriate permission and acknowledgement. Any work or words of other authors, contributors, or sources should be appropriately credited and referenced.
+            <br/><br/>
+        The author(s) of the original research articles (including short communications) must declare that they were involved in at least 3 of the 5 stages of the study as "designing the study", "collecting the data", "analyzing the data", "writing the manuscript" and "confirming the accuracy of the data and the analyses". All authors should disclose all issues concerning financial relationship, conflict of interest, and competing interest that may potentially influence the results of the research or scientific judgment. All financial contributions, supports or sponsorship of projects should be clearly explained.
+        <br/><br/>
+        When an author discovers a significant error or inaccuracy in his/her own published paper, it is the author's obligation to promptly cooperate with the Editor-in-Chief to provide retractions or corrections of mistakes.
+        <br/><br/>
+        For more detailed information about Authorship and Author Responsibilities by ICMJE, please
+          <a
+            href="https://www.icmje.org/recommendations/browse/roles-and-responsibilities/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+          >
+            &nbsp;click here
+          </a>.
+        </>
+      ),
+    },
+    {
+      id: "Responsibility for the Reviewers",
+      title: "Responsibility for the Reviewers",
+      content: (
+        <>
+          Reviewers evaluate manuscripts based on content without regard to ethnic origin, gender, sexual orientation, citizenship, religious belief or political philosophy of the authors. They should have no conflict of interest with respect to the research, the authors and/or the research funders. Their judgments should be objective.
+            <br/><br/>
+            Reviewers should identify relevant published work that has not been cited by the authors. They must ensure that all the information related to submitted manuscripts is kept as confidential and must report to the Editor-in-Chief if they are aware of copyright infringement and plagiarism on the author's side.
+            <br/><br/>
+            A reviewer who feels unqualified to review the topic of a manuscript or knows that its prompt review will be impossible should notify the Editor-in-Chief and excuse himself from the review process.
+            <br/><br/>
+            To read the PDF document of COPE Ethical Guidelines for Peer Reviewers, please 
+            <a
+            href="https://publicationethics.org/guidance/guideline/ethical-guidelines-peer-reviewers"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+          >
+            &nbsp;click here
+          </a>.
+        </>
+      ),
+    },
+    {
+      id: "Editorial Responsibilities",
+      title: "Editorial Responsibilities",
+      content: (
+        <>
+          Editors evaluate manuscripts for their scientific content without regard to ethnic origin, gender, sexual orientation, citizenship, religious belief or political philosophy of the authors. They provide a fair double-blind peer review of the submitted articles for publication. They ensure that all the information related to submitted manuscripts is kept as confidential before publishing.
+            <br/><br/>
+            Editors are responsible for the contents and overall quality of the publication. They should publish errata pages or make corrections when needed.
+            <br/><br/>
+            Editor-in-Chief does not allow any conflicts of interest between the authors, editors and reviewers. Only he has the full authority to assign a reviewer and is responsible for final decision for publication of the manuscripts in Perinatal Journal.
+            <br/><br/>
+            To read the updated version of Council of Science Editors' "Editor Roles and Responsibilities" document, please 
+            <a
+            href="https://www.councilscienceeditors.org/index.php?option=com_content&view=article&id=103:2-1-editor-roles-and-responsibilities&catid=20:site-content"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+          >
+            &nbsp;click here
+          </a>.
+        </>
+      ),
+    }
+  ];
+
     return (
         <div>
             <Layout
@@ -109,92 +238,42 @@ export default function page() {
                 }
             >
                 <div className='w-full h-20 flex'>
-                    <div className="home-body-text w-[70%] p-3 ">
-                        <strong>About Perinatal Journal</strong><br />
-                        <ul>
-                            <li><a href="#description">Description</a></li>
-                            <li><a href="#audience">Audience</a></li>
+                    <div className="home-body-text w-[100%] px-3 ">
+                        <div className="max-w-4xl mx-auto">
+                            <h1 className="text-[24px] font-bold leading-[40px] text-[#0B5486] not-italic">
+                            Publication Ethics
+                            </h1>
+                            <ul className="list-disc list-inside mb-10 space-y-2">
+                                {editorialPolicies.map((policy) => (
+                                <li key={policy.id}>
+                                    <a
+                                    href={`#${policy.id}`}
+                                    className="text-blue-600 hover:underline"
+                                    >
+                                    {policy.title}
+                                    </a>
+                                </li>
+                                ))}
+                            </ul>
 
-                            <li><a href="#abstracted-indexed">Abstracted & Indexed</a></li>
-                            <li><a href="#editorial-board">Editorial Board</a></li>
-                            <li><a href="#publication-history">Publication History</a></li>
-                            <li><a href="#journal-abbreviation">Journal Abbreviation</a></li>
-                            <li><a href="#supplements">Supplements</a></li>
-                            <li><a href="#journal-sponsorship">Journal Sponsorship</a></li>
-                            <li><a href="#impressum">Impressum</a></li>
-                            <li><a href="#correspondence">Correspondence</a></li>
-                        </ul>
-                        <br />
-                        <div>
-                            <strong>Description</strong><br />
-
-                            <p>
-                                Perinatal Journal is an online open access, peer-reviewed scientific journal (e-ISSN: 1305-3124). The journal is the official publication of <a href="http://www.perinatal.org.tr" target="_blank">Perinatal Medicine Foundation</a>. It is published three times a year in April, August and December. The publication language of the journal is English.
-                            </p>
-                            <br />
-                            <strong>Audience</strong><br />
-                            <p>
-                                Perinatal Journal can be read by perinatal medicine experts, fetal medicine experts, obstetricians, gynecologists, radiologists, pediatricians, sonographers, midwives, radiographers, and scientific members of other related areas, that mainly includes original clinical and experimental research articles, case reports, reviews, technical notes and letters to the editor.
-                            </p>
-                            <br />
-                            <strong>Abstracted & Indexed</strong><br />
-                            <p>
-                                Perinatal Journal is currently indexed in DOAJ (Directory of Open Access Journals) and Google Scholar, EBSCOhost, EBSCO (Academic Search Complete), TÜBİTAK ULAKBİM TR Index Health Sciences Database and SCOPUS
-                            </p>
-                            <br />
-                            <strong>Editorial Board</strong><br />
-                            <p>
-                                The details of Editorial Team and Advisory Board members are available on <a href="https://perinataljournal.com/Info/editorial-board">Editorial Board page</a>.
-                            </p>
-                            <br />
-                            <strong>Publication History</strong><br />
-                            <p>
-                                Perinatal Journal (2005-present)<br />
-                                Perinatoloji Dergisi (1993-2004)
-                            </p>
-                            <br />
-                            <strong>Journal Abbreviation</strong><br />
-                            <p>
-                                Perinat J
-                            </p>
-                            <br />
-                            <strong>Supplements</strong><br />
-
-                            <p>
-                                Perinatal Journal can publish peer-reviewed supplementary issues to the main volume. Content will be in line with journal scope and may include original articles, reviews, proceedings, meeting abstracts and practice guidelines.
-                            </p>
-                            <br />
-                            <strong>Journal Sponsorship</strong><br />
-                            <p>
-                                Perinatal Journal is sponsored by Perinatal Medicine Foundation which is an internationally recognized, non-profit, scientific institution.
-                            </p>
-                            <br />
-                            <strong>Impressum</strong><br />
-                            <p>
-                                Ownership & Publisher: Perinatal Medicine Foundation<br />
-                                Managing Editor: Murat Yayla<br />
-                                Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367 Taksim, Istanbul, Turkey&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
-                                Advisor for Scientific Publishing: Akın Usta<br />
-                                Publishing Coordinator: Rumeysa Uslu<br />
-
-                                Language Editor: Fikret Yeşilyurt<br />
-                                Technical Staff: Ali Koz<br />
-                                Publishing service for  Perintal Journal are provided by <a href='mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal'>
-                                    CETUS
-                                </a>
-                            </p>
-                            <br />
-                            <strong>Correspondence</strong><br />
-                            <p>
-                                Perinatal Journal, Perinatal Medicine Foundation<br />
-                                Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70, Bakırköy, Istanbul, Turkey<br />
-                                Phone: +90 542 442 87 b36
-                            </p>
-                            <a href='mailto:info@perinataljournal.com?subject=Perinatal%20Journal'>
-                                <strong>Send e-mail</strong>
-                            </a>
-
-                        </div>
+                            <div className="">
+                                {editorialPolicies.map((policy) => (
+                                <section
+                                    key={policy.id}
+                                    id={policy.id}
+                                    className="scroll-mt-24"
+                                >
+                                    <h2 className="text-[14px] font-bold leading-[20px] text-[#333333]">
+                                    {policy.title}
+                                    </h2>
+                                    <p className="text-[14px] font-normal leading-[20px] text-[#333333]">
+                                    {policy.content}
+                                    </p>
+                                    <br />
+                                </section>
+                                ))}
+                            </div>
+                            </div>
                     </div>
                 </div>
             </Layout>

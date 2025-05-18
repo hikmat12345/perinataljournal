@@ -8,6 +8,101 @@ import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
 
 export default function page() {
+      const editorialPolicies = [
+    {
+      id: "Mailing Address",
+      title: "Mailing Address",
+      content:
+        (
+            <>
+                Perinatal Journal, Perinatal Medicine Foundation
+                <br/>
+                Phone: +90 542 442 87 36
+                <br/>
+                <a
+                href="mailto:office@perinatalmedicine.org"
+                className="text-[#0B5486] text-[14px] font-normal hover:underline"
+                >
+                Send e-mail
+                </a>
+            </>
+        )    
+    },
+    {
+      id: "Principal Contact",
+      title: "Principal Contact",
+      content: (
+        <>
+          Prof. Dr. Cihat Şen, Editor- in-Chief
+          <br/>
+            <a
+            href="mailto:office@perinatalmedicine.org"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+            >
+            Send e-mail
+            </a>
+        </>
+      ),
+    },
+    {
+      id: "Publisher",
+      title: "Publisher",
+      content: (
+        <>
+          Perinatal Medicine Foundation
+          <br/>
+            Phone: +90 542 442 87 36
+            <br/>
+            office@perinatalmedicine.org
+            <br/>
+            <a
+            href="mailto:office@perinatalmedicine.org"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+            >
+            Send e-mail
+            </a>
+        </>
+      ),
+    },
+    {
+      id: "Advertising Contact",
+      title: "Advertising Contact",
+      content: (
+        <>
+          Yasemin Guzel (Mrs.)
+          <br/>
+            Perinatal Medicine Foundation
+            <br/>
+            Phone: +90 542 442 87 36
+            <br/>
+            <a
+            href="mailto:office@perinatalmedicine.org"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+            >
+            Send e-mail
+            </a>
+        </>
+      ),
+    },
+    {
+      id: "Publication Service",
+      title: "Publication Service",
+      content: (
+        <>
+          Cetus Publishing
+          <br/>
+            info@perinatalmedicine.org
+            <br/>
+            <a
+            href="mailto:info@perinatalmedicine.org"
+            className="text-[#0B5486] text-[14px] font-normal hover:underline"
+            >
+            Send e-mail
+            </a>
+        </>
+      ),
+    }
+  ];
     return (
         <div>
             <Layout
@@ -109,92 +204,42 @@ export default function page() {
                 }
             >
                 <div className='w-full h-20 flex'>
-                    <div className="home-body-text w-[70%] p-3 ">
-                        <strong>About Perinatal Journal</strong><br />
-                        <ul>
-                            <li><a href="#description">Description</a></li>
-                            <li><a href="#audience">Audience</a></li>
+                    <div className="home-body-text w-[100%] px-3 ">
+                        <div className="max-w-4xl mx-auto">
+                            <h1 className="text-[24px] font-bold leading-[40px] text-[#0B5486] not-italic">
+                            Publication Ethics
+                            </h1>
+                            <ul className="list-disc list-inside mb-10 space-y-2">
+                                {editorialPolicies.map((policy) => (
+                                <li key={policy.id}>
+                                    <a
+                                    href={`#${policy.id}`}
+                                    className="text-blue-600 hover:underline"
+                                    >
+                                    {policy.title}
+                                    </a>
+                                </li>
+                                ))}
+                            </ul>
 
-                            <li><a href="#abstracted-indexed">Abstracted & Indexed</a></li>
-                            <li><a href="#editorial-board">Editorial Board</a></li>
-                            <li><a href="#publication-history">Publication History</a></li>
-                            <li><a href="#journal-abbreviation">Journal Abbreviation</a></li>
-                            <li><a href="#supplements">Supplements</a></li>
-                            <li><a href="#journal-sponsorship">Journal Sponsorship</a></li>
-                            <li><a href="#impressum">Impressum</a></li>
-                            <li><a href="#correspondence">Correspondence</a></li>
-                        </ul>
-                        <br />
-                        <div>
-                            <strong>Description</strong><br />
-
-                            <p>
-                                Perinatal Journal is an online open access, peer-reviewed scientific journal (e-ISSN: 1305-3124). The journal is the official publication of <a href="http://www.perinatal.org.tr" target="_blank">Perinatal Medicine Foundation</a>. It is published three times a year in April, August and December. The publication language of the journal is English.
-                            </p>
-                            <br />
-                            <strong>Audience</strong><br />
-                            <p>
-                                Perinatal Journal can be read by perinatal medicine experts, fetal medicine experts, obstetricians, gynecologists, radiologists, pediatricians, sonographers, midwives, radiographers, and scientific members of other related areas, that mainly includes original clinical and experimental research articles, case reports, reviews, technical notes and letters to the editor.
-                            </p>
-                            <br />
-                            <strong>Abstracted & Indexed</strong><br />
-                            <p>
-                                Perinatal Journal is currently indexed in DOAJ (Directory of Open Access Journals) and Google Scholar, EBSCOhost, EBSCO (Academic Search Complete), TÜBİTAK ULAKBİM TR Index Health Sciences Database and SCOPUS
-                            </p>
-                            <br />
-                            <strong>Editorial Board</strong><br />
-                            <p>
-                                The details of Editorial Team and Advisory Board members are available on <a href="https://perinataljournal.com/Info/editorial-board">Editorial Board page</a>.
-                            </p>
-                            <br />
-                            <strong>Publication History</strong><br />
-                            <p>
-                                Perinatal Journal (2005-present)<br />
-                                Perinatoloji Dergisi (1993-2004)
-                            </p>
-                            <br />
-                            <strong>Journal Abbreviation</strong><br />
-                            <p>
-                                Perinat J
-                            </p>
-                            <br />
-                            <strong>Supplements</strong><br />
-
-                            <p>
-                                Perinatal Journal can publish peer-reviewed supplementary issues to the main volume. Content will be in line with journal scope and may include original articles, reviews, proceedings, meeting abstracts and practice guidelines.
-                            </p>
-                            <br />
-                            <strong>Journal Sponsorship</strong><br />
-                            <p>
-                                Perinatal Journal is sponsored by Perinatal Medicine Foundation which is an internationally recognized, non-profit, scientific institution.
-                            </p>
-                            <br />
-                            <strong>Impressum</strong><br />
-                            <p>
-                                Ownership & Publisher: Perinatal Medicine Foundation<br />
-                                Managing Editor: Murat Yayla<br />
-                                Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367 Taksim, Istanbul, Turkey&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
-                                Advisor for Scientific Publishing: Akın Usta<br />
-                                Publishing Coordinator: Rumeysa Uslu<br />
-
-                                Language Editor: Fikret Yeşilyurt<br />
-                                Technical Staff: Ali Koz<br />
-                                Publishing service for  Perintal Journal are provided by <a href='mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal'>
-                                    CETUS
-                                </a>
-                            </p>
-                            <br />
-                            <strong>Correspondence</strong><br />
-                            <p>
-                                Perinatal Journal, Perinatal Medicine Foundation<br />
-                                Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70, Bakırköy, Istanbul, Turkey<br />
-                                Phone: +90 542 442 87 b36
-                            </p>
-                            <a href='mailto:info@perinataljournal.com?subject=Perinatal%20Journal'>
-                                <strong>Send e-mail</strong>
-                            </a>
-
-                        </div>
+                            <div className="">
+                                {editorialPolicies.map((policy) => (
+                                <section
+                                    key={policy.id}
+                                    id={policy.id}
+                                    className="scroll-mt-24"
+                                >
+                                    <h2 className="text-[14px] font-bold leading-[20px] text-[#333333]">
+                                    {policy.title}
+                                    </h2>
+                                    <p className="text-[14px] font-normal leading-[20px] text-[#333333]">
+                                    {policy.content}
+                                    </p>
+                                    <br />
+                                </section>
+                                ))}
+                            </div>
+                            </div>
                     </div>
                 </div>
             </Layout>
