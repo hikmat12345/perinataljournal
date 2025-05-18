@@ -1,192 +1,527 @@
-import Layout from '@/components/ui/Layout/layout'
-import ModuleBox from '@/components/ui/modulebox/modulebox'
-import Link from 'next/link'
-import React from 'react'
+import Layout from "@/components/ui/Layout/layout";
+import ModuleBox from "@/components/ui/modulebox/modulebox";
+import Link from "next/link";
+import React from "react";
 import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
+import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
+import Image from "next/image";
 
 export default function page() {
-    return (
-        <div>
-            <Layout
-                sidebar={
-                    <div>
-                        <ModuleBox
-                            title="Archive"
-                            icon={<FaThLarge />}
-                        >
-                            <ul>
-                                <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
-                                <li><a href="/Info/editorial-board">Editorial Board</a></li>
-                                <li><a href="/Info/author-guidelines">Author Guidelines</a></li>
-                                <li><a href="/Info/article-processing-charge">Article Processing Charge</a></li>
-                                <li><a href="/Info/editorial-policies">Editorial Policies</a></li>
-                                <li><a href="/Info/publication-ethics">Publication Ethics</a></li>
-                                <li><a href="/Info/contact-us">Contact Us</a></li>
-                            </ul>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Be a Member"
-                            icon={<FaUserAlt />}
-                        >
-                            <p>You can be a member of the journal and log in quickly. Therefore you can enjoy and benefit with scientific papers, news, opinions, editorials, guidelines and all scientific media.</p>
-                            <Link href="/User/SignIn" className='flex justify-end mt-2'>
-                                <button className="btn btn-success text-right">Be a Member</button>
-                            </Link>
-
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Links"
-                            icon={<GrLink />}
-                        >
-                            <ul>
-                                <li><a href="https://www.perinatalmedicine.org" target="_blank"><i className="icon-share"></i> Perinatal Medicine Foundation</a></li>
-                                <li><a href="https://meet.perinatalmedicine.org/" target="_blank"><i className="icon-share"></i> World School of Perinatal Medicine</a></li>
-                                <li><a href="http://www.worldperinatal.org" target="_blank"><i className="icon-share"></i> World Association of Perinatal Medicine</a></li>
-                            </ul>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Search"
-                            icon={<FaSearch />}
-                        >
-                            <form method="get" action="/Archive/Search/">
-                                <p>You can search published articles.</p>
-                                <select className="input-block-level" id="s" name="s">
-                                    <option value="All">All fields</option>
-                                    <option value="InDoi">DOI</option>
-                                    <option value="InTitle">Article title</option>
-                                    <option value="InAuthors">Author name</option>
-                                    <option value="InAbstract">Abstract</option>
-                                    <option value="InBody">Content</option>
-                                </select>
-                                <input type="text" className="input-block-level" name="q" id="q" />
-                                <input type="submit" className="btn btn-success" value="Search" />
-                            </form>
-                            <div className="clearfix"></div>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Archive"
-                            icon={<FaThLarge />}
-                        >
-                            <ul>
-                                <li><a href="/Archive/Latest/">Current Issue</a></li>
-                                <li><a href="/Archive/EarlyView/">Early View</a></li>
-                                <li><a href="/Archive/Issue/">All Issues</a></li>
-                            </ul>
-                        </ModuleBox>
-                        <ModuleBox
-                        title="Submission"
-                        icon={<FaShareFromSquare />}
-                        >
-                        <ul>
-                            <li><a href="/Submission/">New Submission</a></li>
-                            <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
-                            <li><a href="/Info/author-guidelines">Author Guidelines</a></li>
-                        </ul>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Journal Information"
-                            icon={<i className="icon-info-sign"></i>}
-                        >
-                            <p><strong>Online ISSN</strong><br />1305-3124</p>
-                            <p><strong>Established</strong><br />1993</p>
-                            <p><strong>Editors-in-Chief</strong><br />&ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe</p>
-                            <p><strong>Editors</strong><br />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
-                            <p><strong>Managing Editors</strong><br />Murat Yayla</p>
-                            <p><strong>Statistics Editor</strong><br />Resul Arısoy</p>
-                            <div className="text-center" style={{ margin: '15px 0' }}>
-                                <img src="/open-access.png" alt="Open Access" />
-                                <img src="/doaj.jpg" alt="DOAJ" />
-                                <img src="/google-scholar.jpg" alt="Google Scholar" />
-                                <img src="/ebsco.jpg" alt="EBSCO" />
-                                <img src="/ulakbim.jpg" alt="Ulakbim" />
-                                <img src="/scopus-logo.jpg" alt="Scopus" />
-                            </div>
-                        </ModuleBox>
-                    </div>
-                }
+  const orchidIcon = "/images/orcid.logo.icon.svg";
+  const boardMembers = [
+    {
+      name: "Reuven Achiron",
+      department:
+        "Department of Obstetrics & Gynecology, Chaim Sheba Medical Center Tel-Hashomer, Tel-Aviv, Israel",
+    },
+    {
+      name: "Ozan Batioglu",
+      department:
+        "Fetal Care Center, Maternal Fetal Medicine, Obstetrics, Gynecology&Reproductive Sciences, Yale University School of Medicine, Newhaven, CT, USA",
+    },
+    {
+      name: "Christoph Berg",
+      department:
+        "Department of Obstetrics & Gynecology and Fetal Surgery, University of Bonn, Bonn, Germany",
+    },
+    {
+      name: "Ana Bianchi",
+      department:
+        "Department of Fetal Medicine, University of Montevideo, Montevideo, Uruguay",
+    },
+    {
+      name: "Gurur Bilici Demirkol",
+      department:
+        "Division of Paediatric Cardiology, McGovern Medical School UTHealth, Houston, TX, USA",
+    },
+    {
+      name: "Robert Brawura",
+      department:
+        "Department of Obstetrics & Gynecology, Medical University of Warsaw, Warsaw, Poland",
+    },
+    {
+      name: "Petya Chateeva",
+      department:
+        "Department of Fetal Medicine, Dr. Shterev Hospital, Sofia, Bulgaria",
+    },
+    {
+      name: "Giuseppe Cali",
+      department:
+        "Department of Obstetrics & Gynecology, Azienda Ospedaliera Villa Sofia Cervello, Palermo, Italy",
+    },
+    {
+      name: "Julene Carvalho",
+      department:
+        "Department of Paediatric Cardiology, Royal Brompton Hospital, Imperial College, London, UK",
+    },
+    {
+      name: "Frank A. Chervenak",
+      department:
+        "Department of Obstetrics & Gynecology, Lenox Hill Hospital and Zucker School of Medicine at Hofstra/Northwell, New York, NY, USA",
+    },
+    {
+      name: "Ana Danova",
+      department:
+        "University Clinic of Obstetrics & Gynecology, Medical Faculty, Skopje, North Macedonia",
+    },
+    {
+      name: "Valentino De Robertis",
+      department: "Fetal Medicine Unit, Di Venere Hospital, Bari, Italy",
+    },
+    {
+      name: "Jan Deprest",
+      department: "Department of Obstetrics & Gynecology, UZ Leuven, Belgium",
+    },
+    {
+      name: "Alaa Ebrashy",
+      department:
+        "Fetal Medicine Unit, Department of Obstetrics & Gynecology, Faculty of Medicine, Cairo University, Cairo, Egypt",
+    },
+    {
+      name: "Gokhan Ozyurtkan",
+      department:
+        "Department of Obstetrics & Gynecology, Faculty of Medicine, Duzce University, Duzce, Turkey",
+    },
+    {
+      name: "Elena Greco",
+      department:
+        "Department of Obstetrics & Gynecology, Fetal Medicine Unit, Royal London Hospital, London, UK",
+    },
+    {
+      name: "Nelly Jakovljevic",
+      department:
+        "Department of Neonatology, Obstetrics & Gynecology, Medical University of Sofia, Sofia, Bulgaria",
+    },
+    {
+      name: "K. Oliver Kagan",
+      department:
+        "Department of Prenatal Medicine, University Women’s Hospital, Ulm, Germany",
+    },
+    {
+      name: "Asma Khalil",
+      department: "Fetal Medicine Unit, Saint George’s Hospital, London, UK",
+    },
+    {
+      name: "Satohsi Kusuda",
+      department: "Department of Pediatrics, Kyorin University, Tokyo, Japan",
+    },
+    {
+      name: "Ewelina Litwinowicz",
+      department:
+        "Department of Pathology & Gynecology, Polish Mother’s Memorial Hospital Research Institute, Lodz, Poland",
+    },
+    {
+      name: "Qiujuan Pei",
+      department:
+        "Department of Obstetrics & Gynecology, Peking University People’s Hospital, Beijing, China",
+    },
+    {
+      name: "Giuseppe Rizzo",
+      department:
+        "Division of Maternal-Fetal Medicine, Ospedale Cristo Re Rome, University of Roma Tor Vergata, Rome, Italy",
+    },
+    {
+      name: "Ilian Timor-Tritsch",
+      department:
+        "Division of Maternal-Fetal Medicine, Department of Obstetrics & Gynecology, New York University SOM, New York, NY, USA",
+    },
+    {
+      name: "Şifa Turan",
+      department:
+        "Department of Obstetrics & Gynecology, Ege University School of Medicine, University of Health Sciences, Istanbul, Turkey",
+    },
+    {
+      name: "Bohdan Yogi",
+      department:
+        "Department of Obstetrics & Gynecology, University of Medicine and Dentistry of New Jersey, USA",
+    },
+    {
+      name: "Jun Yoshimatsu",
+      department:
+        "Department of Perinatology & Obstetrics, National Cerebral and Cardiovascular Center, Osaka, Japan",
+    },
+  ];
+  return (
+    <div>
+      <Layout
+        sidebar={
+          <div>
+            <ModuleBox title="Archive" icon={<FaThLarge />}>
+              <ul>
+                <li>
+                  <a href="/Info/about-perinatal-journal">
+                    About Perinatal Journal
+                  </a>
+                </li>
+                <li>
+                  <a href="/Info/editorial-board">Editorial Board</a>
+                </li>
+                <li>
+                  <a href="/Info/author-guidelines">Author Guidelines</a>
+                </li>
+                <li>
+                  <a href="/Info/article-processing-charge">
+                    Article Processing Charge
+                  </a>
+                </li>
+                <li>
+                  <a href="/Info/editorial-policies">Editorial Policies</a>
+                </li>
+                <li>
+                  <a href="/Info/publication-ethics">Publication Ethics</a>
+                </li>
+                <li>
+                  <a href="/Info/contact-us">Contact Us</a>
+                </li>
+              </ul>
+            </ModuleBox>
+            <ModuleBox title="Be a Member" icon={<FaUserAlt />}>
+              <p>
+                You can be a member of the journal and log in quickly. Therefore
+                you can enjoy and benefit with scientific papers, news,
+                opinions, editorials, guidelines and all scientific media.
+              </p>
+              <Link href="/User/SignIn" className="flex justify-end mt-2">
+                <button className="btn btn-success text-right">
+                  Be a Member
+                </button>
+              </Link>
+            </ModuleBox>
+            <ModuleBox title="Links" icon={<GrLink />}>
+              <ul>
+                <li>
+                  <a href="https://www.perinatalmedicine.org" target="_blank">
+                    <i className="icon-share"></i> Perinatal Medicine Foundation
+                  </a>
+                </li>
+                <li>
+                  <a href="https://meet.perinatalmedicine.org/" target="_blank">
+                    <i className="icon-share"></i> World School of Perinatal
+                    Medicine
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.worldperinatal.org" target="_blank">
+                    <i className="icon-share"></i> World Association of
+                    Perinatal Medicine
+                  </a>
+                </li>
+              </ul>
+            </ModuleBox>
+            <ModuleBox title="Search" icon={<FaSearch />}>
+              <form method="get" action="/Archive/Search/">
+                <p>You can search published articles.</p>
+                <select className="input-block-level" id="s" name="s">
+                  <option value="All">All fields</option>
+                  <option value="InDoi">DOI</option>
+                  <option value="InTitle">Article title</option>
+                  <option value="InAuthors">Author name</option>
+                  <option value="InAbstract">Abstract</option>
+                  <option value="InBody">Content</option>
+                </select>
+                <input
+                  type="text"
+                  className="input-block-level"
+                  name="q"
+                  id="q"
+                />
+                <input
+                  type="submit"
+                  className="btn btn-success"
+                  value="Search"
+                />
+              </form>
+              <div className="clearfix"></div>
+            </ModuleBox>
+            <ModuleBox title="Archive" icon={<FaThLarge />}>
+              <ul>
+                <li>
+                  <a href="/Archive/Latest/">Current Issue</a>
+                </li>
+                <li>
+                  <a href="/Archive/EarlyView/">Early View</a>
+                </li>
+                <li>
+                  <a href="/Archive/Issue/">All Issues</a>
+                </li>
+              </ul>
+            </ModuleBox>
+            <ModuleBox title="Submission" icon={<FaShareFromSquare />}>
+              <ul>
+                <li>
+                  <a href="/Submission/">New Submission</a>
+                </li>
+                <li>
+                  <a href="/Info/about-perinatal-journal">
+                    About Perinatal Journal
+                  </a>
+                </li>
+                <li>
+                  <a href="/Info/author-guidelines">Author Guidelines</a>
+                </li>
+              </ul>
+            </ModuleBox>
+            <ModuleBox
+              title="Journal Information"
+              icon={<RiInformation2Fill />}
             >
-                <div className='w-full h-20 flex'>
-                    <div className="home-body-text w-[70%] p-3 ">
-                        <div className="info-container">
-                            <h1>Editorial Board</h1>
+              <p>
+                <strong>Online ISSN</strong>
+                <br />
+                1305-3124
+              </p>
+              <p>
+                <strong>Established</strong>
+                <br />
+                1993
+              </p>
+              <p>
+                <strong>Editors-in-Chief</strong>
+                <br />
+                &ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe
+              </p>
+              <p>
+                <strong>Editors</strong>
+                <br />
+                Cecilia Villalain, Daniel Rolnik, M. Mar Gil
+              </p>
+              <p>
+                <strong>Managing Editors</strong>
+                <br />
+                Murat Yayla
+              </p>
+              <p>
+                <strong>Statistics Editor</strong>
+                <br />
+                Resul Arısoy
+              </p>
+              <div className="text-center" style={{ margin: "15px 0" }}>
+                <img src="/open-access.png" alt="Open Access" />
+                <img src="/doaj.jpg" alt="DOAJ" />
+                <img src="/google-scholar.jpg" alt="Google Scholar" />
+                <img src="/ebsco.jpg" alt="EBSCO" />
+                <img src="/ulakbim.jpg" alt="Ulakbim" />
+                <img src="/scopus-logo.jpg" alt="Scopus" />
+              </div>
+            </ModuleBox>
+          </div>
+        }
+      >
+        <div className="w-full h-20 flex">
+          <div className="home-body-text w-[100%] p-3 ">
+            <div className="max-w-4xl mx-auto px-4 py-8">
+              <h1 className="text-[24px] font-bold mb-6">Editorial Board</h1>
 
-                            <ul>
-                                <li><a href="#editors-in-chief">Editors-in-Chief</a></li>
-                                <li><a href="#editors">Editors</a></li>
-                                <li><a href="#managing-editors">Managing Editors</a></li>
-                                <li><a href="#statistics-editor">Statistics Editor</a></li>
-                                <li><a href="#editorial-board">Editorial Board</a></li>
-                            </ul>
+              <ul className="list-disc ml-6 text-blue-700 mb-8">
+                <li>
+                  <a href="#editors-in-chief">Editors-in-Chief</a>
+                </li>
+                <li>
+                  <a href="#editors">Editors</a>
+                </li>
+                <li>
+                  <a href="#managing-editor">Managing Editor</a>
+                </li>
+                <li>
+                  <a href="#statistics-editor">Statistics Editor</a>
+                </li>
+                <li>
+                  <a href="#editorial-board">Editorial Board</a>
+                </li>
+              </ul>
 
-                            <section id="editors-in-chief">
-                                <h2>Editors-in-Chief</h2>
-                                <p><strong>Cihat Şen</strong>, MD <a href="https://orcid.org/0000-0002-2822-6840" target="_blank"><img src="/Content/img/orchid-id.png" alt="ORCID" /></a><br />
-                                    President, Perinatal Medicine Foundation & World Association of Perinatal Medicine<br />
-                                    Perinatal Medicine Unit, Memorial Bahçelievler Hospital, Istanbul, Türkiye
-                                </p>
-                                <p><strong>Nicola Volpe</strong>, MD, PhD <a href="https://orcid.org/0000-0003-4209-5602" target="_blank"><img src="/Content/img/orchid-id.png" alt="ORCID" /></a><br />
-                                    Obstetrics & Gynecology Unit, Department of Medicine and Surgery, University of Parma<br />
-                                    Azienda Ospedaliero-Universitaria Ospedale Maggiore di Parma, Parma, Italy
-                                </p>
-                            </section>
+              {/* Editors-in-Chief */}
+              <section id="editors-in-chief" className="mb-8">
+                <h2 className="text-[14px] font-semibold underline mb-4">
+                  Editors-in-Chief
+                </h2>
 
-                            <section id="editors">
-                                <h2>Editors</h2>
-                                <p><strong>Cecilia Villalain</strong>, MD, PhD <a href="https://orcid.org/0000-0002-9456-4100" target="_blank"><img src="/Content/img/orchid-id.png" alt="ORCID" /></a><br />
-                                    Department of Obstetrics & Gynecology, 12 de Octubre University Hospital, Madrid, Spain
-                                </p>
-                                <p><strong>Daniel Rolnik</strong>, MD, PhD <a href="https://orcid.org/0000-0002-2263-3592" target="_blank"><img src="/Content/img/orchid-id.png" alt="ORCID" /></a><br />
-                                    Department of Obstetrics & Gynaecology, Monash University, Melbourne, Australia
-                                </p>
-                                <p><strong>Mar M. Gil</strong>, MD <a href="https://orcid.org/0000-0002-9993-5249" target="_blank"><img src="/Content/img/orchid-id.png" alt="ORCID" /></a><br />
-                                    Department of Obstetrics & Gynecology, Hospital Universitario de Torrejón, Madrid, Spain<br />
-                                    School of Health Sciences, Universidad Francisco de Vitoria, Madrid, Spain
-                                </p>
-                            </section>
-
-                            <section id="managing-editors">
-                                <h2>Managing Editor</h2>
-                                <p><strong>Murat Yayla</strong>, MD<br />
-                                    Perinatal Medicine Unit, Acıbadem International Hospital, Istanbul, Türkiye
-                                </p>
-                            </section>
-
-                            <section id="statistics-editor">
-                                <h2>Statistics Editor</h2>
-                                <p><strong>Resul Arısoy</strong>, MD <a href="https://orcid.org/0000-0003-1359-1674" target="_blank"><img src="/Content/img/orchid-id.png" alt="ORCID" /></a><br />
-                                    Perinatal Medicine Unit, Memorial Ataşehir Hospital, Istanbul, Türkiye
-                                </p>
-                            </section>
-
-                            <section id="editorial-board">
-                                <h2>Editorial Board</h2>
-                                {/* Add your table here or ideally map it from JSON for better management */}
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <strong>Reuven Achiron</strong><br />
-                                                Department of Obstetrics & Gynecology, Chaim Sheba Medical Center Tel-Hashomer, Tel-Aviv, Israel
-                                            </td>
-                                            <td>
-                                                <strong>Elena Greco</strong><br />
-                                                Department of Obstetrics & Gynecology, Fetal Medicine Unit, Royal London Hospital, London, UK
-                                            </td>
-                                        </tr>
-                                        {/* Repeat rows or make dynamic */}
-                                    </tbody>
-                                </table>
-                            </section>
-                        </div>
-                    </div>
+                <div className="mb-4">
+                  <div className="inline-flex items-center">
+                    <strong className="text-blue-700">Cihat Şen</strong>, MD{" "}
+                    <Link
+                      href="https://orcid.org/0000-0002-2822-6840"
+                      target="_blank"
+                    >
+                      <Image
+                        src={orchidIcon}
+                        alt="ORCID"
+                        width={16}
+                        height={16}
+                        className="inline ml-1"
+                      />
+                    </Link>
+                  </div>
+                  <div>
+                    President, Perinatal Medicine Foundation &amp; World
+                    Association of Perinatal Medicine
+                  </div>
+                  <div>
+                    Perinatal Medicine Unit, Memorial Bahçelievler Hospital,
+                    Istanbul, Türkiye
+                  </div>
                 </div>
-            </Layout>
 
+                <div>
+                  <strong className="text-blue-700">Nicola Volpe</strong>, MD,
+                  PhD{" "}
+                  <Link
+                    href="https://orcid.org/0000-0003-4209-5602"
+                    target="_blank"
+                  >
+                    <Image
+                      src={orchidIcon}
+                      alt="ORCID"
+                      width={16}
+                      height={16}
+                      className="inline ml-1"
+                    />
+                  </Link>
+                  <div>
+                    Obstetrics &amp; Gynecology Unit, Department of Medicine and
+                    Surgery, University of Parma
+                  </div>
+                  <div>
+                    Azienda Ospedaliero-Universitaria Ospedale Maggiore di
+                    Parma, Parma, Italy
+                  </div>
+                </div>
+              </section>
+
+              {/* Editors */}
+              <section id="editors" className="mb-8">
+                <h2 className="text-[14px] font-semibold underline mb-4">
+                  Editors
+                </h2>
+
+                <div className="mb-4">
+                  <strong className="text-blue-700">Cecilia Villalain</strong>,
+                  MD, PhD{" "}
+                  <Link
+                    href="https://orcid.org/0000-0002-9456-4100"
+                    target="_blank"
+                  >
+                    <Image
+                      src={orchidIcon}
+                      alt="ORCID"
+                      width={16}
+                      height={16}
+                      className="inline ml-1"
+                    />
+                  </Link>
+                  <div>
+                    Department of Obstetrics &amp; Gynecology, 12 de Octubre
+                    University Hospital, Madrid, Spain
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <strong className="text-blue-700">Daniel Rolnik</strong>, MD,
+                  PhD{" "}
+                  <Link
+                    href="https://orcid.org/0000-0002-2263-3592"
+                    target="_blank"
+                  >
+                    <Image
+                      src={orchidIcon}
+                      alt="ORCID"
+                      width={16}
+                      height={16}
+                      className="inline ml-1"
+                    />
+                  </Link>
+                  <div>
+                    Department of Obstetrics &amp; Gynaecology, Monash
+                    University, Melbourne, Australia
+                  </div>
+                </div>
+
+                <div>
+                  <strong className="text-blue-700">Mar M. Gil</strong>, MD{" "}
+                  <Link
+                    href="https://orcid.org/0000-0002-9993-5249"
+                    target="_blank"
+                  >
+                    <Image
+                      src={orchidIcon}
+                      alt="ORCID"
+                      width={16}
+                      height={16}
+                      className="inline ml-1"
+                    />
+                  </Link>
+                  <div>
+                    Department of Obstetrics &amp; Gynecology, Hospital
+                    Universitario de Torrejón, Madrid, Spain; School of Health
+                    Sciences, Universidad Francisco de Vitoria, Madrid, Spain
+                  </div>
+                </div>
+              </section>
+
+              {/* Managing Editor */}
+              <section id="managing-editor" className="mb-8">
+                <h2 className="text-[14px] font-semibold underline mb-4">
+                  Managing Editor
+                </h2>
+                <div>
+                  <strong className="text-blue-700">Murat Yayla</strong>, MD
+                  <div>
+                    Perinatal Medicine Unit, Acıbadem International Hospital,
+                    Istanbul, Türkiye
+                  </div>
+                </div>
+              </section>
+
+              {/* Statistics Editor */}
+              <section id="statistics-editor" className="mb-8">
+                <h2 className="text-[14px] font-semibold underline mb-4">
+                  Statistics Editor
+                </h2>
+                <div>
+                  <strong className="text-blue-700">Resul Arısoy</strong>, MD{" "}
+                  <Link
+                    href="https://orcid.org/0000-0003-1359-1674"
+                    target="_blank"
+                  >
+                    <Image
+                      src={orchidIcon}
+                      alt="ORCID"
+                      width={16}
+                      height={16}
+                      className="inline ml-1"
+                    />
+                  </Link>
+                  <div>
+                    Perinatal Medicine Unit, Memorial Ataşehir Hospital,
+                    Istanbul, Türkiye
+                  </div>
+                </div>
+              </section>
+
+              {/* Editorial Board Full */}
+              <div className="pr-50">
+                <h2 className="text-[14px] font-semibold underline mb-4">
+                  Editorial Board
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2">
+                  {boardMembers.map((member, index) => (
+                    <div key={index}>
+                      <h2 className="text-[rgb(11,84,134)] font-bold text-[14px]">
+                        {member.name}
+                      </h2>
+                      <p className="text-[rgb(11,84,134)] font-normal text-[14px] mt-1">
+                        {member.department}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    )
+      </Layout>
+    </div>
+  );
 }
-
-
-

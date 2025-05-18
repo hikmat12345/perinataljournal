@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
 import React from 'react'
 import { FaShareFromSquare } from "react-icons/fa6";
+import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
 
 export default function page() {
@@ -87,7 +88,7 @@ export default function page() {
                             </ModuleBox>
                         <ModuleBox
                             title="Journal Information"
-                            icon={<i className="icon-info-sign"></i>}
+                            icon={<RiInformation2Fill />}
                         >
                             <p><strong>Online ISSN</strong><br />1305-3124</p>
                             <p><strong>Established</strong><br />1993</p>
