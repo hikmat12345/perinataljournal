@@ -1,7 +1,11 @@
+"use client";
 import Image from "next/image";
 import { MdArticle, MdPictureAsPdf, MdArchive } from "react-icons/md";
 
 const IntroductionCard = () => {
+
+
+
   return (
     <div className="w-full rounded-md p-6 bg-gradient-to-b from-[#E1E7EA] to-white shadow">
       <div className="flex flex-col md:flex-row pb-4 gap-6 items-start">
@@ -35,19 +39,19 @@ const IntroductionCard = () => {
           {/* Buttons */}
           <div className="mt-6 flex flex-wrap gap-4">
             {/* Blue Button */}
-            <button className="flex items-center gap-2 px-4 py-1 rounded bg-[#53B9D7] hover:bg-[#3BA1C5] text-white text-[14px] font-normal leading-[20px] shadow transition">
+            <button
+              onClick={() => window.location.href = '/Archive/Issue/280'}
+              className="flex items-center gap-2 px-4 py-1 rounded bg-[#53B9D7] hover:bg-[#3BA1C5] text-white text-[14px] font-normal leading-[20px] shadow transition">
               <MdArticle size={18} />
               Show articles
             </button>
 
-            {/* Green Button */}
-            <button className="flex items-center gap-2 px-4 py-1 rounded bg-[#5EBD5E] hover:bg-[#449D44] text-white text-[14px] font-normal leading-[20px] shadow transition">
-              <MdPictureAsPdf size={18} />
-              Download Full Issue as PDF
-            </button>
+
 
             {/* Gray/White Button */}
-            <button className="flex items-center gap-2 px-4 py-1 rounded bg-gradient-to-r from-[#F3F3F3] to-[#DCDCDC] hover:from-[#E0E0E0] hover:to-[#C8C8C8] text-gray-800 text-[14px] font-normal leading-[20px] shadow border border-gray-300 transition">
+            <button
+              onClick={() => window.location.href = '/Archive/issue'}
+              className="flex items-center gap-2 px-4 py-1 rounded bg-gradient-to-r from-[#F3F3F3] to-[#DCDCDC] hover:from-[#E0E0E0] hover:to-[#C8C8C8] text-gray-800 text-[14px] font-normal leading-[20px] shadow border border-gray-300 transition">
               <MdArchive size={18} />
               Go to archive
             </button>

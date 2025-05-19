@@ -144,12 +144,12 @@ const page = ({ id }: any) => {
                             title="Journal Information"
                             icon={<i className="icon-info-sign"></i>}
                         >
-                            <p><strong>Online ISSN</strong> <div className="br" />1305-3124</p>
-                            <p><strong>Established</strong> <div className="br" />1993</p>
-                            <p><strong>Editors-in-Chief</strong> <div className="br" /> Cihat Şen,  Nicola Volpe</p>
-                            <p><strong>Editors</strong> <div className="br" />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
-                            <p><strong>Managing Editors</strong> <div className="br" />Murat Yayla</p>
-                            <p><strong>Statistics Editor</strong> <div className="br" />Resul Arısoy</p>
+                            <p><strong>Online ISSN</strong> <br className="br" /> 1305-3124</p>
+                            <p><strong>Established</strong> <br className="br" />1993</p>
+                            <p><strong>Editors-in-Chief</strong> <br className="br" /> Cihat Şen,  Nicola Volpe</p>
+                            <p><strong>Editors</strong> <br className="br" />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
+                            <p><strong>Managing Editors</strong> <br className="br" />Murat Yayla</p>
+                            <p><strong>Statistics Editor</strong> <br className="br" />Resul Arısoy</p>
                             <div className="text-center" style={{ margin: '15px 0' }}>
                                 <img src="/open-access.png" alt="Open Access" />
                                 <img src="/doaj.jpg" alt="DOAJ" />

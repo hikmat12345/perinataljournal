@@ -79,6 +79,7 @@ export default function Header() {
                   "Contact Us",
                 ].map((item, idx, arr) => (
                   <Link
+                    onClick={closeDropdowns}
                     key={idx}
                     href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
                     className={`block px-4 py-2 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
@@ -121,14 +122,10 @@ export default function Header() {
                     icon: <FaBook className="text-[#777777]" />,
                     label: "All Issues",
                     link: "Issue",
-                  },
-                  {
-                    icon: <FaSearch className="text-[#777777]" />,
-                    label: "Article Search",
-                    link: "Search",
-                  },
+                  }
                 ].map((item, idx, arr) => (
                   <Link
+                    onClick={closeDropdowns}
                     key={idx}
                     href={"/Archive/" + item.link.replaceAll(" ", "-").toLowerCase()}
                     className={`block px-4 py-2 hover:bg-gray-100 flex items-center text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""

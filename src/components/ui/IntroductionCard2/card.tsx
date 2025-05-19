@@ -13,10 +13,13 @@ const IntroductionCardSecond = () => {
           <h1 className="text-[32px] font-bold text-[rgb(0,87,156)]">
             Perinatal Journal
           </h1>
-          <h2 className="text-[18px] font-bold leading-[20px] text-[rgb(0,87,156)] mt-2">
+          <h2 className="text-[18px] pt-3 font-bold leading-[20px] text-[rgb(0,87,156)] mt-2">
             Volume 33, Issue-1, April 2025
           </h2>
-          <p className="mt-4 text-[14px] leading-[20px] font-normal text-[rgb(0,87,156)]">
+          <div className="journal-pages text-green-700 mt-3">
+            Pages: 1-61
+          </div>
+          <p className="mt-4 text-[12px] leading-[20px] font-normal text-black">
             Perinatal Journal is an international, online open access, peer-reviewed scientific journal (e-ISSN: 1305-3124). The journal is the official publication of Perinatal Medicine Foundation. It is published three times a year in April, August and December. The publication language of the journal is English.
           </p>
 

@@ -42,13 +42,16 @@ export default function Home({
               <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
               <li><a href="/Info/author-guidelines">Author Guidelines</a></li>
             </ul>
+            <div className="mt-4">
+              <i className="mt-5">Please ensure that all correspondence regarding articles is submitted as email attachments to info@perinataljournal.com</i>
+            </div>
           </ModuleBox>
           <ModuleBox
             title="Journal Information"
             icon={<RiInformation2Fill />}
           >
-            <p><strong>Online ISSN</strong> <div className="br" />1305-3124</p>
-            <p><strong>Established</strong> <div className="br" />1993</p>
+            <p><strong>Online ISSN</strong> <br className="br" />1305-3124</p>
+            <p><strong>Established</strong> <br className="br" />1993</p>
             <p><strong>Editors-in-Chief</strong> <div className="br" /> Cihat Şen,  Nicola Volpe</p>
             <p><strong>Editors</strong> <div className="br" />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
             <p><strong>Managing Editors</strong> <div className="br" />Murat Yayla</p>
