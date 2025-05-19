@@ -11,11 +11,7 @@ import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
 import IntroductionCard from '@/components/ui/IntroductionCard/card';
 
-export default function Home({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function page() {
   return (
     <>
       <div className='pb-8'>

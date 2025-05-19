@@ -2,7 +2,6 @@
 
 //TODO: Will look into this error thing later
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import Error from '../ui/error';
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -29,7 +28,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || <Error />;
+      return this.props.fallback || "Error occurred. Please try again later.";
     }
 
     return this.props.children;
