@@ -6,6 +6,15 @@ import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare, FaChevronRight } from "r
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Perinatal Journal - Contact Us',
+    description: 'Perinatal Journal - Contact Us',
+    icons: {
+        icon: '/images/logo-en-US.png',
+    },
+};
 
 export default function page() {
     const editorialPolicies = [

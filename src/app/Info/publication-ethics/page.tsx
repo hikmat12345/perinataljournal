@@ -1,12 +1,19 @@
 import Layout from '@/components/ui/Layout/layout'
 import ModuleBox from '@/components/ui/modulebox/modulebox'
+import { Metadata } from 'next';
 import Link from 'next/link'
 import React from 'react'
 import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare, FaChevronRight } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
-import { GrLink } from "react-icons/gr";
 
+export const metadata: Metadata = {
+  title: 'Perinatal Journal - Publication Ethics',
+  description: 'Perinatal Journal - Publication Ethics',
+  icons: {
+    icon: '/images/logo-en-US.png',
+  },
+};
 export default function page() {
   const editorialPolicies = [
     {

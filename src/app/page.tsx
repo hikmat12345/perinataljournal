@@ -10,8 +10,18 @@ import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
 import IntroductionCard from '@/components/ui/IntroductionCard/card';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Perinatal Journal - Home',
+  description: 'Perinatal Journal - Home',
+  icons: {
+    icon: '/images/logo-en-US.png',
+  },
+};
 
 export default function page() {
+
   return (
     <>
       <div className='pb-8'>

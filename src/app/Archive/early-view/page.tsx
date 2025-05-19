@@ -5,7 +5,15 @@ import React from 'react'
 import ArchiveTree from '@/components/ui/treatview/treatview';
 import IntroductionCardSecond from '@/components/ui/IntroductionCard2/card';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+    title: 'Perinatal Journal - Early View',
+    description: 'Perinatal Journal - Early View',
+    icons: {
+        icon: '/images/logo-en-US.png',
+    },
+};
 const page = ({ id }: any) => {
 
     const articles = [

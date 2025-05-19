@@ -6,7 +6,15 @@ import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare, FaChevronRight } from "r
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: 'Perinatal Journal - Author Guidelines',
+  description: 'Perinatal Journal - Author Guidelines',
+  icons: {
+    icon: '/images/logo-en-US.png',
+  },
+};
 export default function page() {
   return (
     <div>

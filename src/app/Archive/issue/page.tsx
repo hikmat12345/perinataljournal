@@ -3,7 +3,15 @@ import Layout from '@/components/ui/Layout/layout';
 import ModuleBox from '@/components/ui/modulebox/modulebox';
 import ArchiveTree from '@/components/ui/treatview/treatview';
 import { RiInformation2Fill } from 'react-icons/ri';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+    title: 'Perinatal Journal - Archives',
+    description: 'Perinatal Journal - Archives',
+    icons: {
+        icon: '/images/logo-en-US.png',
+    },
+};
 const page = () => {
 
     const FileTextIcon = () => (

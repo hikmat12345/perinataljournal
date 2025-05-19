@@ -6,7 +6,15 @@ import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: 'Perinatal Journal - Article Processing Charge',
+    description: 'Perinatal Journal - Article Processing Charge',
+    icons: {
+        icon: '/images/logo-en-US.png',
+    },
+};
 export default function page() {
     return (
         <div>
