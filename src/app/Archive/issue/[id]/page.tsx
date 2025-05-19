@@ -1,21 +1,139 @@
+// import {  } from 'next/navigation';
 import Layout from '@/components/ui/Layout/layout'
 import ModuleBox from '@/components/ui/modulebox/modulebox'
-import Link from 'next/link'
 import React from 'react'
 import ArchiveTree from '@/components/ui/treatview/treatview';
-import { Metadata, ResolvingMetadata } from 'next';
+import IntroductionCardSecond from '@/components/ui/IntroductionCard2/card';
+import Link from 'next/link';
 
-type Props = {
-    params: { id: string; name: string };
-};
+const page = ({ id }: any) => {
 
-export async function page({ params }: Props, parent: ResolvingMetadata) {
-    // Extract id from params
-    const { id, name } = params;
+
+    const articles = [
+        {
+            id: '20250331001',
+            pages: '1-4',
+            title: 'Post-immunization evaluation in infants of Hepatitis B carrier mothers',
+            authors: 'Sema Tanriverdi, Özge Özalp Berkarda, Esra Arun Özer',
+            type: 'Original Article',
+            publicationDate: 'December 29, 2024',
+            doi: '10.59215/prn.25.0331001'
+        },
+        {
+            id: '20250331002',
+            pages: '5-10',
+            title: 'Assessment of Xenopsin Related Peptide-1 levels in pregnant women with gestational diabetes mellitus',
+            authors: 'Emre Ağdemir, Melda Kuyucu, Mehtap Yücedağ, Kamile Kübra Ağdemir',
+            type: 'Original Article',
+            publicationDate: 'January 10, 2025',
+            doi: '10.59215/prn.25.0331002'
+        },
+        {
+            id: '20250331003',
+            pages: '11-17',
+            title: 'HOXA1 Expression in preeclampsia: immunohistochemical and bioinformatic analyses',
+            authors: 'Zeynep Türe, Ayşenur Sevinç Akdeniz, Gül Ebru Aydeniz Acar, Fırat Aşır, Tuğcan Korak, Serhat Ege',
+            type: 'Original Article',
+            publicationDate: 'January 14, 2025',
+            doi: '10.59215/prn.25.0331003'
+        },
+        {
+            id: '20250331004',
+            pages: '18-24',
+            title: 'Reducing the rate of permanent obstetric brachial plexus palsy: Impact of a simulation training program in shoulder dystocia after five years of training',
+            authors: 'Christian Garrido López, Emma Batllori Badía, Cecilia Villalaín, María Inmaculada Mejía Jiménez, Patricia Barbero, Laura Forcén Acebal',
+            type: 'Original Article',
+            publicationDate: 'March 18, 2025',
+            doi: '10.59215/prn.25.0331004'
+        },
+        {
+            id: '20250331005',
+            pages: '25-27',
+            title: 'Effect of Oral Supplementation with micronized ferric pyrophosphate in pregnant women to prevent postpartum hemorrhage',
+            authors: 'Federica Di Napoli, Luigi Vigilante, Maria Giuseppina Trinchillo, Gennaro Esposito, Maddalena Turco, Elisabetta Gragnano, Dario Colacurci, Gabriele Saccone',
+            type: 'Original Article',
+            publicationDate: 'March 18, 2025',
+            doi: '10.59215/prn.25.0331005'
+        },
+        {
+            id: '20250331006',
+            pages: '28-33',
+            title: 'Does preoperative tranexamic acid use in placenta previa have a positive effect on the results?',
+            authors: 'Ahmet Zeki Nessar, Mürşide Çevikoğlu Kıll, Fikriye Işıl Adıgüzel, Ayhan Coşkun',
+            type: 'Original Article',
+            publicationDate: 'March 06, 2025',
+            doi: '10.59215/prn.25.0331006'
+        },
+        {
+            id: '20250331007',
+            pages: '34-39',
+            title: 'The impact of assisted reproductive technology on pregnancies with very advanced maternal age',
+            authors: 'Gizem Elif Dizdaroğulları, Aslıhan Öztürk',
+            type: 'Original Article',
+            publicationDate: 'March 12, 2025',
+            doi: '10.59215/prn.25.0331007'
+        },
+        {
+            id: '20250331008',
+            pages: '40-45',
+            title: 'Congenital candida cases in a level-3 neonatal intensive care unit - A 10-year review',
+            authors: 'Brandi Newby, Anithadevi Moodley, Jacqueline Clayton, Cherrie Tan-Dy',
+            type: 'Case Report',
+            publicationDate: 'March 19, 2025',
+            doi: '10.59215/prn.25.0331008'
+        },
+        {
+            id: '20250331009',
+            pages: '46-49',
+            title: 'Complete penoscrotal transposition in the male twin of a dichorionic diamniotic pregnancy from oocyte donation: a case report',
+            authors: 'Beatrice Leuzzi, Annasilvia Pertusio, Andrea Garnero, Simona Gerocarni Nappo, Andrea Sciarrone',
+            type: 'Case Report',
+            publicationDate: 'March 25, 2025',
+            doi: '10.59215/prn.25.0331009'
+        },
+        {
+            id: '20250331010',
+            pages: '50-56',
+            title: 'Sociodemographic and obstetric risk factors for postpartum depression',
+            authors: 'Koray Özbay, İsmail Bağlar, Sahra Sultan Kara, Esra Keles, Fatih Şanlıkan',
+            type: 'Original Article',
+            publicationDate: 'April 02, 2025',
+            doi: '10.59215/prn.25.0331010'
+        },
+        {
+            id: '20250331011',
+            pages: '57-61',
+            title: 'Determination of the relationship between severe preeclampsia and HALP scores',
+            authors: 'Fikriye Işıl Adıgüzel, Seray Sırkıntı, Mert Ali Karataş, Sadık Kükrer, Cevdet Adıgüzel, Gülsüm Uysal',
+            type: 'Original Article',
+            publicationDate: 'April 15, 2025',
+            doi: '10.59215/prn.25.0331011'
+        }
+    ];
+
+    const FileTextIcon = () => (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#28a745" // Green color
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="icon-file-text"
+        >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+        </svg>
+    );
 
     return (
         <div>
-            {id}
             <Layout
                 sidebar={
                     <div>
@@ -23,34 +141,15 @@ export async function page({ params }: Props, parent: ResolvingMetadata) {
                             <ArchiveTree />
                         </div>
                         <ModuleBox
-                            title="Search"
-                            icon={<i className="icon-search"></i>}
-                        >
-                            <form method="get" action="/Archive/Search/">
-                                <p>You can search published articles.</p>
-                                <select className="input-block-level" id="s" name="s">
-                                    <option value="All">All fields</option>
-                                    <option value="InDoi">DOI</option>
-                                    <option value="InTitle">Article title</option>
-                                    <option value="InAuthors">Author name</option>
-                                    <option value="InAbstract">Abstract</option>
-                                    <option value="InBody">Content</option>
-                                </select>
-                                <input type="text" className="input-block-level" name="q" id="q" />
-                                <input type="submit" className="btn btn-success" value="Search" />
-                            </form>
-                            <div className="clearfix"></div>
-                        </ModuleBox>
-                        <ModuleBox
                             title="Journal Information"
                             icon={<i className="icon-info-sign"></i>}
                         >
-                            <p><strong>Online ISSN</strong><br />1305-3124</p>
-                            <p><strong>Established</strong><br />1993</p>
-                            <p><strong>Editors-in-Chief</strong><br />&ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe</p>
-                            <p><strong>Editors</strong><br />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
-                            <p><strong>Managing Editors</strong><br />Murat Yayla</p>
-                            <p><strong>Statistics Editor</strong><br />Resul Arısoy</p>
+                            <p><strong>Online ISSN</strong> <div className="br" />1305-3124</p>
+                            <p><strong>Established</strong> <div className="br" />1993</p>
+                            <p><strong>Editors-in-Chief</strong> <div className="br" /> Cihat Şen,  Nicola Volpe</p>
+                            <p><strong>Editors</strong> <div className="br" />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
+                            <p><strong>Managing Editors</strong> <div className="br" />Murat Yayla</p>
+                            <p><strong>Statistics Editor</strong> <div className="br" />Resul Arısoy</p>
                             <div className="text-center" style={{ margin: '15px 0' }}>
                                 <img src="/open-access.png" alt="Open Access" />
                                 <img src="/doaj.jpg" alt="DOAJ" />
@@ -63,94 +162,45 @@ export async function page({ params }: Props, parent: ResolvingMetadata) {
                     </div>
                 }
             >
-                <div className='w-full h-20 flex'>
-                    <div className="home-body-text w-[70%] p-3 ">
-                        <strong>About Perinatal Journal</strong><br />
-                        <ul>
-                            <li><a href="#description">Description</a></li>
-                            <li><a href="#audience">Audience</a></li>
-
-                            <li><a href="#abstracted-indexed">Abstracted & Indexed</a></li>
-                            <li><a href="#editorial-board">Editorial Board</a></li>
-                            <li><a href="#publication-history">Publication History</a></li>
-                            <li><a href="#journal-abbreviation">Journal Abbreviation</a></li>
-                            <li><a href="#supplements">Supplements</a></li>
-                            <li><a href="#journal-sponsorship">Journal Sponsorship</a></li>
-                            <li><a href="#impressum">Impressum</a></li>
-                            <li><a href="#correspondence">Correspondence</a></li>
-                        </ul>
-                        <br />
-                        <div>
-                            <strong>Description</strong><br />
-
-                            <p>
-                                Perinatal Journal is an online open access, peer-reviewed scientific journal (e-ISSN: 1305-3124). The journal is the official publication of <a href="http://www.perinatal.org.tr" target="_blank">Perinatal Medicine Foundation</a>. It is published three times a year in April, August and December. The publication language of the journal is English.
-                            </p>
-                            <br />
-                            <strong>Audience</strong><br />
-                            <p>
-                                Perinatal Journal can be read by perinatal medicine experts, fetal medicine experts, obstetricians, gynecologists, radiologists, pediatricians, sonographers, midwives, radiographers, and scientific members of other related areas, that mainly includes original clinical and experimental research articles, case reports, reviews, technical notes and letters to the editor.
-                            </p>
-                            <br />
-                            <strong>Abstracted & Indexed</strong><br />
-                            <p>
-                                Perinatal Journal is currently indexed in DOAJ (Directory of Open Access Journals) and Google Scholar, EBSCOhost, EBSCO (Academic Search Complete), TÜBİTAK ULAKBİM TR Index Health Sciences Database and SCOPUS
-                            </p>
-                            <br />
-                            <strong>Editorial Board</strong><br />
-                            <p>
-                                The details of Editorial Team and Advisory Board members are available on <a href="https://perinataljournal.com/Info/editorial-board">Editorial Board page</a>.
-                            </p>
-                            <br />
-                            <strong>Publication History</strong><br />
-                            <p>
-                                Perinatal Journal (2005-present)<br />
-                                Perinatoloji Dergisi (1993-2004)
-                            </p>
-                            <br />
-                            <strong>Journal Abbreviation</strong><br />
-                            <p>
-                                Perinat J
-                            </p>
-                            <br />
-                            <strong>Supplements</strong><br />
-
-                            <p>
-                                Perinatal Journal can publish peer-reviewed supplementary issues to the main volume. Content will be in line with journal scope and may include original articles, reviews, proceedings, meeting abstracts and practice guidelines.
-                            </p>
-                            <br />
-                            <strong>Journal Sponsorship</strong><br />
-                            <p>
-                                Perinatal Journal is sponsored by Perinatal Medicine Foundation which is an internationally recognized, non-profit, scientific institution.
-                            </p>
-                            <br />
-                            <strong>Impressum</strong><br />
-                            <p>
-                                Ownership & Publisher: Perinatal Medicine Foundation<br />
-                                Managing Editor: Murat Yayla<br />
-                                Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367 Taksim, Istanbul, Turkey&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
-                                Advisor for Scientific Publishing: Akın Usta<br />
-                                Publishing Coordinator: Rumeysa Uslu<br />
-
-                                Language Editor: Fikret Yeşilyurt<br />
-                                Technical Staff: Ali Koz<br />
-                                Publishing service for  Perintal Journal are provided by <a href='mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal'>
-                                    CETUS
-                                </a>
-                            </p>
-                            <br />
-                            <strong>Correspondence</strong><br />
-                            <p>
-                                Perinatal Journal, Perinatal Medicine Foundation<br />
-                                Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70, Bakırköy, Istanbul, Turkey<br />
-                                Phone: +90 542 442 87 b36
-                            </p>
-                            <a href='mailto:info@perinataljournal.com?subject=Perinatal%20Journal'>
-                                <strong>Send e-mail</strong>
-                            </a>
-
-                        </div>
-                    </div>
+                <div className="Issue-Container">
+                    <IntroductionCardSecond />
+                    <h1 className="issue-table-of-contents
+                     bg-[#efefef] text-[#3d3d3d] text-[14pt] py-3 px-3 font-bold mt-2">Table of Contents</h1>
+                    <ul className="issue-article-list">
+                        {articles.map((article) => (
+                            <li key={article.id} className='mt-6 list-none'>
+                                <h1 className="article-item-title flex">
+                                    <FileTextIcon />{'  '}
+                                    <Link className='pl-1' href={`/Archive/Article/${article.id}`} title={article.title}>
+                                        {article.title}
+                                    </Link>
+                                    <div className="article-item-pages text-right block ml-auto">
+                                        <span className="badge badge-pages">{article.pages}</span>
+                                    </div>
+                                </h1>
+                                <div className="article-item-authors">{article.authors}</div>
+                                <div className="article-item-serial">
+                                    <span style={{
+                                        marginRight: '5px',
+                                        border: '1px solid #377fbf',
+                                        borderRadius: '5px',
+                                        padding: '2px 5px',
+                                        fontSize: '11px',
+                                        color: '#377fbf',
+                                        backgroundColor: '#f1f2f3'
+                                    }}>
+                                        <strong>{article.type}</strong>
+                                    </span>
+                                    <span>
+                                        <strong>Online publication date:</strong> {article.publicationDate}
+                                    </span>
+                                    <span>
+                                        <strong>DOI:</strong> {article.doi}
+                                    </span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </Layout>
 

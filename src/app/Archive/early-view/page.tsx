@@ -1,101 +1,97 @@
+// import {  } from 'next/navigation';
 import Layout from '@/components/ui/Layout/layout'
 import ModuleBox from '@/components/ui/modulebox/modulebox'
-import Link from 'next/link'
-import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
 import React from 'react'
-import { FaShareFromSquare } from "react-icons/fa6";
-import { RiInformation2Fill } from "react-icons/ri";
-import { GrLink } from "react-icons/gr";
+import ArchiveTree from '@/components/ui/treatview/treatview';
+import IntroductionCardSecond from '@/components/ui/IntroductionCard2/card';
+import Link from 'next/link';
 
-export default function page() {
+const page = ({ id }: any) => {
+
+    const articles = [
+        {
+            id: '20250332001',
+            title: 'Investigation of M3 Muscarinic Acetylcholine Receptor Expression in Placentas of Smoking Women',
+            authors: 'Esma Yıldırım, Gül Ebru Aydeniz Acar, Zeynep Türe, Ayşegül Aşır, Fırat Aşır, Tuğcan Korak, Serhat Ege',
+            type: 'Original Article',
+            publicationDate: 'May 05, 2025',
+            doi: '10.59215/prn.25.0332001'
+        },
+        {
+            id: '20250332002',
+            title: 'Maternal Serum Surfactant Protein-D (SP-D) levels in pregnancies complicated with mild and severe preeclampsia: A case control study',
+            authors: 'Mehmet Mete Kirlangic, Erdem Sahin, Mefkure Eraslan Sahin, Serhan Kutuk, Merve Vural Yalman, Esra Akdemir',
+            type: 'Original Article',
+            publicationDate: 'May 05, 2025',
+            doi: '10.59215/prn.25.0332002'
+        },
+        {
+            id: '20250332003',
+            title: 'Determination of systemic inflammatory markers and determination of possible risk factors in post-term pregnancies',
+            authors: 'Özgün AKBAŞ, Mücahit Furkan BALCI, Arda Batuhan KARADUMAN, Ozan ODABAŞ, Azra Arıcı YURTKUL, Mehmet Ferdi KINCI, Yaşam Kemal AKPAK',
+            type: 'Original Article',
+            publicationDate: 'May 07, 2025',
+            doi: '10.59215/prn.25.0332003'
+        },
+        {
+            id: '20250332004',
+            title: 'Effect of amniocentesis on feto-placental hemodynamics and fetal cardiac function: A comprehensive Doppler study',
+            authors: 'Sevim Tuncer Can, Hakan Golbasi, Burak Bayraktar, Ceren Saglam, Raziye Torun, Zubeyde Emiralioglu Cakir, Ilayda Gercik, Ilknur Gumus Toka, Atalay Ekin',
+            type: 'Original Article',
+            publicationDate: 'May 14, 2025',
+            doi: '10.59215/prn.25.0332004'
+        },
+        {
+            id: '20250332005',
+            title: 'Pruritic urticarial papules and plaques in pregnancy following the second in vitro fertilization cycle: A case report',
+            authors: 'Simge Berrak Beyoglu Oruc, Deniz Ghasemi Mohammadrezaloo, Nur Dokuzeylül Güngör',
+            type: 'Case Report',
+            publicationDate: 'May 15, 2025',
+            doi: '10.59215/prn.25.0332005'
+        }
+    ];
+
+
+    const FileTextIcon = () => (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#28a745" // Green color
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="icon-file-text"
+        >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+        </svg>
+    );
+
     return (
         <div>
             <Layout
                 sidebar={
                     <div>
-                        <ModuleBox
-                            title="Archive"
-                            icon={<FaThLarge />}
-                        >
-                            <ul>
-                                <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
-                                <li><a href="/Info/editorial-board">Editorial Board</a></li>
-                                <li><a href="/Info/author-guidelines">Author Guidelines</a></li>
-                                <li><a href="/Info/article-processing-charge">Article Processing Charge</a></li>
-                                <li><a href="/Info/editorial-policies">Editorial Policies</a></li>
-                                <li><a href="/Info/publication-ethics">Publication Ethics</a></li>
-                                <li><a href="/Info/contact-us">Contact Us</a></li>
-                            </ul>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Be a Member"
-                            icon={<FaUserAlt />}
-                        >
-                            <p>You can be a member of the journal and log in quickly. Therefore you can enjoy and benefit with scientific papers, news, opinions, editorials, guidelines and all scientific media.</p>
-                            <Link href="/User/SignIn" className='flex justify-end mt-2'>
-                                <button className="btn btn-success text-right">Be a Member</button>
-                            </Link>
+                        <div >
+                            <ArchiveTree />
+                        </div>
 
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Links"
-                            icon={<GrLink />}
-                        >
-                            <ul>
-                                <li><a href="https://www.perinatalmedicine.org" target="_blank"><i className="icon-share"></i> Perinatal Medicine Foundation</a></li>
-                                <li><a href="https://meet.perinatalmedicine.org/" target="_blank"><i className="icon-share"></i> World School of Perinatal Medicine</a></li>
-                                <li><a href="http://www.worldperinatal.org" target="_blank"><i className="icon-share"></i> World Association of Perinatal Medicine</a></li>
-                            </ul>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Search"
-                            icon={<FaSearch />}
-                        >
-                            <form method="get" action="/Archive/Search/">
-                                <p>You can search published articles.</p>
-                                <select className="input-block-level" id="s" name="s">
-                                    <option value="All">All fields</option>
-                                    <option value="InDoi">DOI</option>
-                                    <option value="InTitle">Article title</option>
-                                    <option value="InAuthors">Author name</option>
-                                    <option value="InAbstract">Abstract</option>
-                                    <option value="InBody">Content</option>
-                                </select>
-                                <input type="text" className="input-block-level" name="q" id="q" />
-                                <input type="submit" className="btn btn-success" value="Search" />
-                            </form>
-                            <div className="clearfix"></div>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Archive"
-                            icon={<FaThLarge />}
-                        >
-                            <ul>
-                                <li><a href="/Archive/Latest/">Current Issue</a></li>
-                                <li><a href="/Archive/EarlyView/">Early View</a></li>
-                                <li><a href="/Archive/Issue/">All Issues</a></li>
-                            </ul>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Submission"
-                            icon={<FaShareFromSquare />}
-                            >
-                            <ul>
-                                <li><a href="/Submission/">New Submission</a></li>
-                                <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
-                                <li><a href="/Info/author-guidelines">Author Guidelines</a></li>
-                            </ul>
-                            </ModuleBox>
                         <ModuleBox
                             title="Journal Information"
-                            icon={<RiInformation2Fill />}
+                            icon={<i className="icon-info-sign"></i>}
                         >
-                            <p><strong>Online ISSN</strong><br />1305-3124</p>
-                            <p><strong>Established</strong><br />1993</p>
-                            <p><strong>Editors-in-Chief</strong><br />&ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe</p>
-                            <p><strong>Editors</strong><br />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
-                            <p><strong>Managing Editors</strong><br />Murat Yayla</p>
-                            <p><strong>Statistics Editor</strong><br />Resul Arısoy</p>
+                            <p><strong>Online ISSN</strong> <div className="br" />1305-3124</p>
+                            <p><strong>Established</strong> <div className="br" />1993</p>
+                            <p><strong>Editors-in-Chief</strong> <div className="br" /> Cihat Şen,  Nicola Volpe</p>
+                            <p><strong>Editors</strong> <div className="br" />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
+                            <p><strong>Managing Editors</strong> <div className="br" />Murat Yayla</p>
+                            <p><strong>Statistics Editor</strong> <div className="br" />Resul Arısoy</p>
                             <div className="text-center" style={{ margin: '15px 0' }}>
                                 <img src="/open-access.png" alt="Open Access" />
                                 <img src="/doaj.jpg" alt="DOAJ" />
@@ -108,100 +104,47 @@ export default function page() {
                     </div>
                 }
             >
-                <div className='w-full h-20 flex'>
-                    <div className="home-body-text w-[70%] p-3 ">
-                        <strong>About Perinatal Journal</strong><br />
-                        <ul>
-                            <li><a href="#description">Description</a></li>
-                            <li><a href="#audience">Audience</a></li>
+                <div className="Issue-Container">
+                    <IntroductionCardSecond />
+                    <h1 className="issue-table-of-contents
+                     bg-[#efefef] text-[#3d3d3d] text-[14pt] py-3 px-3 font-bold mt-2">Table of Contents</h1>
+                    <ul className="issue-article-list">
+                        {articles.map((article) => (
+                            <li key={article.id} className='mt-6 list-none'>
+                                <h1 className="article-item-title flex">
+                                    <FileTextIcon />{'  '}
+                                    <Link className='pl-1' href={`/Archive/Article/${article.id}`} title={article.title}>
+                                        {article.title}
+                                    </Link>
 
-                            <li><a href="#abstracted-indexed">Abstracted & Indexed</a></li>
-                            <li><a href="#editorial-board">Editorial Board</a></li>
-                            <li><a href="#publication-history">Publication History</a></li>
-                            <li><a href="#journal-abbreviation">Journal Abbreviation</a></li>
-                            <li><a href="#supplements">Supplements</a></li>
-                            <li><a href="#journal-sponsorship">Journal Sponsorship</a></li>
-                            <li><a href="#impressum">Impressum</a></li>
-                            <li><a href="#correspondence">Correspondence</a></li>
-                        </ul>
-                        <br />
-                        <div>
-                            <strong>Description</strong><br />
-
-                            <p>
-                                Perinatal Journal is an online open access, peer-reviewed scientific journal (e-ISSN: 1305-3124). The journal is the official publication of <a href="http://www.perinatal.org.tr" target="_blank">Perinatal Medicine Foundation</a>. It is published three times a year in April, August and December. The publication language of the journal is English.
-                            </p>
-                            <br />
-                            <strong>Audience</strong><br />
-                            <p>
-                                Perinatal Journal can be read by perinatal medicine experts, fetal medicine experts, obstetricians, gynecologists, radiologists, pediatricians, sonographers, midwives, radiographers, and scientific members of other related areas, that mainly includes original clinical and experimental research articles, case reports, reviews, technical notes and letters to the editor.
-                            </p>
-                            <br />
-                            <strong>Abstracted & Indexed</strong><br />
-                            <p>
-                                Perinatal Journal is currently indexed in DOAJ (Directory of Open Access Journals) and Google Scholar, EBSCOhost, EBSCO (Academic Search Complete), TÜBİTAK ULAKBİM TR Index Health Sciences Database and SCOPUS
-                            </p>
-                            <br />
-                            <strong>Editorial Board</strong><br />
-                            <p>
-                                The details of Editorial Team and Advisory Board members are available on <a href="https://perinataljournal.com/Info/editorial-board">Editorial Board page</a>.
-                            </p>
-                            <br />
-                            <strong>Publication History</strong><br />
-                            <p>
-                                Perinatal Journal (2005-present)<br />
-                                Perinatoloji Dergisi (1993-2004)
-                            </p>
-                            <br />
-                            <strong>Journal Abbreviation</strong><br />
-                            <p>
-                                Perinat J
-                            </p>
-                            <br />
-                            <strong>Supplements</strong><br />
-
-                            <p>
-                                Perinatal Journal can publish peer-reviewed supplementary issues to the main volume. Content will be in line with journal scope and may include original articles, reviews, proceedings, meeting abstracts and practice guidelines.
-                            </p>
-                            <br />
-                            <strong>Journal Sponsorship</strong><br />
-                            <p>
-                                Perinatal Journal is sponsored by Perinatal Medicine Foundation which is an internationally recognized, non-profit, scientific institution.
-                            </p>
-                            <br />
-                            <strong>Impressum</strong><br />
-                            <p>
-                                Ownership & Publisher: Perinatal Medicine Foundation<br />
-                                Managing Editor: Murat Yayla<br />
-                                Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367 Taksim, Istanbul, Turkey&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br />
-                                Advisor for Scientific Publishing: Akın Usta<br />
-                                Publishing Coordinator: Rumeysa Uslu<br />
-
-                                Language Editor: Fikret Yeşilyurt<br />
-                                Technical Staff: Ali Koz<br />
-                                Publishing service for  Perintal Journal are provided by <a href='mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal'>
-                                    CETUS
-                                </a>
-                            </p>
-                            <br />
-                            <strong>Correspondence</strong><br />
-                            <p>
-                                Perinatal Journal, Perinatal Medicine Foundation<br />
-                                Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70, Bakırköy, Istanbul, Turkey<br />
-                                Phone: +90 542 442 87 b36
-                            </p>
-                            <a href='mailto:info@perinataljournal.com?subject=Perinatal%20Journal'>
-                                <strong>Send e-mail</strong>
-                            </a>
-
-                        </div>
-                    </div>
+                                </h1>
+                                <div className="article-item-authors">{article.authors}</div>
+                                <div className="article-item-serial">
+                                    <span style={{
+                                        marginRight: '5px',
+                                        border: '1px solid #377fbf',
+                                        borderRadius: '5px',
+                                        padding: '2px 5px',
+                                        fontSize: '11px',
+                                        color: '#377fbf',
+                                        backgroundColor: '#f1f2f3'
+                                    }}>
+                                        <strong>{article.type}</strong>
+                                    </span>
+                                    <span>
+                                        <strong>Online publication date:</strong> {article.publicationDate}
+                                    </span>
+                                    <span>
+                                        <strong>DOI:</strong> {article.doi}
+                                    </span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </Layout>
-
         </div>
-    )
-}
+    );
+};
 
-
-
+export default page;

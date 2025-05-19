@@ -23,13 +23,6 @@ const IntroductionCardSecond = () => {
           {/* Buttons */}
           <div className="mt-6 flex flex-wrap gap-4">
 
-
-            {/* Green Button */}
-            <button className="flex items-center gap-2 px-4 py-1 rounded bg-[#5EBD5E] hover:bg-[#449D44] text-white text-[14px] font-normal leading-[20px] shadow transition">
-              <MdPictureAsPdf size={18} />
-              Download Full Issue as PDF
-            </button>
-
           </div>
         </div>
         <div className="w-[173px] h-[230px] relative shadow-[4px_8px_8px_rgba(0,0,0,0.4)]">

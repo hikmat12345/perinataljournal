@@ -2,7 +2,7 @@ import Layout from "@/components/ui/Layout/layout";
 import ModuleBox from "@/components/ui/modulebox/modulebox";
 import Link from "next/link";
 import React from "react";
-import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
+import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare, FaChevronRight } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
@@ -31,15 +31,15 @@ export default function page() {
           </a>
           to scientific information and research, the journal provides immediate
           open access to its content.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           All published materials will become the sole property of, and will be
           copyrighted by Perinatal Journal. Therefore, "Acknowledgement of
           Authorship and Transfer of Copyright Agreement" presented by
           manuscript submission system should be approved by the authors during
           the submission process.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           The Journal provides copyrights of all published papers (except where
           otherwise noted) for free use of readers, scientists, and institutions
           (such as link to the content or permission for its download,
@@ -64,8 +64,8 @@ export default function page() {
           >
             &nbsp;publisher&nbsp;
           </a>
-          .<br />
-          <br />
+          . <div className="br" />
+          <div className="br" />
         </>
       ),
     },
@@ -83,22 +83,22 @@ export default function page() {
           have to make payment as soon as possible, otherwise will not be
           appearing on early view page and not published which means it is not
           accepted publication.
-          <br />
+          <div className="br" />
           The APCs will be accepted through the link that will be sent to the
           corresponding author of each article via the online article system. In
           the next step, the authors will be receiving a receipt of their
           payment. Please be aware that no any refund is possible for your
           payment.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           Please note that the Article Processing Charge (APC) will not affect
           neither the editorial and peer-review process nor the priority of the
           manuscripts by no means.
-          <br />
+          <div className="br" />
           Please click on for the page of Article Processing Charge
-          <br />
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
+          <div className="br" />
         </>
       ),
     },
@@ -120,8 +120,8 @@ export default function page() {
           within the scope of the journal or not, and when they are not within
           the scope, the Editor either rejects them directly or sends back to
           authors to make the papers comply with publication scope and rules.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           At the next stage of the evaluation, manuscripts that are within the
           scope of the journal undergo double-blind peer review. An Editor is
           assigned for the manuscript to conduct the peer review process. Each
@@ -131,8 +131,8 @@ export default function page() {
           of the Advisory Board. The Editorial Board will assign an external and
           independent editor to manage the evaluation processes of manuscripts
           submitted by the Editorial Board members of the journal.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           If any revision is required in the manuscripts according to the
           comments of the reviewers, the Editor assigned to the paper makes sure
           that the revisions from corresponding author are re-evaluated by
@@ -144,16 +144,16 @@ export default function page() {
           concerns about statistics in reviewer comments, the paper is evaluated
           by Statistics Editor. If necessary, external statistics experts can be
           asked for their opinion.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           The Editors-in-Chief are the final authority in the decision to
           publish the manuscript or not. They also have the right to reject a
           manuscript after authors’ revision. Author(s) should provide
           additional relevant data, documents, or information upon the editorial
           request if necessary.
-          <br />
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
+          <div className="br" />
         </>
       ),
     },
@@ -206,20 +206,20 @@ export default function page() {
           Perinatal Journal does not officially agree with the ideas of
           manuscripts published in the journal and does not guarantee for any
           product or service advertisements in its website.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           The content of the articles published in the journal does not
           necessarily reflect the views or policies of the publisher, nor does
           any mention of trade names, commercial products, or organizations
           imply endorsement by the publisher. Scientific and legal
           responsibilities of published articles belong to their author(s).
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           The publisher and publishing house remain neutral with regard to
           jurisdictional claims in published maps and institutional
           affiliations.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           Materials such as pictures, figures, tables etc. sent with manuscripts
           should be original or if they were published before written approval
           of copyright holder should be sent with manuscript for publishing
@@ -243,8 +243,8 @@ export default function page() {
           accordance with the World Medical Association Declaration of Helsinki,
           covering the latest revision date. Patient confidentiality must be
           protected according to the universally accepted guidelines and rules.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           Manuscripts reporting the results of experimental studies on animals
           must include a statement that the study protocol was approved by the
           animal ethics committee of the institution and that the study was
@@ -276,14 +276,14 @@ export default function page() {
             &nbsp;Principles of Laboratory Animal Science, and the Handbook for
             the Care and Utilization of Laboratory Animals.&nbsp;
           </a>
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           The authors are strongly requested to send the approval of the ethics
           committee together with the manuscript. In addition, manuscripts on
           human and animal studies should describe procedures indicating the
           steps taken to eliminate pain and suffering.
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           The authors should also disclose all issues concerning financial
           relationship, conflicts of interest, and competing interest that may
           potentially influence the results of the research or scientific
@@ -306,7 +306,7 @@ export default function page() {
       title: (
         <>
           The Process for Handling Cases Requiring Corrections, Retractions, and
-          Editorial Expressions of Concern <br />
+          Editorial Expressions of Concern  <div className="br" />
           <span className="italic">Corrections</span>
         </>
       ),
@@ -377,8 +377,8 @@ export default function page() {
             (ICMJE)&nbsp;
           </a>
           .
-          <br />
-          <br />
+          <div className="br" />
+          <div className="br" />
           For the details of journal Publication Ethics and Malpractice
           Statement please
           <a
@@ -398,93 +398,30 @@ export default function page() {
       <Layout
         sidebar={
           <div>
-            <ModuleBox title="Archive" icon={<FaThLarge />}>
-              <ul>
-                <li>
-                  <a href="/Info/about-perinatal-journal">
-                    About Perinatal Journal
-                  </a>
-                </li>
-                <li>
-                  <a href="/Info/editorial-board">Editorial Board</a>
-                </li>
-                <li>
-                  <a href="/Info/author-guidelines">Author Guidelines</a>
-                </li>
-                <li>
-                  <a href="/Info/article-processing-charge">
-                    Article Processing Charge
-                  </a>
-                </li>
-                <li>
-                  <a href="/Info/editorial-policies">Editorial Policies</a>
-                </li>
-                <li>
-                  <a href="/Info/publication-ethics">Publication Ethics</a>
-                </li>
-                <li>
-                  <a href="/Info/contact-us">Contact Us</a>
-                </li>
-              </ul>
+            <ModuleBox >
+              {[
+                "About Perinatal Journal",
+                "Editorial Board",
+                "Author Guidelines",
+                "Article Processing Charge",
+                "Editorial Policies",
+                "Publication Ethics",
+                "Contact Us",
+              ].map((item, idx, arr) => (
+                <Link
+                  key={idx}
+                  href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
+                  className={`block px-2 py-1 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                    }`}
+                >
+                  <span className="mr-2 text-[#777777] text-base">
+                    <FaChevronRight />
+                  </span>
+                  {item}
+                </Link>
+              ))}
             </ModuleBox>
-            <ModuleBox title="Be a Member" icon={<FaUserAlt />}>
-              <p>
-                You can be a member of the journal and log in quickly. Therefore
-                you can enjoy and benefit with scientific papers, news,
-                opinions, editorials, guidelines and all scientific media.
-              </p>
-              <Link href="/User/SignIn" className="flex justify-end mt-2">
-                <button className="btn btn-success text-right">
-                  Be a Member
-                </button>
-              </Link>
-            </ModuleBox>
-            <ModuleBox title="Links" icon={<GrLink />}>
-              <ul>
-                <li>
-                  <a href="https://www.perinatalmedicine.org" target="_blank">
-                    <i className="icon-share"></i> Perinatal Medicine Foundation
-                  </a>
-                </li>
-                <li>
-                  <a href="https://meet.perinatalmedicine.org/" target="_blank">
-                    <i className="icon-share"></i> World School of Perinatal
-                    Medicine
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.worldperinatal.org" target="_blank">
-                    <i className="icon-share"></i> World Association of
-                    Perinatal Medicine
-                  </a>
-                </li>
-              </ul>
-            </ModuleBox>
-            <ModuleBox title="Search" icon={<FaSearch />}>
-              <form method="get" action="/Archive/Search/">
-                <p>You can search published articles.</p>
-                <select className="input-block-level" id="s" name="s">
-                  <option value="All">All fields</option>
-                  <option value="InDoi">DOI</option>
-                  <option value="InTitle">Article title</option>
-                  <option value="InAuthors">Author name</option>
-                  <option value="InAbstract">Abstract</option>
-                  <option value="InBody">Content</option>
-                </select>
-                <input
-                  type="text"
-                  className="input-block-level"
-                  name="q"
-                  id="q"
-                />
-                <input
-                  type="submit"
-                  className="btn btn-success"
-                  value="Search"
-                />
-              </form>
-              <div className="clearfix"></div>
-            </ModuleBox>
+
             <ModuleBox title="Archive" icon={<FaThLarge />}>
               <ul>
                 <li>
@@ -512,6 +449,9 @@ export default function page() {
                   <a href="/Info/author-guidelines">Author Guidelines</a>
                 </li>
               </ul>
+              <div className="mt-4">
+                <i className="mt-5">Please ensure that all correspondence regarding articles is submitted as email attachments to info@perinataljournal.com</i>
+              </div>
             </ModuleBox>
             <ModuleBox
               title="Journal Information"
@@ -519,32 +459,32 @@ export default function page() {
             >
               <p>
                 <strong>Online ISSN</strong>
-                <br />
+                <div className="br" />
                 1305-3124
               </p>
               <p>
                 <strong>Established</strong>
-                <br />
+                <div className="br" />
                 1993
               </p>
               <p>
                 <strong>Editors-in-Chief</strong>
-                <br />
-                &ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe
+                <div className="br" />
+                Cihat Şen,  Nicola Volpe
               </p>
               <p>
                 <strong>Editors</strong>
-                <br />
+                <div className="br" />
                 Cecilia Villalain, Daniel Rolnik, M. Mar Gil
               </p>
               <p>
                 <strong>Managing Editors</strong>
-                <br />
+                <div className="br" />
                 Murat Yayla
               </p>
               <p>
                 <strong>Statistics Editor</strong>
-                <br />
+                <div className="br" />
                 Resul Arısoy
               </p>
               <div className="text-center" style={{ margin: "15px 0" }}>
@@ -589,7 +529,7 @@ export default function page() {
                     <p className="text-[14px] font-normal leading-[20px] text-[#333333]">
                       {policy.content}
                     </p>
-                    <br />
+                    <div className="br" />
                   </section>
                 ))}
               </div>

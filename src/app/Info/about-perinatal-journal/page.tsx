@@ -2,7 +2,7 @@ import Layout from "@/components/ui/Layout/layout";
 import ModuleBox from "@/components/ui/modulebox/modulebox";
 import Link from "next/link";
 import React from "react";
-import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
+import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare, FaChevronRight } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
@@ -13,93 +13,30 @@ export default function page() {
       <Layout
         sidebar={
           <div>
-            <ModuleBox title="Archive" icon={<FaThLarge />}>
-              <ul>
-                <li>
-                  <a href="/Info/about-perinatal-journal">
-                    About Perinatal Journal
-                  </a>
-                </li>
-                <li>
-                  <a href="/Info/editorial-board">Editorial Board</a>
-                </li>
-                <li>
-                  <a href="/Info/author-guidelines">Author Guidelines</a>
-                </li>
-                <li>
-                  <a href="/Info/article-processing-charge">
-                    Article Processing Charge
-                  </a>
-                </li>
-                <li>
-                  <a href="/Info/editorial-policies">Editorial Policies</a>
-                </li>
-                <li>
-                  <a href="/Info/publication-ethics">Publication Ethics</a>
-                </li>
-                <li>
-                  <a href="/Info/contact-us">Contact Us</a>
-                </li>
-              </ul>
+            <ModuleBox >
+              {[
+                "About Perinatal Journal",
+                "Editorial Board",
+                "Author Guidelines",
+                "Article Processing Charge",
+                "Editorial Policies",
+                "Publication Ethics",
+                "Contact Us",
+              ].map((item, idx, arr) => (
+                <Link
+                  key={idx}
+                  href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
+                  className={`block px-2 py-1 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                    }`}
+                >
+                  <span className="mr-2 text-[#777777] text-base">
+                    <FaChevronRight />
+                  </span>
+                  {item}
+                </Link>
+              ))}
             </ModuleBox>
-            <ModuleBox title="Be a Member" icon={<FaUserAlt />}>
-              <p>
-                You can be a member of the journal and log in quickly. Therefore
-                you can enjoy and benefit with scientific papers, news,
-                opinions, editorials, guidelines and all scientific media.
-              </p>
-              <Link href="/User/SignIn" className="flex justify-end mt-2">
-                <button className="btn btn-success text-right">
-                  Be a Member
-                </button>
-              </Link>
-            </ModuleBox>
-            <ModuleBox title="Links" icon={<GrLink />}>
-              <ul>
-                <li>
-                  <a href="https://www.perinatalmedicine.org" target="_blank">
-                    <i className="icon-share"></i> Perinatal Medicine Foundation
-                  </a>
-                </li>
-                <li>
-                  <a href="https://meet.perinatalmedicine.org/" target="_blank">
-                    <i className="icon-share"></i> World School of Perinatal
-                    Medicine
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.worldperinatal.org" target="_blank">
-                    <i className="icon-share"></i> World Association of
-                    Perinatal Medicine
-                  </a>
-                </li>
-              </ul>
-            </ModuleBox>
-            <ModuleBox title="Search" icon={<FaSearch />}>
-              <form method="get" action="/Archive/Search/">
-                <p>You can search published articles.</p>
-                <select className="input-block-level" id="s" name="s">
-                  <option value="All">All fields</option>
-                  <option value="InDoi">DOI</option>
-                  <option value="InTitle">Article title</option>
-                  <option value="InAuthors">Author name</option>
-                  <option value="InAbstract">Abstract</option>
-                  <option value="InBody">Content</option>
-                </select>
-                <input
-                  type="text"
-                  className="input-block-level"
-                  name="q"
-                  id="q"
-                />
-                <input
-                  type="submit"
-                  className="btn btn-success"
-                  value="Search"
-                />
-              </form>
-              <div className="clearfix"></div>
-            </ModuleBox>
+
             <ModuleBox title="Archive" icon={<FaThLarge />}>
               <ul>
                 <li>
@@ -127,6 +64,9 @@ export default function page() {
                   <a href="/Info/author-guidelines">Author Guidelines</a>
                 </li>
               </ul>
+              <div className="mt-4">
+                <i className="mt-5">Please ensure that all correspondence regarding articles is submitted as email attachments to info@perinataljournal.com</i>
+              </div>
             </ModuleBox>
             <ModuleBox
               title="Journal Information"
@@ -134,32 +74,32 @@ export default function page() {
             >
               <p>
                 <strong>Online ISSN</strong>
-                <br />
+                <div className="br" />
                 1305-3124
               </p>
               <p>
                 <strong>Established</strong>
-                <br />
+                <div className="br" />
                 1993
               </p>
               <p>
                 <strong>Editors-in-Chief</strong>
-                <br />
-                &ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe
+                <div className="br" />
+                Cihat Şen,  Nicola Volpe
               </p>
               <p>
                 <strong>Editors</strong>
-                <br />
+                <div className="br" />
                 Cecilia Villalain, Daniel Rolnik, M. Mar Gil
               </p>
               <p>
                 <strong>Managing Editors</strong>
-                <br />
+                <div className="br" />
                 Murat Yayla
               </p>
               <p>
                 <strong>Statistics Editor</strong>
-                <br />
+                <div className="br" />
                 Resul Arısoy
               </p>
               <div className="text-center" style={{ margin: "15px 0" }}>
@@ -179,7 +119,7 @@ export default function page() {
             <h1 className="text-[24px] font-bold leading-[40px] text-[#0B5486] not-italic">
               About Perinatal Journal
             </h1>
-            <br />
+            <div className="br" />
             <ul>
               <li>
                 <a href="#description">Description</a>
@@ -213,10 +153,10 @@ export default function page() {
                 <a href="#correspondence">Correspondence</a>
               </li>
             </ul>
-            <br />
+            <div className="br" />
             <div>
               <strong>Description</strong>
-              <br />
+              <div className="br" />
 
               <p>
                 Perinatal Journal is an online open access, peer-reviewed
@@ -228,9 +168,9 @@ export default function page() {
                 . It is published three times a year in April, August and
                 December. The publication language of the journal is English.
               </p>
-              <br />
+              <div className="br" />
               <strong>Audience</strong>
-              <br />
+              <div className="br" />
               <p>
                 Perinatal Journal can be read by perinatal medicine experts,
                 fetal medicine experts, obstetricians, gynecologists,
@@ -240,18 +180,18 @@ export default function page() {
                 articles, case reports, reviews, technical notes and letters to
                 the editor.
               </p>
-              <br />
+              <div className="br" />
               <strong>Abstracted & Indexed</strong>
-              <br />
+              <div className="br" />
               <p>
                 Perinatal Journal is currently indexed in DOAJ (Directory of
                 Open Access Journals) and Google Scholar, EBSCOhost, EBSCO
                 (Academic Search Complete), TÜBİTAK ULAKBİM TR Index Health
                 Sciences Database and SCOPUS
               </p>
-              <br />
+              <div className="br" />
               <strong>Editorial Board</strong>
-              <br />
+              <div className="br" />
               <p>
                 The details of Editorial Team and Advisory Board members are
                 available on{" "}
@@ -260,21 +200,21 @@ export default function page() {
                 </a>
                 .
               </p>
-              <br />
+              <div className="br" />
               <strong>Publication History</strong>
-              <br />
+              <div className="br" />
               <p>
                 Perinatal Journal (2005-present)
-                <br />
+                <div className="br" />
                 Perinatoloji Dergisi (1993-2004)
               </p>
-              <br />
+              <div className="br" />
               <strong>Journal Abbreviation</strong>
-              <br />
+              <div className="br" />
               <p>Perinat J</p>
-              <br />
+              <div className="br" />
               <strong>Supplements</strong>
-              <br />
+              <div className="br" />
 
               <p>
                 Perinatal Journal can publish peer-reviewed supplementary issues
@@ -282,47 +222,47 @@ export default function page() {
                 and may include original articles, reviews, proceedings, meeting
                 abstracts and practice guidelines.
               </p>
-              <br />
+              <div className="br" />
               <strong>Journal Sponsorship</strong>
-              <br />
+              <div className="br" />
               <p>
                 Perinatal Journal is sponsored by Perinatal Medicine Foundation
                 which is an internationally recognized, non-profit, scientific
                 institution.
               </p>
-              <br />
+              <div className="br" />
               <strong>Impressum</strong>
-              <br />
+              <div className="br" />
               <p>
                 Ownership & Publisher: Perinatal Medicine Foundation
-                <br />
+                <div className="br" />
                 Managing Editor: Murat Yayla
-                <br />
+                <div className="br" />
                 Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367
                 Taksim, Istanbul, Turkey&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-                <br />
+                <div className="br" />
                 Advisor for Scientific Publishing: Akın Usta
-                <br />
+                <div className="br" />
                 Publishing Coordinator: Rumeysa Uslu
-                <br />
+                <div className="br" />
                 Language Editor: Fikret Yeşilyurt
-                <br />
+                <div className="br" />
                 Technical Staff: Ali Koz
-                <br />
+                <div className="br" />
                 Publishing service for Perintal Journal are provided by{" "}
                 <a href="mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal">
                   CETUS
                 </a>
               </p>
-              <br />
+              <div className="br" />
               <strong>Correspondence</strong>
-              <br />
+              <div className="br" />
               <p>
                 Perinatal Journal, Perinatal Medicine Foundation
-                <br />
+                <div className="br" />
                 Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70,
                 Bakırköy, Istanbul, Turkey
-                <br />
+                <div className="br" />
                 Phone: +90 542 442 87 b36
               </p>
               <a href="mailto:info@perinataljournal.com?subject=Perinatal%20Journal">

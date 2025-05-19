@@ -2,7 +2,7 @@ import Layout from "@/components/ui/Layout/layout";
 import ModuleBox from "@/components/ui/modulebox/modulebox";
 import Link from "next/link";
 import React from "react";
-import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
+import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare, FaChevronRight } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
@@ -13,93 +13,30 @@ export default function page() {
       <Layout
         sidebar={
           <div>
-            <ModuleBox title="Archive" icon={<FaThLarge />}>
-              <ul>
-                <li>
-                  <a href="/Info/about-perinatal-journal">
-                    About Perinatal Journal
-                  </a>
-                </li>
-                <li>
-                  <a href="/Info/editorial-board">Editorial Board</a>
-                </li>
-                <li>
-                  <a href="/Info/author-guidelines">Author Guidelines</a>
-                </li>
-                <li>
-                  <a href="/Info/article-processing-charge">
-                    Article Processing Charge
-                  </a>
-                </li>
-                <li>
-                  <a href="/Info/editorial-policies">Editorial Policies</a>
-                </li>
-                <li>
-                  <a href="/Info/publication-ethics">Publication Ethics</a>
-                </li>
-                <li>
-                  <a href="/Info/contact-us">Contact Us</a>
-                </li>
-              </ul>
+            <ModuleBox >
+              {[
+                "About Perinatal Journal",
+                "Editorial Board",
+                "Author Guidelines",
+                "Article Processing Charge",
+                "Editorial Policies",
+                "Publication Ethics",
+                "Contact Us",
+              ].map((item, idx, arr) => (
+                <Link
+                  key={idx}
+                  href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
+                  className={`block px-2 py-1 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                    }`}
+                >
+                  <span className="mr-2 text-[#777777] text-base">
+                    <FaChevronRight />
+                  </span>
+                  {item}
+                </Link>
+              ))}
             </ModuleBox>
-            <ModuleBox title="Be a Member" icon={<FaUserAlt />}>
-              <p>
-                You can be a member of the journal and log in quickly. Therefore
-                you can enjoy and benefit with scientific papers, news,
-                opinions, editorials, guidelines and all scientific media.
-              </p>
-              <Link href="/User/SignIn" className="flex justify-end mt-2">
-                <button className="btn btn-success text-right">
-                  Be a Member
-                </button>
-              </Link>
-            </ModuleBox>
-            <ModuleBox title="Links" icon={<GrLink />}>
-              <ul>
-                <li>
-                  <a href="https://www.perinatalmedicine.org" target="_blank">
-                    <i className="icon-share"></i> Perinatal Medicine Foundation
-                  </a>
-                </li>
-                <li>
-                  <a href="https://meet.perinatalmedicine.org/" target="_blank">
-                    <i className="icon-share"></i> World School of Perinatal
-                    Medicine
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.worldperinatal.org" target="_blank">
-                    <i className="icon-share"></i> World Association of
-                    Perinatal Medicine
-                  </a>
-                </li>
-              </ul>
-            </ModuleBox>
-            <ModuleBox title="Search" icon={<FaSearch />}>
-              <form method="get" action="/Archive/Search/">
-                <p>You can search published articles.</p>
-                <select className="input-block-level" id="s" name="s">
-                  <option value="All">All fields</option>
-                  <option value="InDoi">DOI</option>
-                  <option value="InTitle">Article title</option>
-                  <option value="InAuthors">Author name</option>
-                  <option value="InAbstract">Abstract</option>
-                  <option value="InBody">Content</option>
-                </select>
-                <input
-                  type="text"
-                  className="input-block-level"
-                  name="q"
-                  id="q"
-                />
-                <input
-                  type="submit"
-                  className="btn btn-success"
-                  value="Search"
-                />
-              </form>
-              <div className="clearfix"></div>
-            </ModuleBox>
+
             <ModuleBox title="Archive" icon={<FaThLarge />}>
               <ul>
                 <li>
@@ -127,6 +64,9 @@ export default function page() {
                   <a href="/Info/author-guidelines">Author Guidelines</a>
                 </li>
               </ul>
+              <div className="mt-4">
+                <i className="mt-5">Please ensure that all correspondence regarding articles is submitted as email attachments to info@perinataljournal.com</i>
+              </div>
             </ModuleBox>
             <ModuleBox
               title="Journal Information"
@@ -134,32 +74,32 @@ export default function page() {
             >
               <p>
                 <strong>Online ISSN</strong>
-                <br />
+                <div className="br" />
                 1305-3124
               </p>
               <p>
                 <strong>Established</strong>
-                <br />
+                <div className="br" />
                 1993
               </p>
               <p>
                 <strong>Editors-in-Chief</strong>
-                <br />
-                &ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe
+                <div className="br" />
+                Cihat Şen,  Nicola Volpe
               </p>
               <p>
                 <strong>Editors</strong>
-                <br />
+                <div className="br" />
                 Cecilia Villalain, Daniel Rolnik, M. Mar Gil
               </p>
               <p>
                 <strong>Managing Editors</strong>
-                <br />
+                <div className="br" />
                 Murat Yayla
               </p>
               <p>
                 <strong>Statistics Editor</strong>
-                <br />
+                <div className="br" />
                 Resul Arısoy
               </p>
               <div className="text-center" style={{ margin: "15px 0" }}>
@@ -206,7 +146,7 @@ export default function page() {
                 ))}
               </ul>
             </div>
-            <br />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Coverage</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -223,7 +163,7 @@ export default function page() {
                 </li>
               </ul>
             </div>
-            <br />
+            <div className="br" />
             <div className="text-[#333333]">
               <p className="text-[14px] font-normal leading-[20px]">
                 In addition, the journal includes article categories which do
@@ -240,7 +180,7 @@ export default function page() {
                 <li className="text-[14px] font-normal">Clinical Guidelines</li>
               </ul>
             </div>
-            <br />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Manuscript Evaluation</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -252,8 +192,8 @@ export default function page() {
                 responsible for the manuscripts. The name, date, and place of
                 the relevant meeting should be stated if the submission is a
                 work that was previously presented in a scientific meeting.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 All manuscripts that are submitted to the Perinatal Journal are
                 first subjected to technical evaluation in terms of conformance
                 to the journal’s manuscript rules and plagiarism at the
@@ -272,7 +212,7 @@ export default function page() {
                 </a>
               </p>
             </div>
-            <br />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Ethical Issues</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -289,8 +229,8 @@ export default function page() {
                 the latest revision date. Patient confidentiality must be
                 protected according to the universally accepted guidelines and
                 rules.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Manuscripts reporting the results of experimental studies on
                 animals must include a statement that the study protocol was
                 approved by the animal ethics committee of the institution and
@@ -301,15 +241,15 @@ export default function page() {
                 Scientific Purposes, Principles of Laboratory Animal Science,
                 and the Handbook for the Care and Utilization of Laboratory
                 Animals.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 The authors are strongly requested to send the approval of the
                 ethics committee together with the manuscript. In addition,
                 manuscripts on human and animal studies should describe
                 procedures indicating the steps taken to eliminate pain and
                 suffering.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 The authors should also disclose all issues concerning financial
                 relationship, conflicts of interest, and competing interest that
                 may potentially influence the results of the research or
@@ -318,8 +258,8 @@ export default function page() {
                 be clearly explained in the relevant step of the submission
                 process, with full assurance that any related document will be
                 submitted to the journal when requested.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Perinatal Journal is committed to upholding the highest
                 standards of publication ethics and observes the following
                 principles of Publication Ethics and Malpractice Statement which
@@ -371,8 +311,8 @@ export default function page() {
                 </a>
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Manuscript Preparation</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -389,8 +329,8 @@ export default function page() {
                 >
                   &nbsp;www.icmje.org
                 </a>
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Authors are requested to ensure that their manuscript follows
                 the appropriate guidelines such as CONSORT for randomized
                 controlled trials, STROBE for observational studies, STARD for
@@ -402,8 +342,8 @@ export default function page() {
                 NCT012345678) should be included in the Methods.
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">
                 Authorship and Length of Texts
@@ -416,8 +356,8 @@ export default function page() {
                 “writing the manuscript” and “confirming the accuracy of the
                 data and the analyses”. Those who do not fulfill this
                 prerequisite should not be stated as an author.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Each author should also submit his/her
                 <a
                   href="https://orcid.org/"
@@ -428,44 +368,44 @@ export default function page() {
                   &nbsp;ORCID&nbsp;
                 </a>
                 ID besides the classical personal data such as affiliation.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 <span className="italic">Original research articles</span> base
                 on clinical or experimental studies. The main text should not
                 exceed 2500 words (max. 16 pages), and a maximum of six authors
                 is advisable.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 <span className="italic">Case reports</span> should illustrate
                 interesting cases including their treatment options. The main
                 text should not exceed 2000 words (max. 8 pages), and a maximum
                 of five authors is advisable.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 <span className="italic">Opinion articles:</span> Only by
                 invitation and should be no more than 2000 words long (max. 8
                 pages).
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 <span className="italic">Review articles:</span> Only by
                 invitation and should be no more than 4000-5000 words long (max.
                 20 pages).
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 <span className="italic">Technical notes</span> aims to present
                 a newly diagnostic or therapeutic method. They should not exceed
                 2000 words (max. 8 pages) and include a maximum of 10
                 references.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 <span className="italic">Letters to the Editor</span> should be
                 no more than 500 words long (max. 2 pages) and include a maximum
                 of 10 references.
               </p>
             </div>
-            <br />
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">
                 Sections in the Manuscripts
@@ -476,8 +416,8 @@ export default function page() {
                 drawings, pictures, videos, patient forms, surveys etc.).
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Title</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -486,47 +426,47 @@ export default function page() {
                 should be used in the title of the manuscript.
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Abstract</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 Abstracts should not contain any abbreviation and references.
                 They should be prepared under following designs.
-                <br />
+                <div className="br" />
                 — Abstracts of Original Research Articles should be max. 250
                 words and structured in four paragraphs using the following
                 subtitles: Objective, Methods, Results, and Conclusion.
                 Following the abstract, each abstract should include max. five
                 keywords separated with comma and written in lower cases.
-                <br />
+                <div className="br" />
                 — Abstracts of Case Reports should be max. 125 words and
                 structured in three paragraphs using the following subtitles:
                 Objective, Case, Conclusion. Following the abstract, each
                 abstract should include max. three keywords separated with comma
                 and written in lower cases.
-                <br />
+                <div className="br" />
                 — Abstracts of Review Articles should be max. 300 words and
                 presented not structured in one paragraph. Following the
                 abstract, each abstract should include max. five keywords
                 separated with comma and written in lower cases.
-                <br />
+                <div className="br" />
                 — Abstracts of Technical Notes should be max. 125 words and
                 structured in three paragraphs using the following subtitles:
                 Objective, Technique, Conclusion. Following the abstract, each
                 abstract should include max. three keywords separated with comma
                 and written in lower cases.
-                <br />
+                <div className="br" />
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Main text</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 The sections in main text are defined according to the
                 manuscript type.
-                <br />— In{" "}
+                <div className="br" />— In{" "}
                 <span className="font-bold">
                   Original Research Articles,
                 </span>{" "}
@@ -534,7 +474,7 @@ export default function page() {
                 Methods, Results, Discussion and Conclusion". Each title may
                 have subtitles. The categories of subtitles should be clearly
                 defined.
-                <br />
+                <div className="br" />
                 The Introduction section should include a brief summary of the
                 base of the work and clearly states the purpose of the study.
                 The Methods section should contain a detailed description of the
@@ -546,39 +486,39 @@ export default function page() {
                 Discussion section should mainly rely on the results derived
                 from the study, with relevant citations from the most recent
                 literature.
-                <br />
+                <div className="br" />
                 The Conclusion section should briefly and claearly present the
                 conclusions derived from the results of the study. It should be
                 in compliance with the aim of the work and and point out its
                 application in clinical practice.
-                <br />— In <span className="font-bold">Case Reports,</span> main
+                <div className="br" />— In <span className="font-bold">Case Reports,</span> main
                 text should be divided with the titles "Introduction, Case(s),
                 Discussion". Reported case(s) should be introduced clearly
                 including the case story, and the results of laboratory tests
                 should be given in table format as far as possible.
-                <br />— The text of the{" "}
+                <div className="br" />— The text of the{" "}
                 <span className="font-bold">Review Articles</span> should follow
                 the "Introduction" and be organized under subtitles which should
                 clearly define the text's context categorization. The reviews
                 are expected to include wide surveying of literature and reflect
                 the author's personal experiences as far as possible.
-                <br />— The text of the{" "}
+                <div className="br" />— The text of the{" "}
                 <span className="font-bold">Technical Note</span> type of
                 articles should be divided into "Introduction, Technic,
                 Discussion". The presented technic should be defined briefly
                 under the related title, and include illustrations or figures as
                 soon as possible.
-                <br />— <span className="font-bold">
+                <div className="br" />— <span className="font-bold">
                   Letters to the Editor
                 </span>{" "}
                 should not have titled sections. If there is a citation about a
                 formerly published article within the text, reference(s) should
                 be provided.
-                <br />
+                <div className="br" />
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">References</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -587,8 +527,8 @@ export default function page() {
                 be numbered in square brackets in the order in which they are
                 mentioned in the text including Tables and Figures. Citation
                 order should be checked carefully.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Only published articles or articles in press can be used in
                 references. Unpublished data including conference papers or
                 personal communications should not be used. Papers published in
@@ -596,51 +536,51 @@ export default function page() {
                 issues of the electronic versions of conventional periodicals
                 should be absolutely presented with DOI (digital object
                 identifier) numbers.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Journal titles should be abbreviated according to the Index
                 Medicus. All authors if six or fewer should be listed;
                 otherwise, the first six and “et al.” should be written.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Direct use of references is strongly recommended and the authors
                 may be asked to provide the first and last pages of certain
                 references. Publication of the manuscript will be suspended
                 until this request is fulfilled by the author(s).
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 The style and punctuation should follow the formats outlined
                 below:
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 — Standard journal article: Hammerman C, Bin-Nun A, Kaplan M.
                 Managing the patent ductus arteriosus in the premature neonate:
                 a new look at what we thought we knew. Semin Perinatol
-                2012;36:130–8. <br />
-                <br />
+                2012;36:130–8.  <div className="br" />
+                <div className="br" />
                 — Article published in an electronic-only journal: Lee J, Romero
                 R, Xu Y, Kim JS, Topping V, Yoo W, et al. A signature of
                 maternal anti-fetal rejection in spontaneous preterm birth:
                 chronic chorioamnionitis, anti-human leukocyte antigen
                 antibodies, and C4d. PLoS One 2011;6:e16806. doi:10.1371/
                 journal.pone.0011846
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 — Book: Jones KL. Practical perinatology. New York: Springer;
                 1990. p. 112–9.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 — Chapter in a book: Moore TR, Hauguel-De Mouzon S, Catalano P.
                 Diabetes in pregnancy. In: Creasy RK, Resnik R, Greene MF, Iams
                 JD, Lockwood CJ, Moore TR, editors. Creasy and Resnik’s
                 maternal-fetal medicine: principles and practice. 7th ed.
                 Philadelphia, PA: Saunders-Elsevier; 2014. p. 988–1021.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">
                 Figures and tables
@@ -660,17 +600,17 @@ export default function page() {
                 submitted; otherwise, patient names or eyes must be blocked out
                 to prevent identification. Microscopic photographs should
                 include information on staining and magnification.
-                <br />
-                <br />
+                <div className="br" />
+                <div className="br" />
                 Each table should be prepared on a separate page with table
                 heading on top of the table. Table heading should be added to
                 the main text file on a separate page when a table is submitted
                 as a supplementary file.
               </p>
             </div>
-            <br />
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Submission</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -688,8 +628,8 @@ export default function page() {
                 their articles online.
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">
                 Submission checklist
@@ -697,33 +637,33 @@ export default function page() {
               <p className="text-[14px] font-normal leading-[20px]">
                 The following list will be useful during the final check of a
                 manuscript before submission:
-                <br />
+                <div className="br" />
                 1. Manuscript length (max. 4000 words for original research
                 articles)
-                <br />
+                <div className="br" />
                 2. Number of authors (max. six authors for original research
                 articles)
-                <br />
+                <div className="br" />
                 3. Title page (no anusual abbreviations)
-                <br />
+                <div className="br" />
                 4. Abstracts (max. 250 words for original research articles)
-                <br />
+                <div className="br" />
                 5. Key words (max. five keywords for original research articles)
-                <br />
+                <div className="br" />
                 6. Main text (subtitles)
-                <br />
+                <div className="br" />
                 7. References (listed according to the rules of ICMJE)
-                <br />
+                <div className="br" />
                 8. Appendices such as tables, figures, drawings, pictures,
                 videos, patient forms, surveys etc. (numbering; legends and
                 headings; copyright info/permission)
-                <br />
+                <div className="br" />
                 9. Conflicts of Interest Disclosure Statement (if necessary)
-                <br />
+                <div className="br" />
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Open Data Policy</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -734,8 +674,8 @@ export default function page() {
                 submission.
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">
                 Open Access Policy & Copyright
@@ -761,8 +701,8 @@ export default function page() {
                 should be approved by the authors during the submission
               </p>
             </div>
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Privacy Statement</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -773,9 +713,9 @@ export default function page() {
                 party.
               </p>
             </div>
-            <br />
-            <br />
-            <br />
+            <div className="br" />
+            <div className="br" />
+            <div className="br" />
           </div>
         </div>
       </Layout>

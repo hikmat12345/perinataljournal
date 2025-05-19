@@ -1,115 +1,10 @@
-// import {  } from 'next/navigation';
-import Layout from '@/components/ui/Layout/layout'
-import ModuleBox from '@/components/ui/modulebox/modulebox'
-import React from 'react'
-import ArchiveTree from '@/components/ui/treatview/treatview';
-import IntroductionCardSecond from '@/components/ui/IntroductionCard2/card';
 import Link from 'next/link';
+import Layout from '@/components/ui/Layout/layout';
+import ModuleBox from '@/components/ui/modulebox/modulebox';
+import ArchiveTree from '@/components/ui/treatview/treatview';
+import { RiInformation2Fill } from 'react-icons/ri';
 
-const page = ({ id }: any) => {
-
-
-    const articles = [
-        {
-            id: '20250331001',
-            pages: '1-4',
-            title: 'Post-immunization evaluation in infants of Hepatitis B carrier mothers',
-            authors: 'Sema Tanriverdi, Özge Özalp Berkarda, Esra Arun Özer',
-            type: 'Original Article',
-            publicationDate: 'December 29, 2024',
-            doi: '10.59215/prn.25.0331001'
-        },
-        {
-            id: '20250331002',
-            pages: '5-10',
-            title: 'Assessment of Xenopsin Related Peptide-1 levels in pregnant women with gestational diabetes mellitus',
-            authors: 'Emre Ağdemir, Melda Kuyucu, Mehtap Yücedağ, Kamile Kübra Ağdemir',
-            type: 'Original Article',
-            publicationDate: 'January 10, 2025',
-            doi: '10.59215/prn.25.0331002'
-        },
-        {
-            id: '20250331003',
-            pages: '11-17',
-            title: 'HOXA1 Expression in preeclampsia: immunohistochemical and bioinformatic analyses',
-            authors: 'Zeynep Türe, Ayşenur Sevinç Akdeniz, Gül Ebru Aydeniz Acar, Fırat Aşır, Tuğcan Korak, Serhat Ege',
-            type: 'Original Article',
-            publicationDate: 'January 14, 2025',
-            doi: '10.59215/prn.25.0331003'
-        },
-        {
-            id: '20250331004',
-            pages: '18-24',
-            title: 'Reducing the rate of permanent obstetric brachial plexus palsy: Impact of a simulation training program in shoulder dystocia after five years of training',
-            authors: 'Christian Garrido López, Emma Batllori Badía, Cecilia Villalaín, María Inmaculada Mejía Jiménez, Patricia Barbero, Laura Forcén Acebal',
-            type: 'Original Article',
-            publicationDate: 'March 18, 2025',
-            doi: '10.59215/prn.25.0331004'
-        },
-        {
-            id: '20250331005',
-            pages: '25-27',
-            title: 'Effect of Oral Supplementation with micronized ferric pyrophosphate in pregnant women to prevent postpartum hemorrhage',
-            authors: 'Federica Di Napoli, Luigi Vigilante, Maria Giuseppina Trinchillo, Gennaro Esposito, Maddalena Turco, Elisabetta Gragnano, Dario Colacurci, Gabriele Saccone',
-            type: 'Original Article',
-            publicationDate: 'March 18, 2025',
-            doi: '10.59215/prn.25.0331005'
-        },
-        {
-            id: '20250331006',
-            pages: '28-33',
-            title: 'Does preoperative tranexamic acid use in placenta previa have a positive effect on the results?',
-            authors: 'Ahmet Zeki Nessar, Mürşide Çevikoğlu Kıll, Fikriye Işıl Adıgüzel, Ayhan Coşkun',
-            type: 'Original Article',
-            publicationDate: 'March 06, 2025',
-            doi: '10.59215/prn.25.0331006'
-        },
-        {
-            id: '20250331007',
-            pages: '34-39',
-            title: 'The impact of assisted reproductive technology on pregnancies with very advanced maternal age',
-            authors: 'Gizem Elif Dizdaroğulları, Aslıhan Öztürk',
-            type: 'Original Article',
-            publicationDate: 'March 12, 2025',
-            doi: '10.59215/prn.25.0331007'
-        },
-        {
-            id: '20250331008',
-            pages: '40-45',
-            title: 'Congenital candida cases in a level-3 neonatal intensive care unit - A 10-year review',
-            authors: 'Brandi Newby, Anithadevi Moodley, Jacqueline Clayton, Cherrie Tan-Dy',
-            type: 'Case Report',
-            publicationDate: 'March 19, 2025',
-            doi: '10.59215/prn.25.0331008'
-        },
-        {
-            id: '20250331009',
-            pages: '46-49',
-            title: 'Complete penoscrotal transposition in the male twin of a dichorionic diamniotic pregnancy from oocyte donation: a case report',
-            authors: 'Beatrice Leuzzi, Annasilvia Pertusio, Andrea Garnero, Simona Gerocarni Nappo, Andrea Sciarrone',
-            type: 'Case Report',
-            publicationDate: 'March 25, 2025',
-            doi: '10.59215/prn.25.0331009'
-        },
-        {
-            id: '20250331010',
-            pages: '50-56',
-            title: 'Sociodemographic and obstetric risk factors for postpartum depression',
-            authors: 'Koray Özbay, İsmail Bağlar, Sahra Sultan Kara, Esra Keles, Fatih Şanlıkan',
-            type: 'Original Article',
-            publicationDate: 'April 02, 2025',
-            doi: '10.59215/prn.25.0331010'
-        },
-        {
-            id: '20250331011',
-            pages: '57-61',
-            title: 'Determination of the relationship between severe preeclampsia and HALP scores',
-            authors: 'Fikriye Işıl Adıgüzel, Seray Sırkıntı, Mert Ali Karataş, Sadık Kükrer, Cevdet Adıgüzel, Gülsüm Uysal',
-            type: 'Original Article',
-            publicationDate: 'April 15, 2025',
-            doi: '10.59215/prn.25.0331011'
-        }
-    ];
+const page = () => {
 
     const FileTextIcon = () => (
         <svg
@@ -131,100 +26,286 @@ const page = ({ id }: any) => {
             <polyline points="10 9 9 9 8 9" />
         </svg>
     );
-
     return (
-        <div>
-            <Layout
-                sidebar={
-                    <div>
-                        <div >
-                            <ArchiveTree />
+        <Layout
+            sidebar={
+                <div>
+                    <ArchiveTree />
+                    <ModuleBox
+                        title="Journal Information"
+                        icon={<RiInformation2Fill />}
+                    >
+                        <p>
+                            <strong>Online ISSN</strong>
+                            <div className="br" />
+                            1305-3124
+                        </p>
+                        <p>
+                            <strong>Established</strong>
+                            <div className="br" />
+                            1993
+                        </p>
+                        <p>
+                            <strong>Editors-in-Chief</strong>
+                            <div className="br" />
+                            Cihat Şen,  Nicola Volpe
+                        </p>
+                        <p>
+                            <strong>Editors</strong>
+                            <div className="br" />
+                            Cecilia Villalain, Daniel Rolnik, M. Mar Gil
+                        </p>
+                        <p>
+                            <strong>Managing Editors</strong>
+                            <div className="br" />
+                            Murat Yayla
+                        </p>
+                        <p>
+                            <strong>Statistics Editor</strong>
+                            <div className="br" />
+                            Resul Arısoy
+                        </p>
+                        <div className="text-center" style={{ margin: "15px 0" }}>
+                            <img src="/open-access.png" alt="Open Access" />
+                            <img src="/doaj.jpg" alt="DOAJ" />
+                            <img src="/google-scholar.jpg" alt="Google Scholar" />
+                            <img src="/ebsco.jpg" alt="EBSCO" />
+                            <img src="/ulakbim.jpg" alt="Ulakbim" />
+                            <img src="/scopus-logo.jpg" alt="Scopus" />
                         </div>
-                        <ModuleBox
-                            title="Search"
-                            icon={<i className="icon-search"></i>}
-                        >
-                            <form method="get" action="/Archive/Search/">
-                                <p>You can search published articles.</p>
-                                <select className="input-block-level" id="s" name="s">
-                                    <option value="All">All fields</option>
-                                    <option value="InDoi">DOI</option>
-                                    <option value="InTitle">Article title</option>
-                                    <option value="InAuthors">Author name</option>
-                                    <option value="InAbstract">Abstract</option>
-                                    <option value="InBody">Content</option>
-                                </select>
-                                <input type="text" className="input-block-level" name="q" id="q" />
-                                <input type="submit" className="btn btn-success" value="Search" />
-                            </form>
-                            <div className="clearfix"></div>
-                        </ModuleBox>
-                        <ModuleBox
-                            title="Journal Information"
-                            icon={<i className="icon-info-sign"></i>}
-                        >
-                            <p><strong>Online ISSN</strong><br />1305-3124</p>
-                            <p><strong>Established</strong><br />1993</p>
-                            <p><strong>Editors-in-Chief</strong><br />&ZeroWidthSpace;Cihat Şen, &ZeroWidthSpace;Nicola Volpe</p>
-                            <p><strong>Editors</strong><br />Cecilia Villalain, Daniel Rolnik, M. Mar Gil</p>
-                            <p><strong>Managing Editors</strong><br />Murat Yayla</p>
-                            <p><strong>Statistics Editor</strong><br />Resul Arısoy</p>
-                            <div className="text-center" style={{ margin: '15px 0' }}>
-                                <img src="/open-access.png" alt="Open Access" />
-                                <img src="/doaj.jpg" alt="DOAJ" />
-                                <img src="/google-scholar.jpg" alt="Google Scholar" />
-                                <img src="/ebsco.jpg" alt="EBSCO" />
-                                <img src="/ulakbim.jpg" alt="Ulakbim" />
-                                <img src="/scopus-logo.jpg" alt="Scopus" />
-                            </div>
-                        </ModuleBox>
-                    </div>
-                }
-            >
-                <div className="Issue-Container">
-                    <IntroductionCardSecond />
-
-                    <h1 className="issue-table-of-contents">Table of Contents</h1>
-                    <ul className="issue-article-list">
-                        {articles.map((article) => (
-                            <li key={article.id}>
-                                <FileTextIcon />
-                                <div className="article-item-pages">
-                                    <span className="badge badge-pages">{article.pages}</span>
-                                </div>
-                                <h1 className="article-item-title">
-                                    <i className="icon-file-text text-green"></i>{' '}
-                                    <Link href={`/Archive/Article/${article.id}`} title={article.title}>
-                                        {article.title}
-                                    </Link>
-                                </h1>
-                                <div className="article-item-authors">{article.authors}</div>
-                                <div className="article-item-serial">
-                                    <span style={{
-                                        marginRight: '5px',
-                                        border: '1px solid #377fbf',
-                                        borderRadius: '5px',
-                                        padding: '2px 5px',
-                                        fontSize: '11px',
-                                        color: '#377fbf',
-                                        backgroundColor: '#f1f2f3'
-                                    }}>
-                                        <strong>{article.type}</strong>
-                                    </span>
-                                    <span>
-                                        <strong>Online publication date:</strong> {article.publicationDate}
-                                    </span>
-                                    <span>
-                                        <strong>DOI:</strong> {article.doi}
-                                    </span>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                    </ModuleBox>
                 </div>
-            </Layout>
+            }
+        >
+            <div className="journal-Container p-4">
+                <h1 className="text-2xl font-bold mb-4">Archives for Perinatal Journal</h1>
+                <p className="mb-6">Please select the issue you would like to see</p>
 
-        </div>
+                <div className="archive-full-list-container space-y-8">
+                    {[
+                        {
+                            year: 2025,
+                            volume: 33,
+                            issues: [
+                                { id: 280, name: "Issue-1", pages: "1-61" }
+                            ]
+                        },
+                        {
+                            year: 2024,
+                            volume: 32,
+                            issues: [
+                                { id: 276, name: "Issue-1", pages: "1-98" },
+                                { id: 278, name: "Congress Supplement (Perinatal Medicine-2024)", pages: "1-34" },
+                                { id: 277, name: "Issue-2", pages: "99-172" },
+                                { id: 279, name: "Issue-3", pages: "173-262" }
+                            ]
+                        },
+                        {
+                            year: 2023,
+                            volume: 31,
+                            issues: [
+                                { id: 270, name: "Issue-1", pages: "1-85" },
+                                { id: 271, name: "Issue-2", pages: "86-163" },
+                                { id: 273, name: "Congress Supplement (Perinatal Medicine-2023)", pages: "01-28" },
+                                { id: 272, name: "Issue-3", pages: "164-255" }
+                            ]
+                        },
+                        {
+                            year: 2022,
+                            volume: 30,
+                            issues: [
+                                { id: 267, name: "Issue-1", pages: "1-86" },
+                                { id: 268, name: "Issue-2", pages: "87-230" },
+                                { id: 269, name: "Issue-3", pages: "231-330" }
+                            ]
+                        },
+                        {
+                            year: 2021,
+                            volume: 29,
+                            issues: [
+                                { id: 264, name: "Issue-1", pages: "1-86" },
+                                { id: 265, name: "Issue-2", pages: "87-178" },
+                                { id: 266, name: "Issue-3", pages: "179-279" }
+                            ]
+                        },
+                        {
+                            year: 2020,
+                            volume: 28,
+                            issues: [
+                                { id: 261, name: "Issue-1", pages: "1-55" },
+                                { id: 262, name: "Issue-2", pages: "57–147" },
+                                { id: 263, name: "Issue-3", pages: "149-224" }
+                            ]
+                        },
+                        {
+                            year: 2019,
+                            volume: 27,
+                            issues: [
+                                { id: 258, name: "Issue-1", pages: "1-48" },
+                                { id: 259, name: "Issue-2", pages: "49-124" },
+                                { id: 260, name: "Issue-3", pages: "125-197" }
+                            ]
+                        },
+                        {
+                            year: 2018,
+                            volume: 26,
+                            issues: [
+                                { id: 254, name: "Issue-1", pages: "1-55" },
+                                { id: 255, name: "Issue-2", pages: "57-105" },
+                                { id: 256, name: "Issue-3", pages: "107-173" }
+                            ]
+                        },
+                        {
+                            year: 2017,
+                            volume: 25,
+                            issues: [
+                                { id: 250, name: "Issue-1", pages: "1-47" },
+                                { id: 251, name: "Issue-2", pages: "49-89" },
+                                { id: 252, name: "Issue-3", pages: "91-156" }
+                            ]
+                        },
+                        {
+                            year: 2016,
+                            volume: 24,
+                            issues: [
+                                { id: 247, name: "Issue-1", pages: "1-60" },
+                                { id: 248, name: "Issue-2", pages: "61-127" },
+                                { id: 249, name: "Issue-3", pages: "129-182" }
+                            ]
+                        },
+                        {
+                            year: 2015,
+                            volume: 23,
+                            issues: [
+                                { id: 243, name: "Issue-1", pages: "1-71" },
+                                { id: 244, name: "Issue-2", pages: "73-139" },
+                                { id: 245, name: "Issue-3", pages: "141-211" }
+                            ]
+                        },
+                        {
+                            year: 2014,
+                            volume: 22,
+                            issues: [
+                                { id: 239, name: "Issue-1", pages: "1-61" },
+                                { id: 240, name: "Issue-2", pages: "65-121" },
+                                { id: 241, name: "Issue-3", pages: "123-186" }
+                            ]
+                        },
+                        {
+                            year: 2013,
+                            volume: 21,
+                            issues: [
+                                { id: 235, name: "Issue-1", pages: "1-45" },
+                                { id: 236, name: "Issue-2", pages: "47-99" },
+                                { id: 237, name: "Issue-3", pages: "101-154" }
+                            ]
+                        },
+                        {
+                            year: 2012,
+                            volume: 20,
+                            issues: [
+                                { id: 232, name: "Issue-1", pages: "1-44" },
+                                { id: 233, name: "Issue-2", pages: "45-120" },
+                                { id: 234, name: "Issue-3", pages: "121-164" }
+                            ]
+                        },
+                        {
+                            year: 2011,
+                            volume: 19,
+                            issues: [
+                                { id: 228, name: "Issue-1", pages: "1-50" },
+                                { id: 229, name: "Issue-2", pages: "51-102" },
+                                { id: 230, name: "Issue-3", pages: "103-148" }
+                            ]
+                        },
+                        {
+                            year: 2010,
+                            volume: 18,
+                            issues: [
+                                { id: 225, name: "Issue-1", pages: "1-31" },
+                                { id: 226, name: "Issue-2", pages: "35-64" },
+                                { id: 227, name: "Issue-3", pages: "69-113" }
+                            ]
+                        },
+                        {
+                            year: 2009,
+                            volume: 17,
+                            issues: [
+                                { id: 222, name: "Issue-1", pages: "1-35" },
+                                { id: 223, name: "Issue-2", pages: "59-90" },
+                                { id: 224, name: "Issue-3", pages: "97-130" }
+                            ]
+                        },
+                        {
+                            year: 2009,
+                            volume: 17,
+                            issues: [
+                                { id: 222, name: "Issue-1", pages: "1-35" },
+                                { id: 223, name: "Issue-2", pages: "59-90" },
+                                { id: 224, name: "Issue-3", pages: "97-130" }
+                            ]
+                        },
+                        {
+                            year: 2008,
+                            volume: 16,
+                            issues: [
+                                { id: 219, name: "Issue-1", pages: "1-41" },
+                                { id: 220, name: "Issue-2", pages: "43-72" },
+                                { id: 221, name: "Issue-3", pages: "75-104" }
+                            ]
+                        },
+                        {
+                            year: 2007,
+                            volume: 15,
+                            issues: [
+                                { id: 216, name: "Issue-1", pages: "1-47" },
+                                { id: 217, name: "Issue-2", pages: "51-87" },
+                                { id: 218, name: "Issue-3", pages: "93-145" }
+                            ]
+                        },
+                        {
+                            year: 2006,
+                            volume: 14,
+                            issues: [
+                                { id: 212, name: "Issue-1", pages: "1-55" },
+                                { id: 213, name: "Issue-2", pages: "59-101" },
+                                { id: 214, name: "Issue-3", pages: "117-154" },
+                                { id: 215, name: "Issue-4", pages: "159-211" }
+                            ]
+                        },
+                        {
+                            year: 2005,
+                            volume: 13,
+                            issues: [
+                                { id: 207, name: "Issue-1", pages: "9-63" },
+                                { id: 208, name: "Issue-2", pages: "71-125" },
+                                { id: 209, name: "Issue-3", pages: "129-183" },
+                                { id: 210, name: "Issue-4", pages: "187-247" }
+                            ]
+                        }
+                    ].map((yearData, i) => (
+                        <div key={i}>
+                            <h5 className="text-lg font-semibold mb-2">
+                                Year {yearData.year} (Volume {yearData.volume})
+                            </h5>
+                            <ul className="archive-full-list space-y-2">
+                                {yearData.issues.map((issue) => (
+                                    <li key={issue.id} className="flex items-center">
+                                        <Link
+                                            href={`/Archive/Issue/${issue.id}`}
+                                            className="btn btn-info flex items-center mr-2"
+                                        >
+                                            <i className="icon-file mr-1"></i> {issue.name}
+                                        </Link>
+                                        <span className="pages text-gray-600">({issue.pages})</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </Layout>
     );
 };
 

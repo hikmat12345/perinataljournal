@@ -483,8 +483,8 @@ const ArchiveTree = () => {
     ]
 
     return (
-        <div className="module-container p-4">
-            <div className="css-treeview">
+        <div className="module-container p-4  mb-6 module-box rounded-sm shadow-sm border border-[#CFD2E9]">
+            <div className="css-treeview ">
                 <ul className="space-y-1 
                     list-none">
                     {archiveData.map((item) => (
