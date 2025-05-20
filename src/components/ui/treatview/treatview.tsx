@@ -10,20 +10,11 @@ import { LiaFileInvoiceSolid } from "react-icons/lia";
 import { RiInformation2Fill } from "react-icons/ri";
 
 const ArchiveTree = () => {
-    const [expandedFolders, setExpandedFolders] = useState<any>({
-        'vol-482': true, // Default to open the current year
-        'vol-481': true, // Also open previous year by default
-    });
-
-    // const [expandedFolders, setExpandedFolders] = useState<Record<string, boolean>>({});
+    const [expandedFolder, setExpandedFolder] = useState<string | null>('vol-482'); // Set default open folder
 
     const toggleFolder = (id: string) => {
-        setExpandedFolders((prev: any) => ({
-            ...prev,
-            [id]: !prev[id],
-        }));
+        setExpandedFolder((prev) => (prev === id ? null : id)); // Close if already open, otherwise open the clicked one
     };
-
     const archiveData = [
         {
             "id": "all",
@@ -492,66 +483,67 @@ const ArchiveTree = () => {
 
     return (
         <>
-            <ModuleBox title="Archive" icon={<RiInformation2Fill />} noHorizontalPadding>
-                <div className="module-container">
-                    <div className="css-treeview">
-                        <ul className=" list-none">
-                            {archiveData.map((item) => (
-                                <li key={item.id}>
-                                    {item.items ? (
-                                        <div className="flex flex-col">
-                                            <div
-                                                className="flex items-center cursor-pointer hover:bg-gray-100 rounded p-1"
-                                                onClick={() => toggleFolder(item.id)}
-                                            >
-                                                {/* Expand/Collapse icon */}
-                                                {expandedFolders[item.id] ? (
-                                                    <FaRegSquareMinus className="text-gray-500 mr-1" size={14} />
-                                                ) : (
-                                                    <FaRegPlusSquare className="text-gray-500 mr-1" size={14} />
-                                                )}
-
-                                                {/* Folder Icon */}
-                                                {expandedFolders[item.id] ? (
-                                                    <FaFolderOpen className="text-yellow-500 mr-2" size={16} />
-                                                ) : (
-                                                    <FaFolder className="text-yellow-500 mr-2" size={16} />
-                                                )}
-
-                                                <span className="text-[13px] leading-[16px] font-bold text-[#333333]">
-                                                    {item.name}
-                                                </span>
-                                            </div>
-
-                                            {/* Sub-Items */}
-                                            {expandedFolders[item.id] && (
-                                                <ul className="pl-6 mt-1 space-y-1">
-                                                    {item.items.map((issue: any) => (
-                                                        <li key={issue.id} className="flex items-center group">
-                                                            <LiaFileInvoiceSolid className="text-gray-400 ml-8 group-hover:text-blue-500" size={16} />
-                                                            <Link href={issue.href} className="text-sm text-gray-700 hover:text-blue-600">
-                                                                {issue.name}
-                                                            </Link>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            )}
-                                        </div>
+    <ModuleBox title="Archive" icon={<RiInformation2Fill />} noHorizontalPadding>
+    <div className="module-container">
+        <div className="css-treeview">
+            <ul className="list-none">
+                {archiveData.map((item) => (
+                    <li key={item.id}>
+                        {item.items ? (
+                            <div className="flex flex-col">
+                                <div
+                                    className="flex items-center cursor-pointer hover:bg-gray-100 rounded p-1"
+                                    onClick={() => toggleFolder(item.id)}
+                                >
+                                    {/* Expand/Collapse icon */}
+                                    {expandedFolder === item.id ? (
+                                        <FaRegSquareMinus className="text-gray-500 mr-1" size={14} />
                                     ) : (
-                                        // Flat link (like All Issues / Early View)
-                                        <div className="flex items-center hover:bg-gray-100 rounded p-1 group">
-                                            <LiaFileInvoiceSolid className="text-gray-400 mr-2 group-hover:text-blue-500" size={16} />
-                                            <Link href={item.href} className="text-sm text-gray-700 hover:text-blue-600">
-                                                {item.name}
-                                            </Link>
-                                        </div>
+                                        <FaRegPlusSquare className="text-gray-500 mr-1" size={14} />
                                     )}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </ModuleBox>
+
+                                    {/* Folder Icon */}
+                                    {expandedFolder === item.id ? (
+                                        <FaFolderOpen className="text-yellow-500 mr-2" size={16} />
+                                    ) : (
+                                        <FaFolder className="text-yellow-500 mr-2" size={16} />
+                                    )}
+
+                                    <span className="text-[13px] leading-[16px] font-bold text-[#333333]">
+                                        {item.name}
+                                    </span>
+                                </div>
+
+                                {/* Sub-Items */}
+                                {expandedFolder === item.id && (
+                                    <ul className="pl-6 mt-1 space-y-1">
+                                        {item.items.map((issue: any) => (
+                                            <li key={issue.id} className="flex items-center group">
+                                                <LiaFileInvoiceSolid className="text-gray-400 ml-8 group-hover:text-blue-500" size={16} />
+                                                <Link href={issue.href} className="text-sm text-gray-700 hover:text-blue-600">
+                                                    {issue.name}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                        ) : (
+                            // Flat link (like All Issues / Early View)
+                            <div className="flex items-center hover:bg-gray-100 rounded p-1 group">
+                                <LiaFileInvoiceSolid className="text-gray-400 mr-2 group-hover:text-blue-500" size={16} />
+                                <Link href={item.href} className="text-sm text-gray-700 hover:text-blue-600">
+                                    {item.name}
+                                </Link>
+                            </div>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</ModuleBox>
+
         </>
     );
 };
