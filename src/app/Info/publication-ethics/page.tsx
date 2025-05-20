@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Perinatal Journal - Publication Ethics',
   description: 'Perinatal Journal - Publication Ethics',
   icons: {
-    icon: '/images/logo-en-US.png',
+    icon: '/PMF logo yuvarlak trans.png',
   },
 };
 export default function page() {

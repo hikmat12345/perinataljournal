@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Perinatal Journal -  About Perinatal Journal',
   description: 'Perinatal Journal - About Perinatal Journal',
   icons: {
-    icon: '/images/logo-en-US.png',
+    icon: '/PMF logo yuvarlak trans.png',
   },
 };
 export default function page() {
@@ -120,155 +120,122 @@ export default function page() {
             </h1>
             <div className="br" />
             <ul>
-              <li>
-                <a href="#description">Description</a>
-              </li>
-              <li>
-                <a href="#audience">Audience</a>
-              </li>
-
-              <li>
-                <a href="#abstracted-indexed">Abstracted & Indexed</a>
-              </li>
-              <li>
-                <a href="#editorial-board">Editorial Board</a>
-              </li>
-              <li>
-                <a href="#publication-history">Publication History</a>
-              </li>
-              <li>
-                <a href="#journal-abbreviation">Journal Abbreviation</a>
-              </li>
-              <li>
-                <a href="#supplements">Supplements</a>
-              </li>
-              <li>
-                <a href="#journal-sponsorship">Journal Sponsorship</a>
-              </li>
-              <li>
-                <a href="#impressum">Impressum</a>
-              </li>
-              <li>
-                <a href="#correspondence">Correspondence</a>
-              </li>
+              <li><a href="#description">Description</a></li>
+              <li><a href="#audience">Audience</a></li>
+              <li><a href="#abstracted-indexed">Abstracted & Indexed</a></li>
+              <li><a href="#editorial-board">Editorial Board</a></li>
+              <li><a href="#publication-history">Publication History</a></li>
+              <li><a href="#journal-abbreviation">Journal Abbreviation</a></li>
+              <li><a href="#supplements">Supplements</a></li>
+              <li><a href="#journal-sponsorship">Journal Sponsorship</a></li>
+              <li><a href="#impressum">Impressum</a></li>
+              <li><a href="#correspondence">Correspondence</a></li>
             </ul>
             <div className="br" />
-            <div>
+
+            <div id="description">
               <strong>Description</strong>
               <div className="br" />
-
               <p>
-                Perinatal Journal is an online open access, peer-reviewed
-                scientific journal (e-ISSN: 1305-3124). The journal is the
-                official publication of{" "}
-                <a href="http://www.perinatal.org.tr" target="_blank">
-                  Perinatal Medicine Foundation
-                </a>
-                . It is published three times a year in April, August and
-                December. The publication language of the journal is English.
+                Perinatal Journal is an online open access, peer-reviewed scientific journal (e-ISSN: 1305-3124). The journal is the official publication of{" "}
+                <a href="http://www.perinatal.org.tr" target="_blank">Perinatal Medicine Foundation</a>. It is published three times a year in April, August and December. The publication language of the journal is English.
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="audience">
               <strong>Audience</strong>
               <div className="br" />
               <p>
-                Perinatal Journal can be read by perinatal medicine experts,
-                fetal medicine experts, obstetricians, gynecologists,
-                radiologists, pediatricians, sonographers, midwives,
-                radiographers, and scientific members of other related areas,
-                that mainly includes original clinical and experimental research
-                articles, case reports, reviews, technical notes and letters to
-                the editor.
+                Perinatal Journal can be read by perinatal medicine experts, fetal medicine experts, obstetricians, gynecologists, radiologists, pediatricians, sonographers, midwives, radiographers, and scientific members of other related areas...
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="abstracted-indexed">
               <strong>Abstracted & Indexed</strong>
               <div className="br" />
               <p>
-                Perinatal Journal is currently indexed in DOAJ (Directory of
-                Open Access Journals) and Google Scholar, EBSCOhost, EBSCO
-                (Academic Search Complete), TÜBİTAK ULAKBİM TR Index Health
-                Sciences Database and SCOPUS
+                Perinatal Journal is currently indexed in DOAJ, Google Scholar, EBSCOhost, TÜBİTAK ULAKBİM TR Index, SCOPUS, etc.
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="editorial-board">
               <strong>Editorial Board</strong>
               <div className="br" />
               <p>
-                The details of Editorial Team and Advisory Board members are
-                available on{" "}
-                <a href="https://perinataljournal.com/Info/editorial-board">
-                  Editorial Board page
-                </a>
-                .
+                The details of Editorial Team and Advisory Board members are available on{" "}
+                <a href="https://perinataljournal.com/Info/editorial-board">Editorial Board page</a>.
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="publication-history">
               <strong>Publication History</strong>
               <div className="br" />
               <p>
-                Perinatal Journal (2005-present)
-                <div className="br" />
+                Perinatal Journal (2005-present)<br />
                 Perinatoloji Dergisi (1993-2004)
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="journal-abbreviation">
               <strong>Journal Abbreviation</strong>
               <div className="br" />
               <p>Perinat J</p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="supplements">
               <strong>Supplements</strong>
               <div className="br" />
-
               <p>
-                Perinatal Journal can publish peer-reviewed supplementary issues
-                to the main volume. Content will be in line with journal scope
-                and may include original articles, reviews, proceedings, meeting
-                abstracts and practice guidelines.
+                Perinatal Journal can publish peer-reviewed supplementary issues to the main volume...
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="journal-sponsorship">
               <strong>Journal Sponsorship</strong>
               <div className="br" />
               <p>
-                Perinatal Journal is sponsored by Perinatal Medicine Foundation
-                which is an internationally recognized, non-profit, scientific
-                institution.
+                Perinatal Journal is sponsored by Perinatal Medicine Foundation, a non-profit, scientific institution.
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="impressum">
               <strong>Impressum</strong>
               <div className="br" />
               <p>
-                Ownership & Publisher: Perinatal Medicine Foundation
-                <div className="br" />
-                Managing Editor: Murat Yayla
-                <div className="br" />
-                Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367
-                Taksim, Istanbul, Turkey&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-                <div className="br" />
-                Advisor for Scientific Publishing: Akın Usta
-                <div className="br" />
-                Publishing Coordinator: Rumeysa Uslu
-                <div className="br" />
-                Language Editor: Fikret Yeşilyurt
-                <div className="br" />
-                Technical Staff: Ali Koz
-                <div className="br" />
-                Publishing service for Perintal Journal are provided by{" "}
-                <a href="mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal">
-                  CETUS
-                </a>
+                Ownership & Publisher: Perinatal Medicine Foundation<br />
+                Managing Editor: Murat Yayla<br />
+                Administrative Office: Cumhuriyet Cad. 30/5 Elmadağ, 34367 Taksim, Istanbul, Turkey<br />
+                Advisor for Scientific Publishing: Akın Usta<br />
+                Publishing Coordinator: Rumeysa Uslu<br />
+                Language Editor: Fikret Yeşilyurt<br />
+                Technical Staff: Ali Koz<br />
+                Publishing service provided by <a href="mailto:info@perinatalmedicine.org?subject=Perinatal%20Journal">CETUS</a>
               </p>
-              <div className="br" />
+            </div>
+
+            <div className="br" />
+            <div id="correspondence">
               <strong>Correspondence</strong>
               <div className="br" />
               <p>
-                Perinatal Journal, Perinatal Medicine Foundation
-                <div className="br" />
-                Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70,
-                Bakırköy, Istanbul, Turkey
-                <div className="br" />
-                Phone: +90 542 442 87 b36
+                Perinatal Journal, Perinatal Medicine Foundation<br />
+                Ataköy 10.Kısım, Çobançeşme E5 Yan Yol No:6 Route A-70, Bakırköy, Istanbul, Turkey<br />
+                Phone: +90 542 442 87 36
               </p>
               <a href="mailto:info@perinataljournal.com?subject=Perinatal%20Journal">
                 <strong>Send e-mail</strong>
               </a>
             </div>
           </div>
+
         </div>
       </Layout>
     </>

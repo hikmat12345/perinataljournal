@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Perinatal Journal - Early View',
     description: 'Perinatal Journal - Early View',
     icons: {
-        icon: '/images/logo-en-US.png',
+        icon: '/PMF logo yuvarlak trans.png',
     },
 };
 const page = ({ id }: any) => {
@@ -113,7 +113,12 @@ const page = ({ id }: any) => {
                 }
             >
                 <div className="Issue-Container">
-                    <IntroductionCardSecond />
+                    <IntroductionCardSecond
+                        title="Early View"
+
+                        description="Perinatal Journal is an international, online open access, peer-reviewed scientific journal (e-ISSN: 1305-3124). The journal is the official publication of Perinatal Medicine Foundation. It is published three times a year in April, August and December. The publication language of the journal is English."
+                        imageUrl="/images/perinatal-journal-small-en-US.jpg"
+                    />
                     <h1 className="issue-table-of-contents
                      bg-[#efefef] text-[#3d3d3d] text-[14pt] py-3 px-3 font-bold mt-2">Table of Contents</h1>
                     <ul className="issue-article-list">

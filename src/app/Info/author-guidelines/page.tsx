@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Perinatal Journal - Author Guidelines',
   description: 'Perinatal Journal - Author Guidelines',
   icons: {
-    icon: '/images/logo-en-US.png',
+    icon: '/PMF logo yuvarlak trans.png',
   },
 };
 export default function page() {
@@ -114,7 +114,7 @@ export default function page() {
         }
       >
         <div className="w-full h-20 flex">
-          <div className="home-body-text w-[100%] p-3 ">
+          <div className="home-body-text w-[100%] p-3">
             <div>
               <h2 className="text-[24px] font-bold text-[#0B5486] mb-2">
                 Author Guidelines
@@ -134,9 +134,7 @@ export default function page() {
                 ].map((item, index) => (
                   <li key={index}>
                     <a
-                      href={`#${item
-                        .toLowerCase()
-                        .replace(/[^a-z0-9]+/g, "-")}`}
+                      href={`#${item.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
                       className="text-[#0B5486] text-[14px] font-normal hover:underline"
                     >
                       {item}
@@ -145,8 +143,10 @@ export default function page() {
                 ))}
               </ul>
             </div>
+
             <div className="br" />
-            <div className="text-[#333333]">
+
+            <div id="coverage" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Coverage</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 The manuscripts should be prepared for one of the following
@@ -157,12 +157,12 @@ export default function page() {
                 <li className="text-[14px] font-normal">Case Report</li>
                 <li className="text-[14px] font-normal">Review</li>
                 <li className="text-[14px] font-normal">Technical Note</li>
-                <li className="text-[14px] font-normal">
-                  Letter to the Editor
-                </li>
+                <li className="text-[14px] font-normal">Letter to the Editor</li>
               </ul>
             </div>
+
             <div className="br" />
+
             <div className="text-[#333333]">
               <p className="text-[14px] font-normal leading-[20px]">
                 In addition, the journal includes article categories which do
@@ -179,8 +179,10 @@ export default function page() {
                 <li className="text-[14px] font-normal">Clinical Guidelines</li>
               </ul>
             </div>
+
             <div className="br" />
-            <div className="text-[#333333]">
+
+            <div id="manuscript-evaluation" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Manuscript Evaluation</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 All submissions to the Perinatal Journal must be original,
@@ -195,7 +197,7 @@ export default function page() {
                 <div className="br" />
                 All manuscripts that are submitted to the Perinatal Journal are
                 first subjected to technical evaluation in terms of conformance
-                to the journal’s manuscript rules and plagiarism at the
+                to the journal's manuscript rules and plagiarism at the
                 preliminary evaluation. Following this initial evaluation,
                 manuscripts that are within the scope of the journal undergo
                 double-blind peer review. For more detailed information about
@@ -211,8 +213,10 @@ export default function page() {
                 </a>
               </p>
             </div>
+
             <div className="br" />
-            <div className="text-[#333333]">
+
+            <div id="ethical-issues" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Ethical Issues</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 All manuscripts presenting data obtained from studies involving
@@ -222,7 +226,7 @@ export default function page() {
                 equivalent body. This institutional approval should be submitted
                 with the manuscript. Authors of case reports must submit the
                 written informed consent of the subject(s) of the report or of
-                the patient’s legal representatives for the publication of the
+                the patient's legal representatives for the publication of the
                 manuscript. All studies should be carried out in accordance with
                 the World Medical Association Declaration of Helsinki, covering
                 the latest revision date. Patient confidentiality must be
@@ -310,9 +314,11 @@ export default function page() {
                 </a>
               </p>
             </div>
+
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+
+            <div id="manuscript-preparation" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Manuscript Preparation</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 In addition to the rules listed below, manuscripts to be
@@ -341,19 +347,21 @@ export default function page() {
                 NCT012345678) should be included in the Methods.
               </p>
             </div>
+
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+
+            <div id="authorship-and-length-of-texts" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">
                 Authorship and Length of Texts
               </h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 The author(s) must declare that they were involved in at least 3
-                of the 5 stages of the study stated in the “Acknowledgement of
-                Authorship and Transfer of Copyright Agreement” as “designing
-                the study”, “collecting the data”, “analyzing the data”,
-                “writing the manuscript” and “confirming the accuracy of the
-                data and the analyses”. Those who do not fulfill this
+                of the 5 stages of the study stated in the "Acknowledgement of
+                Authorship and Transfer of Copyright Agreement" as "designing
+                the study", "collecting the data", "analyzing the data",
+                "writing the manuscript" and "confirming the accuracy of the
+                data and the analyses". Those who do not fulfill this
                 prerequisite should not be stated as an author.
                 <div className="br" />
                 <div className="br" />
@@ -402,10 +410,12 @@ export default function page() {
                 of 10 references.
               </p>
             </div>
+
             <div className="br" />
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+
+            <div id="sections-in-the-manuscripts" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">
                 Sections in the Manuscripts
               </h2>
@@ -415,8 +425,10 @@ export default function page() {
                 drawings, pictures, videos, patient forms, surveys etc.).
               </p>
             </div>
+
             <div className="br" />
             <div className="br" />
+
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Title</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -425,8 +437,10 @@ export default function page() {
                 should be used in the title of the manuscript.
               </p>
             </div>
+
             <div className="br" />
             <div className="br" />
+
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Abstract</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -458,8 +472,10 @@ export default function page() {
                 <div className="br" />
               </p>
             </div>
+
             <div className="br" />
             <div className="br" />
+
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Main text</h2>
               <p className="text-[14px] font-normal leading-[20px]">
@@ -518,7 +534,7 @@ export default function page() {
             </div>
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+            <div className="text-[#333333]" id="references">
               <h2 className="text-[14px] font-bold italic">References</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 References used in the text should be directly related to the
@@ -580,7 +596,7 @@ export default function page() {
             </div>
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+            <div className="text-[#333333]" id="appendices">
               <h2 className="text-[14px] font-bold italic">
                 Figures and tables
               </h2>
@@ -610,7 +626,7 @@ export default function page() {
             <div className="br" />
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+            <div className="text-[#333333]" id="submission">
               <h2 className="text-[14px] font-bold italic">Submission</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 For a swift peer review, Perinatal Journal operates a web-based
@@ -629,7 +645,7 @@ export default function page() {
             </div>
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+            <div className="text-[#333333]" id="submission-checklist">
               <h2 className="text-[14px] font-bold italic">
                 Submission checklist
               </h2>
@@ -663,7 +679,7 @@ export default function page() {
             </div>
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+            <div className="text-[#333333]" id="open-data-policy">
               <h2 className="text-[14px] font-bold">Open Data Policy</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 Data that is integral to the paper must be made available in
@@ -675,7 +691,7 @@ export default function page() {
             </div>
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+            <div className="text-[#333333]" id="open-access-policy">
               <h2 className="text-[14px] font-bold">
                 Open Access Policy & Copyright
               </h2>
@@ -702,7 +718,7 @@ export default function page() {
             </div>
             <div className="br" />
             <div className="br" />
-            <div className="text-[#333333]">
+            <div className="text-[#333333]" id="privacy-statement">
               <h2 className="text-[14px] font-bold">Privacy Statement</h2>
               <p className="text-[14px] font-normal leading-[20px]">
                 By the Law on the Protection of Personal Data, the names and

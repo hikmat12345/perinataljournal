@@ -2,13 +2,11 @@ import Layout from '@/components/ui/Layout/layout';
 import ModuleBox from '@/components/ui/modulebox/modulebox';
 import React from 'react'
 import 'font-awesome/css/font-awesome.min.css'; // For Font Awesome 4.x
-import Carousel from '@/components/Carousel/Carousel.';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
+import { FaThLarge } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
-import { GrLink } from "react-icons/gr";
 import IntroductionCard from '@/components/ui/IntroductionCard/card';
 import { Metadata } from 'next';
 
@@ -16,7 +14,7 @@ export const metadata: Metadata = {
   title: 'Perinatal Journal - Home',
   description: 'Perinatal Journal - Home',
   icons: {
-    icon: '/images/logo-en-US.png',
+    icon: '/PMF logo yuvarlak trans.png',
   },
 };
 
@@ -70,7 +68,6 @@ export default function page() {
               <img src="/scopus-logo.jpg" alt="Scopus" />
             </div>
           </ModuleBox>
-
 
         </div>}>
         <div className='w-full h-20 flex'>
@@ -195,16 +192,6 @@ export default function page() {
           </div>
           <div className="home-body-right-sidebar w-[30%]">
             <div className="home-body-right-sidebar-inner">
-              {/* <ModuleBox
-              title="Latest Articles"
-              icon={<i className="icon-share"></i>}
-            >
-              <ul>
-                <li><a href="/Archive/Latest/">Current Issue</a></li>
-                <li><a href="/Archive/EarlyView/">Early View</a></li>
-                <li><a href="/Archive/Issue/">All Issues</a></li>
-              </ul>
-            </ModuleBox> */}
               <div className='mb-4 border border-black'>
                 <a href="https://www.scopus.com/results/results.uri?sort=plf-f&amp;src=s&amp;st1=13053124&amp;sid=71065fb360f89f361d486ba2aa4a8e7d&amp;sot=b&amp;sdt=b&amp;sl=14&amp;s=ISSN%2813053124%29&amp;origin=searchbasic&amp;editSaveSearch=&amp;yearFrom=Before+1960&amp;yearTo=Present&amp;sessionSearchId=71065fb360f89f361d486ba2aa4a8e7d&amp;limit=10" target="_blank">
                   {/* <img src="/Content/img/scopus-banner.jpg"> */}

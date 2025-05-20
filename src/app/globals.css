@@ -183,7 +183,7 @@ input[type="checkbox"] {
 }
 
 .br {
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 .css-treeview ul {
@@ -346,4 +346,9 @@ h5 {
   vertical-align: middle;
   display: block;
   width: 31px;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }

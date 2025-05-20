@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Perinatal Journal - Editorial Policies',
   description: 'Perinatal Journal - Editorial Policies',
   icons: {
-    icon: '/images/logo-en-US.png',
+    icon: '/PMF logo yuvarlak trans.png',
   },
 };
 export default function page() {

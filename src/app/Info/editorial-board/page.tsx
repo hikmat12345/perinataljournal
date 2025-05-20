@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Perinatal Journal - Editorial Board',
   description: 'Perinatal Journal - Editorial Board',
   icons: {
-    icon: '/images/logo-en-US.png',
+    icon: '/PMF logo yuvarlak trans.png',
   },
 };
 export default function page() {
@@ -414,7 +414,7 @@ export default function page() {
               </section>
 
               {/* Editorial Board Full */}
-              <div className="pr-50">
+              <div className="pr-50" id="editorial-board">
                 <h2 className="text-[14px] font-semibold underline mb-4">
                   Editorial Board
                 </h2>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Perinatal Journal - Article Processing Charge',
     description: 'Perinatal Journal - Article Processing Charge',
     icons: {
-        icon: '/images/logo-en-US.png',
+        icon: '/PMF logo yuvarlak trans.png',
     },
 };
 export default function page() {

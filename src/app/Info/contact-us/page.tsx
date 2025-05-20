@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Perinatal Journal - Contact Us',
     description: 'Perinatal Journal - Contact Us',
     icons: {
-        icon: '/images/logo-en-US.png',
+        icon: '/PMF logo yuvarlak trans.png',
     },
 };
 
