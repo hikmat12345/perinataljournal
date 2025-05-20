@@ -179,7 +179,7 @@ const page = ({ id }: any) => {
                             <li key={article.id} className='mt-6 list-none'>
                                 <h1 className="article-item-title flex">
                                     <FileTextIcon />{'  '}
-                                    <Link className='pl-1' href={`/Archive/Article/${article.id}`} title={article.title}>
+                                    <Link className='pl-1 font-bold pr-2' href={`/Archive/Article/${article.id}`} title={article.title}>
                                         {article.title}
                                     </Link>
                                     <div className="article-item-pages text-right block ml-auto">
@@ -202,7 +202,7 @@ const page = ({ id }: any) => {
                                     <span>
                                         <strong>Online publication date:</strong> {article.publicationDate}
                                     </span>
-                                    <span>
+                                    <span className='pl-3'>
                                         <strong>DOI:</strong> {article.doi}
                                     </span>
                                 </div>

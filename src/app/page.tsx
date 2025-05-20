@@ -34,9 +34,9 @@ export default function page() {
             icon={<FaThLarge />}
           >
             <ul>
-              <li><a href="/Archive/Latest/">Current Issue</a></li>
-              <li><a href="/Archive/EarlyView/">Early View</a></li>
-              <li><a href="/Archive/Issue/">All Issues</a></li>
+              <li><Link href="/Archive/issue/288">Current Issue</Link></li>
+              <li><Link href="/Archive/early-view">Early View</Link></li>
+              <li><Link href="/Archive/issue">All Issues</Link></li>
             </ul>
           </ModuleBox>
           <ModuleBox
@@ -44,7 +44,6 @@ export default function page() {
             icon={<FaShareFromSquare />}
           >
             <ul>
-              <li><a href="/Submission/">New Submission</a></li>
               <li><a href="/Info/about-perinatal-journal">About Perinatal Journal</a></li>
               <li><a href="/Info/author-guidelines">Author Guidelines</a></li>
             </ul>

@@ -6,16 +6,8 @@ import Link from 'next/link';
 import Layout from '@/components/ui/Layout/layout';
 import ArchiveTree from '@/components/ui/treatview/treatview';
 import ModuleBox from '@/components/ui/modulebox/modulebox';
-import { Metadata } from 'next';
 
 
-export const metadata: Metadata = {
-    title: 'Perinatal Journal - Post-immunization evaluation in infants of Hepatitis B carrier mothers',
-    description: 'Perinatal Journal - Post-immunization evaluation in infants of Hepatitis B carrier mothers',
-    icons: {
-        icon: '/images/logo-en-US.png',
-    },
-};
 export default function ArticleTabs() {
     const [activeTab, setActiveTab] = useState('info');
     const orchidIcon = "/images/orcid.logo.icon.svg";

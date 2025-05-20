@@ -21,136 +21,110 @@ export default function page() {
   const boardMembers = [
     {
       name: "Reuven Achiron",
-      department:
-        "Department of Obstetrics & Gynecology, Chaim Sheba Medical Center Tel-Hashomer, Tel-Aviv, Israel",
-    },
-    {
-      name: "Ozan Batioglu",
-      department:
-        "Fetal Care Center, Maternal Fetal Medicine, Obstetrics, Gynecology&Reproductive Sciences, Yale University School of Medicine, Newhaven, CT, USA",
-    },
-    {
-      name: "Christoph Berg",
-      department:
-        "Department of Obstetrics & Gynecology and Fetal Surgery, University of Bonn, Bonn, Germany",
-    },
-    {
-      name: "Ana Bianchi",
-      department:
-        "Department of Fetal Medicine, University of Montevideo, Montevideo, Uruguay",
-    },
-    {
-      name: "Gurur Bilici Demirkol",
-      department:
-        "Division of Paediatric Cardiology, McGovern Medical School UTHealth, Houston, TX, USA",
-    },
-    {
-      name: "Robert Brawura",
-      department:
-        "Department of Obstetrics & Gynecology, Medical University of Warsaw, Warsaw, Poland",
-    },
-    {
-      name: "Petya Chateeva",
-      department:
-        "Department of Fetal Medicine, Dr. Shterev Hospital, Sofia, Bulgaria",
-    },
-    {
-      name: "Giuseppe Cali",
-      department:
-        "Department of Obstetrics & Gynecology, Azienda Ospedaliera Villa Sofia Cervello, Palermo, Italy",
-    },
-    {
-      name: "Julene Carvalho",
-      department:
-        "Department of Paediatric Cardiology, Royal Brompton Hospital, Imperial College, London, UK",
-    },
-    {
-      name: "Frank A. Chervenak",
-      department:
-        "Department of Obstetrics & Gynecology, Lenox Hill Hospital and Zucker School of Medicine at Hofstra/Northwell, New York, NY, USA",
-    },
-    {
-      name: "Ana Danova",
-      department:
-        "University Clinic of Obstetrics & Gynecology, Medical Faculty, Skopje, North Macedonia",
-    },
-    {
-      name: "Valentino De Robertis",
-      department: "Fetal Medicine Unit, Di Venere Hospital, Bari, Italy",
-    },
-    {
-      name: "Jan Deprest",
-      department: "Department of Obstetrics & Gynecology, UZ Leuven, Belgium",
-    },
-    {
-      name: "Alaa Ebrashy",
-      department:
-        "Fetal Medicine Unit, Department of Obstetrics & Gynecology, Faculty of Medicine, Cairo University, Cairo, Egypt",
-    },
-    {
-      name: "Gokhan Ozyurtkan",
-      department:
-        "Department of Obstetrics & Gynecology, Faculty of Medicine, Duzce University, Duzce, Turkey",
+      department: "Department of Obstetrics & Gynecology, Chaim Sheba Medical Center Tel-Hashomer, Tel-Aviv, Israel"
     },
     {
       name: "Elena Greco",
-      department:
-        "Department of Obstetrics & Gynecology, Fetal Medicine Unit, Royal London Hospital, London, UK",
+      department: "Department of Obstetrics & Gynecology, Fetal Medicine Unit, Royal London Hospital, London, UK"
     },
     {
-      name: "Nelly Jakovljevic",
-      department:
-        "Department of Neonatology, Obstetrics & Gynecology, Medical University of Sofia, Sofia, Bulgaria",
+      name: "Ozan Bahtiyar",
+      department: "Fetal Care Center, Maternal Fetal Medicine, Obstetrics, Gynecology@Reproductive Sciences, Yale University School of Medicine, New Haven, CT, USA"
+    },
+    {
+      name: "Nelly Jekova",
+      department: "Department of Neonatology, Obstetrics & Gynecology, University Hospital, Sofia, Bulgaria"
+    },
+    {
+      name: "Christoph Berg",
+      department: "Department of Obstetrics & Gynecology and Fetal Surgery, University of Bonn, Bonn, Germany"
     },
     {
       name: "K. Oliver Kagan",
-      department:
-        "Department of Prenatal Medicine, University Women’s Hospital, Ulm, Germany",
+      department: "Department of Prenatal Medicine, University Women's Hospital, University of Tübingen, Tübingen, Germany"
+    },
+    {
+      name: "Ana Bianchi",
+      department: "Department of Fetal Medicine, University of Montevideo, Montevideo, Uruguay"
     },
     {
       name: "Asma Khalil",
-      department: "Fetal Medicine Unit, Saint George’s Hospital, London, UK",
+      department: "Fetal Medicine Unit, Saint George’s Hospital, London, UK"
     },
     {
-      name: "Satohsi Kusuda",
-      department: "Department of Pediatrics, Kyorin University, Tokyo, Japan",
+      name: "Gurur Biliciler Denktaş",
+      department: "Division of Pediatric Cardiology, McGovern Medical School UTHealth, Houston, TX, USA"
     },
     {
-      name: "Ewelina Litwinowicz",
-      department:
-        "Department of Pathology & Gynecology, Polish Mother’s Memorial Hospital Research Institute, Lodz, Poland",
+      name: "Satoshi Kusuda",
+      department: "Department of Pediatrics, Kyorin University, Tokyo, Japan"
     },
     {
-      name: "Qiujuan Pei",
-      department:
-        "Department of Obstetrics & Gynecology, Peking University People’s Hospital, Beijing, China",
+      name: "Robert Brawura",
+      department: "Department of Obstetrics & Gynecology, Medical University of Warsaw, Warsaw, Poland"
     },
     {
-      name: "Giuseppe Rizzo",
-      department:
-        "Division of Maternal-Fetal Medicine, Ospedale Cristo Re Rome, University of Roma Tor Vergata, Rome, Italy",
+      name: "Ewelina Litwińska",
+      department: "Department of Perinatology & Gynaecology, Polish Mother’s Memorial Hospital Research Institute, Lodz, Poland"
     },
     {
-      name: "Ilian Timor-Tritsch",
-      department:
-        "Division of Maternal-Fetal Medicine, Department of Obstetrics & Gynecology, New York University SOM, New York, NY, USA",
+      name: "Petya Cahveeva",
+      department: "Department of Fetal Medicine, Dr. Shterev Hospital, Sofia, Bulgaria"
+    },
+    {
+      name: "Qiuyan Pei",
+      department: "Department of Obstetrics & Gynecology, Peking University People's Hospital, Beijing, China"
+    },
+    {
+      name: "Giuseppe Cali",
+      department: "Department of Obstetrics & Gynecology, Azienda Ospedaliera Villa Sofia Cervello, Palermo, Italy"
+    },
+    {
+      name: "Guiseppe Rizzo",
+      department: "Division of Maternal-Fetal Medicine, Ospedale Cristo Re Roma, University of Roma Tor Vergata, Rome, Italy"
+    },
+    {
+      name: "Frank A. Chervenak",
+      department: "Department of Obstetrics & Gynecology, Lenox Hill Hospital and Zucker School of Medicine at Hofstra/Northwell, New York, NY, USA"
+    },
+    {
+      name: "Ilan Timor-Tritsch",
+      department: "Division of Maternal-Fetal Medicine, Department of Obstetrics & Gynecology, New York University SOM, New York, NY, USA"
+    },
+    {
+      name: "Ana Daneva",
+      department: "University Clinic of Obstetrics & Gynecology, Medical Faculty, Skopje, North Macedonia"
     },
     {
       name: "Şifa Turan",
-      department:
-        "Department of Obstetrics & Gynecology, Ege University School of Medicine, University of Health Sciences, Istanbul, Turkey",
+      department: "Department of Obstetrics, Gynecology & Reproductive Sciences, University of Maryland Medical Center, Baltimore, MD, USA"
     },
     {
-      name: "Bohdan Yogi",
-      department:
-        "Department of Obstetrics & Gynecology, University of Medicine and Dentistry of New Jersey, USA",
+      name: "Jan Deprest",
+      department: "Department of Obstetrics & Gynecology, UZ Leuven, Leuven, Belgium"
+    },
+    {
+      name: "Simcha Yagel",
+      department: "Department of Obstetrics & Gynecology, Hadassah-Hebrew University Medical Center, Jerusalem, Israel"
+    },
+    {
+      name: "Alaa Ebrashy",
+      department: "Fetal Medicine Unit, Department of Obstetrics & Gynecology, Cairo University, Cairo, Egypt"
     },
     {
       name: "Jun Yoshimatsu",
-      department:
-        "Department of Perinatology & Obstetrics, National Cerebral and Cardiovascular Center, Osaka, Japan",
+      department: "Department of Perinatology & Gynecology, National Cerebral and Cardiovascular Center, Osaka, Japan"
     },
+    {
+      name: "Gökhan Göynümer",
+      department: "Department of Obstetrics & Gynecology, Faculty of Medicine, Duzce University, Düzce, Turkey"
+    }
   ];
+
+
+
+
+
   return (
     <div>
       <Layout
@@ -182,22 +156,13 @@ export default function page() {
 
             <ModuleBox title="Archive" icon={<FaThLarge />}>
               <ul>
-                <li>
-                  <a href="/Archive/Latest/">Current Issue</a>
-                </li>
-                <li>
-                  <a href="/Archive/EarlyView/">Early View</a>
-                </li>
-                <li>
-                  <a href="/Archive/Issue/">All Issues</a>
-                </li>
+                <li><Link href="/Archive/issue/288">Current Issue</Link></li>
+                <li><Link href="/Archive/early-view">Early View</Link></li>
+                <li><Link href="/Archive/issue">All Issues</Link></li>
               </ul>
             </ModuleBox>
             <ModuleBox title="Submission" icon={<FaShareFromSquare />}>
               <ul>
-                <li>
-                  <a href="/Submission/">New Submission</a>
-                </li>
                 <li>
                   <a href="/Info/about-perinatal-journal">
                     About Perinatal Journal
@@ -455,7 +420,7 @@ export default function page() {
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2">
                   {boardMembers.map((member, index) => (
-                    <div key={index}>
+                    <div key={index} className="pt-5 pr-7">
                       <h2 className="text-[rgb(11,84,134)] font-bold text-[14px]">
                         {member.name}
                       </h2>

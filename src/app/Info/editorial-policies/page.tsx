@@ -318,29 +318,27 @@ export default function page() {
           <span className="italic">Corrections</span>
         </>
       ),
-      content:
-        "Errata in published papers may be identified in the form of a corrigendum or erratum when the Editors-in-Chief consider it appropriate to inform the journal readership about a previous error and makes a correction to the error in the published article. The correction will appear as a new article under the Erratum category of the journal, and will cite the original published article.",
-    },
-    {
-      id: "Retractions",
-      title: (
+      content: (
         <>
-          <span className="italic">Retractions</span>
-        </>
-      ),
-      content:
-        "Retractions are considered and published when there are severe errors in an article that invalidate the conclusions. Retractions are also made in cases where there is evidence of publication malpractice, such as plagiarism, duplicate publication, or unethical research. If a retraction is confirmed it will be handled according to the updated version of COPE Retraction Guidelines, and a retraction note signed by the authors and/or the editor is published in a subsequent issue of the journal and listed in the relevant contents list, a link is made to the original article concurrently.",
+          Errata in published papers may be identified in the form of a corrigendum or erratum when  the Editors-in-Chief consider it appropriate to inform the journal readership about a previous error and makes a correction to the error in the published article. The correction will appear as a new article under the Erratum category of the journal, and will cite the original published article.
+          <div className="br" />
+          <div className="br" />
+          <strong>Retractions </strong>
+          <div className="br" />
+          <div className="br" />
+          Retractions are considered and published when there are severe errors in an article that invalidate the conclusions. Retractions are also made in cases where there is evidence of publication malpractice, such as plagiarism, duplicate publication, or unethical research. If a retraction is confirmed it will be handled according to the updated version of COPE Retraction Guidelines, and a retraction note signed by the authors and/or the editor is published in a subsequent issue of the journal and listed in the relevant contents list, a link is made to the original article concurrently.
+          <div className="br" />
+          <div className="br" />
+          <strong>Editorial expressions of concern</strong>
+          <div className="br" />
+          <div className="br" />
+          Where substantial doubt arises as to the honesty or integrity of a submitted or published article, Editors-in-Chief may consider issuing an expression of concern. However, expressions of concern should only be issued if an investigation into the problems relating to the article has proven inconclusive, and if there remain strong indicators that the concerns are valid. Under some rare cases, an editorial expression of concern may also be issued when an investigation is underway but a judgement will not be available for a considerable time. The expression of concern will be linked back to the published article it relates to.",
+          <div className="br" />
+          <div className="br" />
+        </>)
     },
-    {
-      id: "Editorial expressions of concern",
-      title: (
-        <>
-          <span className="italic">Editorial expressions of concern</span>
-        </>
-      ),
-      content:
-        "Where substantial doubt arises as to the honesty or integrity of a submitted or published article, Editors-in-Chief may consider issuing an expression of concern. However, expressions of concern should only be issued if an investigation into the problems relating to the article has proven inconclusive, and if there remain strong indicators that the concerns are valid. Under some rare cases, an editorial expression of concern may also be issued when an investigation is underway but a judgement will not be available for a considerable time. The expression of concern will be linked back to the published article it relates to.",
-    },
+
+
     {
       id: "Publication Ethics and Malpractice Statement",
       title: "Publication Ethics and Malpractice Statement",
@@ -432,22 +430,13 @@ export default function page() {
 
             <ModuleBox title="Archive" icon={<FaThLarge />}>
               <ul>
-                <li>
-                  <a href="/Archive/Latest/">Current Issue</a>
-                </li>
-                <li>
-                  <a href="/Archive/EarlyView/">Early View</a>
-                </li>
-                <li>
-                  <a href="/Archive/Issue/">All Issues</a>
-                </li>
+                <li><Link href="/Archive/issue/288">Current Issue</Link></li>
+                <li><Link href="/Archive/early-view">Early View</Link></li>
+                <li><Link href="/Archive/issue">All Issues</Link></li>
               </ul>
             </ModuleBox>
             <ModuleBox title="Submission" icon={<FaShareFromSquare />}>
               <ul>
-                <li>
-                  <a href="/Submission/">New Submission</a>
-                </li>
                 <li>
                   <a href="/Info/about-perinatal-journal">
                     About Perinatal Journal

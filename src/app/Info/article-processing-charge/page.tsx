@@ -2,7 +2,7 @@ import Layout from "@/components/ui/Layout/layout";
 import ModuleBox from "@/components/ui/modulebox/modulebox";
 import Link from "next/link";
 import React from "react";
-import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare } from "react-icons/fa";
+import { FaThLarge, FaSearch, FaUserAlt, FaShareSquare, FaChevronRight } from "react-icons/fa";
 import { FaShareFromSquare } from "react-icons/fa6";
 import { RiInformation2Fill } from "react-icons/ri";
 import { GrLink } from "react-icons/gr";
@@ -21,54 +21,39 @@ export default function page() {
             <Layout
                 sidebar={
                     <div>
-                        <ModuleBox title="Archive" icon={<FaThLarge />}>
-                            <ul>
-                                <li>
-                                    <a href="/Info/about-perinatal-journal">
-                                        About Perinatal Journal
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/Info/editorial-board">Editorial Board</a>
-                                </li>
-                                <li>
-                                    <a href="/Info/author-guidelines">Author Guidelines</a>
-                                </li>
-                                <li>
-                                    <a href="/Info/article-processing-charge">
-                                        Article Processing Charge
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/Info/editorial-policies">Editorial Policies</a>
-                                </li>
-                                <li>
-                                    <a href="/Info/publication-ethics">Publication Ethics</a>
-                                </li>
-                                <li>
-                                    <a href="/Info/contact-us">Contact Us</a>
-                                </li>
-                            </ul>
+                        <ModuleBox >
+                            {[
+                                "About Perinatal Journal",
+                                "Editorial Board",
+                                "Author Guidelines",
+                                "Article Processing Charge",
+                                "Editorial Policies",
+                                "Publication Ethics",
+                                "Contact Us",
+                            ].map((item, idx, arr) => (
+                                <Link
+                                    key={idx}
+                                    href={"/Info/" + item.replaceAll(" ", "-").toLowerCase()}
+                                    className={`block px-2 py-1 hover:bg-gray-100 flex items-start text-[#777777] text-sm font-normal leading-6 ${idx !== arr.length - 1 ? "border-b border-gray-200" : ""
+                                        }`}
+                                >
+                                    <span className="mr-2 text-[#777777] text-base">
+                                        <FaChevronRight />
+                                    </span>
+                                    {item}
+                                </Link>
+                            ))}
                         </ModuleBox>
 
                         <ModuleBox title="Archive" icon={<FaThLarge />}>
                             <ul>
-                                <li>
-                                    <a href="/Archive/Latest/">Current Issue</a>
-                                </li>
-                                <li>
-                                    <a href="/Archive/EarlyView/">Early View</a>
-                                </li>
-                                <li>
-                                    <a href="/Archive/Issue/">All Issues</a>
-                                </li>
+                                <li><Link href="/Archive/issue/288">Current Issue</Link></li>
+                                <li><Link href="/Archive/early-view">Early View</Link></li>
+                                <li><Link href="/Archive/issue">All Issues</Link></li>
                             </ul>
                         </ModuleBox>
                         <ModuleBox title="Submission" icon={<FaShareFromSquare />}>
                             <ul>
-                                <li>
-                                    <a href="/Submission/">New Submission</a>
-                                </li>
                                 <li>
                                     <a href="/Info/about-perinatal-journal">
                                         About Perinatal Journal
