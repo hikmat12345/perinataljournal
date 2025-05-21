@@ -44,13 +44,13 @@ const IntroductionCardSecond = ({
 
         {/* Image */}
         <div className="w-[173px] h-[230px] relative shadow-[4px_8px_8px_rgba(0,0,0,0.4)]">
-          <Image
+          {imageUrl && <Image
             src={imageUrl}
             alt={imageAlt}
             width={173}
             height={230}
             className="w-[173px] h-[230px] object-cover"
-          />
+          />}
         </div>
       </div>
     </div>

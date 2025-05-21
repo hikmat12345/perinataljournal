@@ -121,7 +121,7 @@ export default function page() {
                                 Perinatal Journal is an open access journal and has no any
                                 subscription and publication fee.
                             </h2>
-                            <p className="text-[14px] font-normal leading-[20px]">
+                            <div className="text-[14px] font-normal leading-[20px]">
                                 However in order to cover our handling, processing and
                                 production expenses, a nominal processing fee called{" "}
                                 <span className="font-bold">
@@ -199,7 +199,7 @@ export default function page() {
                                     </span>
                                 </a>
                                 .
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>

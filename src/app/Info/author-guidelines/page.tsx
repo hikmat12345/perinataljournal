@@ -184,7 +184,7 @@ export default function page() {
 
             <div id="manuscript-evaluation" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Manuscript Evaluation</h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 All submissions to the Perinatal Journal must be original,
                 unpublished, and not under the review of any other publication.
                 This is recorded by the system automatically with the IP number,
@@ -211,14 +211,14 @@ export default function page() {
                 >
                   &nbsp;click here
                 </a>
-              </p>
+              </div>
             </div>
 
             <div className="br" />
 
             <div id="ethical-issues" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Ethical Issues</h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 All manuscripts presenting data obtained from studies involving
                 human subjects must include a statement that the written
                 informed consent of the participants was obtained and that the
@@ -312,7 +312,7 @@ export default function page() {
                 >
                   &nbsp;click here.
                 </a>
-              </p>
+              </div>
             </div>
 
             <div className="br" />
@@ -320,7 +320,7 @@ export default function page() {
 
             <div id="manuscript-preparation" className="text-[#333333]">
               <h2 className="text-[14px] font-bold">Manuscript Preparation</h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 In addition to the rules listed below, manuscripts to be
                 published in the Perinatal Journal should be in compliance with
                 the Uniform Requirements for Manuscripts Submitted to Biomedical
@@ -345,7 +345,7 @@ export default function page() {
                 on a suitable trial registry, before any participants have been
                 recruited into the trial. The trial registration number (e.g.
                 NCT012345678) should be included in the Methods.
-              </p>
+              </div>
             </div>
 
             <div className="br" />
@@ -355,7 +355,7 @@ export default function page() {
               <h2 className="text-[14px] font-bold">
                 Authorship and Length of Texts
               </h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 The author(s) must declare that they were involved in at least 3
                 of the 5 stages of the study stated in the "Acknowledgement of
                 Authorship and Transfer of Copyright Agreement" as "designing
@@ -408,7 +408,7 @@ export default function page() {
                 <span className="italic">Letters to the Editor</span> should be
                 no more than 500 words long (max. 2 pages) and include a maximum
                 of 10 references.
-              </p>
+              </div>
             </div>
 
             <div className="br" />
@@ -443,7 +443,7 @@ export default function page() {
 
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Abstract</h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 Abstracts should not contain any abbreviation and references.
                 They should be prepared under following designs.
                 <div className="br" />
@@ -470,7 +470,7 @@ export default function page() {
                 abstract should include max. three keywords separated with comma
                 and written in lower cases.
                 <div className="br" />
-              </p>
+              </div>
             </div>
 
             <div className="br" />
@@ -478,7 +478,7 @@ export default function page() {
 
             <div className="text-[#333333]">
               <h2 className="text-[14px] font-bold italic">Main text</h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 The sections in main text are defined according to the
                 manuscript type.
                 <div className="br" />— In{" "}
@@ -530,13 +530,13 @@ export default function page() {
                 formerly published article within the text, reference(s) should
                 be provided.
                 <div className="br" />
-              </p>
+              </div>
             </div>
             <div className="br" />
             <div className="br" />
             <div className="text-[#333333]" id="references">
               <h2 className="text-[14px] font-bold italic">References</h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 References used in the text should be directly related to the
                 topic, as recent as possible and in enough numbers. They should
                 be numbered in square brackets in the order in which they are
@@ -592,7 +592,7 @@ export default function page() {
                 Philadelphia, PA: Saunders-Elsevier; 2014. p. 988–1021.
                 <div className="br" />
                 <div className="br" />
-              </p>
+              </div>
             </div>
             <div className="br" />
             <div className="br" />
@@ -600,7 +600,7 @@ export default function page() {
               <h2 className="text-[14px] font-bold italic">
                 Figures and tables
               </h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 All illustrations (photographs, graphics, drawings, etc.)
                 accompanying the manuscript should be referred to as “figure”.
                 All figures should be numbered consecutively and mentioned in
@@ -621,14 +621,14 @@ export default function page() {
                 heading on top of the table. Table heading should be added to
                 the main text file on a separate page when a table is submitted
                 as a supplementary file.
-              </p>
+              </div>
             </div>
             <div className="br" />
             <div className="br" />
             <div className="br" />
             <div className="text-[#333333]" id="submission">
               <h2 className="text-[14px] font-bold italic">Submission</h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 For a swift peer review, Perinatal Journal operates a web-based
                 submission, peer review and manuscript tracking system. Authors
                 are required to
@@ -641,7 +641,7 @@ export default function page() {
                   &nbsp;submit&nbsp;
                 </a>
                 their articles online.
-              </p>
+              </div>
             </div>
             <div className="br" />
             <div className="br" />
@@ -649,7 +649,7 @@ export default function page() {
               <h2 className="text-[14px] font-bold italic">
                 Submission checklist
               </h2>
-              <p className="text-[14px] font-normal leading-[20px]">
+              <div className="text-[14px] font-normal leading-[20px]">
                 The following list will be useful during the final check of a
                 manuscript before submission:
                 <div className="br" />
@@ -675,7 +675,7 @@ export default function page() {
                 <div className="br" />
                 9. Conflicts of Interest Disclosure Statement (if necessary)
                 <div className="br" />
-              </p>
+              </div>
             </div>
             <div className="br" />
             <div className="br" />

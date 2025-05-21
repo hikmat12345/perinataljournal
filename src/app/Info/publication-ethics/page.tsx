@@ -265,9 +265,9 @@ export default function page() {
                   <section
                     key={policy.id}
                     id={policy.id}
-                    className="scroll-mt-24"
+                    className="scroll-mt-24 mt-7"
                   >
-                    <h2 className="text-[14px] font-bold leading-[20px] text-[#333333]">
+                    <h2 className="text-[14px] font-bold leading-[20px] text-[#333333] pb-3">
                       {policy.title}
                     </h2>
                     <p className="text-[14px] font-normal leading-[20px] text-[#333333]">

@@ -1,21 +1,26 @@
-import { getIssueData } from '@/lib/getIssueData';
+"use client"
 import IntroductionCardSecond from '@/components/ui/IntroductionCard2/card';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-    const issue = await getIssueData(params.id);
-    return {
-        title: issue.title,
-        description: issue.description,
-        icons: {
-            icon: '/PMF logo yuvarlak trans.png'
-        }
-    };
-}
+// export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+// const issue = await getIssueData(params.id);
+// return {
+//     title: issue?.data?.title,
+//     description: issue?.data?.description,
+//     icons: {
+//         icon: '/PMF logo yuvarlak trans.png'
+//     }
+//   };
+// }
 
 export default async function IssuePage({ params }: { params: { id: string } }) {
-    const issue = await getIssueData(params.id);
+    const issue = await fetch(`http://localhost:3000/apis/articles?id=${params.id}`, {
+        method: 'GET',
+        cache: 'no-store'
+    });
+    const issueData = await issue?.json();
+    console.log(issueData);
 
     const FileTextIcon = () => (
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#28a745" strokeWidth="2"
@@ -29,21 +34,20 @@ export default async function IssuePage({ params }: { params: { id: string } }) 
     );
 
     return (
-        <div
-        >
+        <div >
             <div className="Issue-Container">
                 <IntroductionCardSecond
-                    title={issue.title}
-                    subtitle={issue.subtitle}
-                    pageRange={issue.pageRange}
-                    description={issue.description}
-                    imageUrl={issue.imageUrl}
+                    title={issueData?.data?.title}
+                    subtitle={issueData?.data?.subtitle}
+                    pageRange={issueData?.data?.pageRange}
+                    description={issueData?.data?.description}
+                    imageUrl={issueData?.data?.imageUrl}
                 />
                 <h1 className="issue-table-of-contents bg-[#efefef] text-[#3d3d3d] text-[14pt] py-3 px-3 font-bold mt-2">
                     Table of Contents
                 </h1>
                 <ul className="issue-article-list">
-                    {issue.articles.map((article: any) => (
+                    {issueData?.data?.articles.map((article: any) => (
                         <li key={article.id} className="mt-6 list-none">
                             <h1 className="article-item-title flex">
                                 <FileTextIcon />{' '}
